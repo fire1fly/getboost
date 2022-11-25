@@ -25,6 +25,8 @@
             background-color: $light
         &-progress
           background-color: $primary
+    &._next
+      animation: stepsBlink 4s infinite
     &-grid
       margin-bottom: 32px
       display: flex
@@ -74,7 +76,12 @@
       flex: 0 1 510px
   &-form
     &-inner
-      padding: 32px
+      height: 100%
+      padding: 32px 32px 0 32px
+      display: flex
+      flex-direction: column
+      .form-block._bottom
+        margin-top: auto
     &-btn
       border-radius: 30px
       width: 100%
@@ -84,7 +91,8 @@
   &-subtitle
     margin: 0
     margin-bottom: 20px
-    +stolzl-reg
+    +stolzl-med
+    font-weight: normal
   &-sum
     border-radius: 8px
     border: 1px solid $grey10
@@ -150,6 +158,78 @@
     +inter-reg
     font-size: 14px
     color: $grey60
+  &-promo
+    padding: 15px 16px 0 22px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 16px
+    &-link
+      display: flex
+      align-items: center
+      gap: 9px
+      +stolzl-med
+      font-size: 16px
+      color: $primary
+      cursor: pointer
+    .promo
+      &.active
+        width: 100%
+    &-checkbox
+      display: flex
+      align-items: center
+      gap: 8px
+      &-label
+        +inter-semibold
+        font-size: 14px
+        color: $grey90
+  &-cart
+    margin-top: 12px
+    padding: 25px 0
+    border-radius: 8px
+    border: 1px solid $grey10
+    background-color: $grey0
+    &-title
+      margin-bottom: 6px
+      padding: 0 40px
+      +stolzl-med
+      font-size: 24px
+      color: $grey100
+    .cart-item
+      grid-template-columns: min-content min-content auto
+      grid-template-rows: repeat(2, auto)
+      gap: 5px 16px
+      padding: 20px 40px
+      &__preview
+        grid-column: 1/2
+        grid-row: 1/3
+      &__info
+        align-self: end
+        grid-column: 2/4
+        grid-row: 1/2
+      &__counter
+        grid-column: 2/3
+        grid-row: 2/3
+      &__total
+        grid-column: 3/4
+        grid-row: 2/3
+      &-preview
+        &-remove
+          border-width: 3px
+          width: 33px
+          height: 33px
+          display: flex
+      &-counter
+        margin: 0
+        height: 46px
+        &-value
+          padding: 0 20px
+      &-total
+        margin: 0
+        font-size: 20px
+      &-remove
+        display: none
 
 @media ( max-width: 1024px )
   .ch
@@ -205,7 +285,7 @@
 @media ( max-width: 768px )
   .ch
     padding-top: 15px
-    padding-bottom: 30px
+    padding-bottom: 80px
     &-title
       margin-bottom: 15px
     &-step
@@ -213,6 +293,51 @@
         display: none
     &-subtitle
       font-size: 20px
+    &-form
+      &-btn
+        position: fixed
+        left: 50%
+        transform: translate(-50%)
+        bottom: 70px
+        z-index: 5
+        width: 92%
+    &-promo
+      padding: 15px 8px 0
+      flex-direction: colunm
+      &-checkbox
+        border-radius: 8px
+        border: 1px solid $grey10
+        padding: 14px 18px
+        width: 100%
+        background-color: $grey0
+    &-cart
+      padding: 20px 0
+      &-title
+        border-bottom: 1px solid $grey10
+        padding: 0 16px 14px
+        font-size: 20px
+      .cart-item
+        grid-template-columns: 106px auto
+        grid-template-rows: repeat(3, auto)
+        gap: 12px
+        padding: 12px 24px
+        &__info
+          align-self: start
+          grid-column: 2/3
+          grid-row: 1/3
+        &__counter
+          margin: 0
+          grid-column: 1/2
+          grid-row: 3/4
+        &__total
+          margin: 0
+          grid-column: 2/3
+          grid-row: 3/4
+        &-counter
+          height: 33px
+          &-value
+            flex: 1 1 auto
+            padding: 0
 
 @media ( max-width: 420px )
   .ch

@@ -3,21 +3,75 @@
   grid-template-columns: repeat(4, 1fr)
   grid-gap: 20px
   &-card
-    border: 1px solid $grey10
+    position: relative
+    overflow: hidden
     border-radius: 8px
-    padding: 18px
+    min-height: 380px
     background-color: $grey0
     box-shadow: 0px 4px 23px #EFF2F8
     &-preview
-      position: relative
-      margin-bottom: 16px
-      border-radius: 8px
+      position: absolute
+      z-index: 1
       width: 100%
-      overflow: hidden
+      height: 100%
       img, svg
         object-fit: cover
         width: 100%
         height: 100%
+    &-backdrop
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+      width: 100%
+      height: 100%
+      background: linear-gradient(35.38deg, #18142D 12.99%, rgba(0, 0, 0, 0) 146.94%)
+    &-character
+      position: absolute
+      top: 30%
+      right: 5%
+      z-index: 3
+      width: 60%
+      will-change: transform
+    &__inner
+      position: relative
+      z-index: 4
+      height: 100%
+      padding: 8px 10px 30px 18px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      gap: 10px
+    &-plate
+      border-radius: 8px
+      padding: 8px 12px
+      display: inline-flex
+      align-items: center
+      gap: 8px
+      +inter-semibold
+      font-size: 14px
+      color: $five
+      text-transform: uppercase
+      &._primary
+        background: linear-gradient(270deg, #3474EE 45.04%, rgba(0, 88, 255, 0) 181.68%)
+      &._orange
+        background-color: $orange
+      &._green1
+        background: linear-gradient(270deg, #00B654 45.04%, rgba(0, 182, 84, 0) 181.68%)
+      &._green2
+        background: linear-gradient(270deg, #00CCB4 45.04%, rgba(1, 183, 139, 0) 181.68%)
+      &._light-primary
+        background: linear-gradient(270deg, #1FAFFF 45.04%, rgba(0, 88, 255, 0) 181.68%, rgba(93, 197, 255, 0) 181.68%)
+      &._purple
+        background: linear-gradient(270deg, #7025EA 45.04%, rgba(112, 37, 234, 0) 181.68%)
+      &-grid
+        width: 100%
+        flex: 1 1 auto
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 6px
     &__plate
       position: absolute
       top: 8px
@@ -31,24 +85,38 @@
         background-color: $orange
         color: $five
     &-subtitle
-      margin-bottom: 4px
       +inter-semibold
-      text-transform: uppercase
-      font-size: 14px
-      letter-spacing: 1%
-      color: $grey70
+      font-size: 12px
+      color: $grey40
     &-title
       margin: 0
-      margin-bottom: 4px
-      +inter-bold
-      font-size: 20px
-      color: $grey100
+      +inter-semibold
+      font-size: 16px
+      color: $grey0
+    &-tag
+      display: flex
+      align-items: center
+      gap: 8px
+      +inter-semibold
+      font-size: 12px
+      color: $grey0
+      &.active
+        color: $primary
+        .pc-card-tag__icon
+          fill: $primary
+      &-grid
+        display: flex
+        flex-direction: column
+        gap: 8px
+      &__icon
+        flex: 0 0 auto
     &-price
       display: block
-      +stolzl-med
-      font-size: 24px
-      color: $grey100
+      +inter-bold
+      font-size: 20px
+      color: $grey0
       &__through
+        +stolzl-med
         display: block
         text-decoration: line-through
         font-size: 16px
@@ -60,17 +128,20 @@
       +inter-semibold
       font-size: 16px
     &-f
-      margin-top: 24px
+      width: 100%
       display: flex
       align-items: center
       justify-content: space-between
       flex-wrap: wrap
-      .pc-card
-        &-price
-          margin-bottom: 8px
-        &-btn
-          margin-left: auto
-          margin-bottom: 8px
+      gap: 10px
+      &-attach
+        border-radius: 4px
+        padding: 6px 12px
+        background-color: rgba(0, 182, 84, 0.1)
+        +stolzl-med
+        text-align: center
+        font-size: 12px
+        color: $green
   &-btn
     margin: 45px auto 0
     border-radius: 30px
@@ -84,29 +155,42 @@
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 24px
     &-card
-      padding: 14px
+      &__inner
+        padding: 20px 20px 18px 13px
+      &-title
+        font-size: 20px
+      &-f
+        &-attach
+          width: 100%
     &-btn
       margin: 32px auto 0
 
 @media ( max-width: 768px )
   .pc
-    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr))
     grid-gap: 8px
     &-card
+      min-height: 280px
       padding: 0
-      &-preview
-        margin-bottom: 14px
-        border-radius: 0
-        border-top-left-radius: 8px
-        border-top-right-radius: 8px
-      &__plate
+      &__inner
+        padding: 4px 4px 12px 14px
+        gap: 4px
+      &-plate
+        border-radius: 4px
+        height: 27px
+        padding: 0 8px
+        gap: 4px
         font-size: 12px
+        text-transform: none
+        &-grid
+          gap: 2px
       &-subtitle
-        padding: 0 14px
-        font-size: 12px
+        font-size: 10px
+        text-transform: uppercase
       &-title
-        padding: 0 14px
         font-size: 14px
+      &-tag
+        &-grid
+          display: none
       &-price
         font-size: 16px
         display: flex
@@ -117,21 +201,24 @@
           order: 1
           display: inline-block
           font-size: 14px
+      &-price
+        display: flex
+        align-items: center
+        gap: 3px
       &-btn
+        width: 100%
         height: 33px
         font-size: 14px
       &-f
-        padding: 0 14px 17px
-        margin-top: 12px
-        display: block
-        .pc-card
-          &-price
-            margin-bottom: 12px
-          &-btn
-            margin-left: 0px
-            margin-bottom: 0px
+        flex-direction: column
+        align-items: flex-start
+        gap: 10px
     &-btn
       margin: 18px auto 0
       width: 100%
       height: 50px
       font-size: 16px
+
+@media ( max-width: 520px )
+  .pc
+    grid-template-columns: repeat(2, 1fr)

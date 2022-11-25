@@ -5,6 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link type="image/x-icon" rel="icon" href="./favicon.ico">
+  <link type="image/png" sizes="16x16" rel="icon" href="./favicon-16x16.png">
+  <link type="image/png" sizes="32x32" rel="icon" href="./favicon-32x32.png">
+  <link type="image/png" sizes="64x64" rel="icon" href="./favicon-64x64.png">
+  <link type="image/png" sizes="128x128" rel="icon" href="./favicon-128x128.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon-180x180.png">
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.min.css">
 
@@ -75,7 +82,7 @@
           </div>
         </div><!-- /.h-dd__game -->
         <nav class="h-nav">
-          <a href="#" class="h-nav-link">Loalty</a>
+          <a href="./cashback.html" class="h-nav-link">Loalty</a>
           <a href="#" class="h-nav-link">Reviews</a>
         </nav>
         <a href="#" class="h-wilink h__wilink">
@@ -85,7 +92,7 @@
           <div class="h-wilink-label">24/7 Support</div>
         </a><!-- /.h-wilink (link with icon) -->
         <div class="h-bar">
-          <button type="button" class="btn btn-dark h-btn">
+          <button type="button" class="btn btn-dark h-btn btn-open-modal" data-modal="cart">
             <div class="h-btn-icon h-btn-cart">
               <img src="./assets/static/icon-cart.svg" alt="cart">
               <div class="h-btn-cart-sign">1</div>
@@ -101,7 +108,7 @@
         </div>
         <div class="h-menu">
           <nav class="h-nav">
-            <a href="#" class="h-nav-link">Loalty</a>
+            <a href="./cashback.html" class="h-nav-link">Loalty</a>
             <a href="#" class="h-nav-link">Reviews</a>
           </nav>
           <div class="h-dd-list h-menu__list">
@@ -155,7 +162,7 @@
             <div class="h-wilink-label">24/7 Support</div>
           </a><!-- /.h-wilink (link with icon) -->
           <div class="h-bar">
-            <button type="button" class="btn btn-dark h-btn">
+            <button type="button" class="btn btn-dark h-btn btn-open-modal" data-modal="cart">
               <div class="h-btn-icon h-btn-cart">
                 <img src="./assets/static/icon-cart.svg" alt="cart">
                 <div class="h-btn-cart-sign">1</div>
@@ -167,26 +174,26 @@
         </div>
       </div>
     </header><!-- /.header -->
-    <div class="callout _green2">
-      <div class="container callout__inner">
-        <div class="callout-msg">
-          Check our <b>4 503</b> reviews on 
-          <a href="#">
-            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.7195 6.36129H10.953L8.86302 0L6.76646 6.36129L0 6.35484L5.47979 10.2903L3.38323 16.6452L8.86302 12.7161L14.3363 16.6452L12.2463 10.2903L17.7195 6.36129Z" fill="white"/>
-              <path d="M12.7163 11.7287L12.246 10.29L8.86279 12.7158L12.7163 11.7287Z" fill="#B1B1B1"/>
+    <main class="main">
+      <div class="callout _green2 js-callout" data-close-axis="y">
+        <div class="container callout__inner">
+          <div class="callout-msg">
+            Check our <b>4 503</b> reviews on 
+            <a href="#">
+              <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.7195 6.36129H10.953L8.86302 0L6.76646 6.36129L0 6.35484L5.47979 10.2903L3.38323 16.6452L8.86302 12.7161L14.3363 16.6452L12.2463 10.2903L17.7195 6.36129Z" fill="white"/>
+                <path d="M12.7163 11.7287L12.246 10.29L8.86279 12.7158L12.7163 11.7287Z" fill="#B1B1B1"/>
+              </svg>
+              Trustpilot
+            </a>
+          </div>
+          <div class="callout-close js-callout-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7L7 17M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Trustpilot
-          </a>
-        </div>
-        <div class="callout-close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 7L7 17M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          </div>
         </div>
       </div>
-    </div>
-    <main class="main">
       <div class="ms">
         <div class="ms__inner">
           <div class="ms-h">
@@ -195,13 +202,14 @@
             <div class="ms-text text">A hassle-free boosting in your favourite game:</div>
           </div>
           <div class="ms-row container">
-            <div class="ms-item">
+            <a href="./goods.html" class="ms-item">
               <picture>
-                <source media="(min-width: 1024px)" srcset="./assets/static/ms-item-1-lg.png">
-                <source media="(min-width: 768px)" srcset="./assets/static/ms-item-1-md.png">
-                <source media="(min-width: 0px)" srcset="./assets/static/ms-item-1-sm.png">
-                <img class="ms-item-bg" src="./assets/static/ms-item-1-lg.png" alt="WoW WOTLK">
+                <source media="(min-width: 1024px)" srcset="./assets/static/ms-item-1-lg.jpg">
+                <source media="(min-width: 768px)" srcset="./assets/static/ms-item-1-md.jpg">
+                <source media="(min-width: 0px)" srcset="./assets/static/ms-item-1-sm.jpg">
+                <img class="ms-item-bg" src="./assets/static/ms-item-1-lg.jpg" alt="WoW WOTLK">
               </picture>
+              <div class="ms-item-backdrop"></div>
               <div class="ms-item-row">
                 <div class="ms-item-info">
                   <div class="ms-item-preview">
@@ -212,55 +220,57 @@
                     <div class="ms-item-sub">10 932 boosts</div>
                   </div>
                 </div>
-                <a href="./card.html" class="ms-item-link">
+                <div href="./card.html" class="ms-item-link">
                   <img src="./assets/static/icon-arrow-right-white.svg" alt="arrow">
-                </a>
+                </div>
               </div>
-            </div><!-- /.ms-item -->
-            <div class="ms-item">
+            </a><!-- /.ms-item -->
+            <a href="./goods.html" class="ms-item">
               <picture>
-                <source media="(min-width: 1024px)" srcset="./assets/static/ms-item-2-lg.png">
-                <source media="(min-width: 768px)" srcset="./assets/static/ms-item-2-md.png">
-                <source media="(min-width: 0px)" srcset="./assets/static/ms-item-2-sm.png">
-                <img class="ms-item-bg" src="./assets/static/ms-item-2-lg.png" alt="WoW Shadowlands">
+                <source media="(min-width: 1024px)" srcset="./assets/static/ms-item-2-lg.jpg">
+                <source media="(min-width: 768px)" srcset="./assets/static/ms-item-2-md.jpg">
+                <source media="(min-width: 0px)" srcset="./assets/static/ms-item-2-sm.jpg">
+                <img class="ms-item-bg" src="./assets/static/ms-item-2-lg.jpg" alt="WoW Shadowlands">
               </picture>
+              <div class="ms-item-backdrop"></div>
               <div class="ms-item-row">
                 <div class="ms-item-info">
                   <div class="ms-item-preview">
                     <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
                   </div>
                   <div class="ms-item-text">
-                    <h2 class="ms-item-title h5">WoW Shadowlands</h2>
+                    <h2 class="ms-item-title h5">WoW Dragonflight</h2>
                     <div class="ms-item-sub">10 932 boosts</div>
                   </div>
                 </div>
-                <a href="./card.html" class="ms-item-link">
+                <div href="./card.html" class="ms-item-link">
                   <img src="./assets/static/icon-arrow-right-white.svg" alt="arrow">
-                </a>
+                </div>
               </div>
-            </div><!-- /.ms-item -->
-            <div class="ms-item">
+            </a><!-- /.ms-item -->
+            <a href="./goods.html" class="ms-item">
               <picture>
-                <source media="(min-width: 1024px)" srcset="./assets/static/ms-item-3-lg.png">
-                <source media="(min-width: 768px)" srcset="./assets/static/ms-item-3-md.png">
-                <source media="(min-width: 0px)" srcset="./assets/static/ms-item-3-sm.png">
-                <img class="ms-item-bg" src="./assets/static/ms-item-3-lg.png" alt="Destiny 2">
+                <source media="(min-width: 1024px)" srcset="./assets/static/ms-item-3-lg.jpg">
+                <source media="(min-width: 768px)" srcset="./assets/static/ms-item-3-md.jpg">
+                <source media="(min-width: 0px)" srcset="./assets/static/ms-item-3-sm.jpg">
+                <img class="ms-item-bg" src="./assets/static/ms-item-3-lg.jpg" alt="Destiny 2">
               </picture>
+              <div class="ms-item-backdrop"></div>
               <div class="ms-item-row">
                 <div class="ms-item-info">
                   <div class="ms-item-preview">
-                    <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+                    <img src="./assets/static/destiny-preview-white.png" alt="Destiny 2">
                   </div>
                   <div class="ms-item-text">
                     <h2 class="ms-item-title h5">Destiny 2</h2>
                     <div class="ms-item-sub">10 932 boosts</div>
                   </div>
                 </div>
-                <a href="./card.html" class="ms-item-link">
+                <div href="./card.html" class="ms-item-link">
                   <img src="./assets/static/icon-arrow-right-white.svg" alt="arrow">
-                </a>
+                </div>
               </div>
-            </div><!-- /.ms-item -->
+            </a><!-- /.ms-item -->
           </div>
         </div>
       </div><!-- /.ms (main screen) -->
@@ -304,6 +314,31 @@
         </div>
       </div>
     </footer><!-- /.footer -->
+  </div>
+
+  <div class="bnrfl__wrapper">
+    <div class="container">
+      <div class="bnrfl js-callout">
+        <div class="bnrfl-close js-callout-close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="#E8E9EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>          
+        </div>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./assets/static/main-banner-fly-pic-lg.png">
+          <source media="(min-width: 0px)" srcset="./assets/static/main-banner-fly-pic-sm.png">
+          <img src="./assets/static/main-banner-fly-pic-lg.png" alt="picture" class="bnrfl-pic">
+        </picture>
+        <div class="bnrfl__inner">
+          <div class="bnrfl-title">Be the first to get discounts!</div>
+          <div class="bnrfl-text">Do you want to be notified of new discounts, special offers and promo codes? Sign up for the newsletter!</div>
+          <div class="bnrfl-field">
+            <input type="email" class="bnrfl-field-input" placeholder="Your email">
+            <button type="button" class="btn btn-primary bnrfl-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="m__wrapper" data-modal="signin">

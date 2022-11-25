@@ -1,4 +1,9 @@
 .callout
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 5
+  width: 100%
   padding: 5px 0
   +inter-reg
   font-size: 14px
@@ -19,6 +24,7 @@
     display: flex
     align-items: center
     justify-content: center
+    text-align: center
     transition: 0.3s ease-in-out
   &-close
     position: absolute
@@ -33,11 +39,5 @@
 
 @keyframes closeUp
   100%
-    width: 0
     height: 0
     padding: 0
-
-@media ( max-width: 768px )
-  .callout
-    &__inner
-      justify-content: flex-start

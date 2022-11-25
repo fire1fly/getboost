@@ -42,15 +42,21 @@
       margin-right: 8px
       width: 30px
       height: 30px
+      &.animate-active
+        animation: spinning 0.5s ease-in-out 0.2s 1 alternate backwards
   &-pic
     position: relative
     bottom: 0
     align-self: end
     flex: 0 0 auto
+    width: 20%
     line-height: 0
     margin-top: -80px
+    transition: 0.5s
+    &.animate-active
+      width: 38%
     img
-      max-width: 100%
+      width: 100%
   &-f
     border-bottom-left-radius: 24px
     border-bottom-right-radius: 24px
@@ -58,7 +64,11 @@
     display: flex
     align-items: center
     gap: 14px 30px
-    background-color: $primary
+    background-color: rgba($primary, 0.3)
+    transition: 0.3s
+    transition-delay: 0.2s
+    &.animate-active
+      background-color: $primary
     &-item
       flex: 0 1 auto
       img, svg
@@ -98,5 +108,5 @@
       margin-top: -40px
       flex: auto
       max-width: 250px
-      width: 100%
-    &-f
+      &.animate-active
+        width: 100%

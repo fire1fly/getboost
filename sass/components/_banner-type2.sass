@@ -10,13 +10,23 @@
   overflow: hidden
   &__inner
     flex: 0 0 400px
-    z-index: 2
+    z-index: 1
   &-title
     margin: 0
     margin-bottom: 24px
     text-transform: uppercase
+    display: flex
+    flex-wrap: wrap
+    gap: 0px 10px
     +stolzl-reg
     color: $five
+    .word
+      display: flex
+      span
+        opacity: 0
+        transition: 0.3s
+        &.animate-active
+          opacity: 1
   &-f
     display: flex
     align-items: center
@@ -32,6 +42,8 @@
     +inter-semibold
     font-size: 16px
     color: $grey0
+    &.animate-active
+      animation: blink 0.3s ease-in-out 0s 8 alternate backwards
   &-pic
     &-1
       z-index: 1
@@ -40,7 +52,11 @@
       left: 40%
     &-2
       line-height: 0
-      z-index: 2
+      z-index: 1
+      flex: 0 0 auto
+      width: 630px
+      img
+        max-width: 100%
 
 @media ( max-width: 1024px )
   .bnr2
@@ -66,3 +82,5 @@
       &-2
         display: block
         margin-left: auto
+        max-width: 320px
+        width: 100%

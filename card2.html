@@ -6,20 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link type="image/x-icon" rel="icon" href="./favicon.ico">
+  <link type="image/png" sizes="16x16" rel="icon" href="./favicon-16x16.png">
+  <link type="image/png" sizes="32x32" rel="icon" href="./favicon-32x32.png">
+  <link type="image/png" sizes="64x64" rel="icon" href="./favicon-64x64.png">
+  <link type="image/png" sizes="128x128" rel="icon" href="./favicon-128x128.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon-180x180.png">
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.min.css">
 
   <script defer src="./js/dropdown.js"></script>
   <script defer src="./js/mobileMenu.js"></script>
+  <script defer src="./js/callout.js"></script>
   <script defer src="./js/range.js"></script>
   <script defer src="./js/double-range.js"></script>
+  <script defer src="./js/promocodeField.js"></script>
+  <script defer src="./js/parallax.js"></script>
+  <script defer src="./js/intersectionAnimations.js"></script>
+  <script defer src="./js/stepsAnimation.js"></script>
+  <script defer src="./js/dropblock.js"></script>
   <script defer src="./js/modal.js"></script>
 
   <title>Card - Getboost.gg</title>
 </head>
 
 <body>
-  <div class="root">
+  <div class="root _overflow">
     <header class="h">
       <div class="h__inner container">
         <a href="./index.html" class="h-logo h__logo">
@@ -92,7 +105,7 @@
           <div class="h-wilink-label">24/7 Support</div>
         </a><!-- /.h-wilink (link with icon) -->
         <div class="h-bar">
-          <button type="button" class="btn btn-dark h-btn">
+          <button type="button" class="btn btn-dark h-btn btn-open-modal" data-modal="cart">
             <div class="h-btn-icon h-btn-cart">
               <img src="./assets/static/icon-cart.svg" alt="cart">
               <div class="h-btn-cart-sign">1</div>
@@ -165,7 +178,7 @@
             <div class="h-wilink-label">24/7 Support</div>
           </a><!-- /.h-wilink (link with icon) -->
           <div class="h-bar">
-            <button type="button" class="btn btn-dark h-btn">
+            <button type="button" class="btn btn-dark h-btn btn-open-modal" data-modal="cart">
               <div class="h-btn-icon h-btn-cart">
                 <img src="./assets/static/icon-cart.svg" alt="cart">
                 <div class="h-btn-cart-sign">1</div>
@@ -177,11 +190,31 @@
         </div>
       </div>
     </header><!-- /.header -->
-    <main class="main c">
-      <div class="c-ms-frame">
-        <img src="./assets/static/card-screen-bg.png" alt="card background" class="c-ms-bg">
-        <div class="c-ms container">
-          <div class="c-ms__inner">
+    <main class="main">
+      <div class="callout _green2 js-callout" data-close-axis="y">
+        <div class="container callout__inner">
+          <div class="callout-msg">
+            Check our <b>4 503</b> reviews on 
+            <a href="#">
+              <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.7195 6.36129H10.953L8.86302 0L6.76646 6.36129L0 6.35484L5.47979 10.2903L3.38323 16.6452L8.86302 12.7161L14.3363 16.6452L12.2463 10.2903L17.7195 6.36129Z" fill="white"/>
+                <path d="M12.7163 11.7287L12.246 10.29L8.86279 12.7158L12.7163 11.7287Z" fill="#B1B1B1"/>
+              </svg>
+              Trustpilot
+            </a>
+          </div>
+          <div class="callout-close js-callout-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7L7 17M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="c">
+        <div class="c-ms-frame">
+          <img src="./assets/static/card-screen-bg.png" alt="card background" class="c-ms-bg">
+          <div class="c-ms-backdrop"></div>
+          <div class="c-ms container">
             <div class="c-ms__info">
               <div class="breads _dark">
                 <a href="./index.html" class="breads-item">
@@ -240,354 +273,1171 @@
               </div>
               
             </div>
-            
-          </div>
-          <form class="c-form c-ms__form">
-            <div class="c-form__bar">
-              <div class="c-form-block">
-                <div class="c-form-title">Region</div>
-                <div class="c-form-block-grid">
-                  <div class="form-tab-grid _type1 _big _short">
-                    <label class="form-tab">
-                      <input name="language" type="radio" checked>
-                      <div class="form-tab-plate">EU</div>
-                    </label>
-                    <label class="form-tab">
-                      <input name="language" type="radio">
-                      <div class="form-tab-plate">US</div>
-                    </label>
-                  </div>
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">I want to start withinn 1 hour</div>
-                  </label>
-                </div>
-              </div>
-              <div class="c-form-block">
-                <div class="c-form-title">Rating</div>
-                <div class="c-form-dr double-range">
-                  <div class="c-form-dr-row">
-                    <div class="c-form-dr-field">
-                      <div class="c-form-dr-label">Your rating</div>
-                      <input type="text" class="c-form-dr-input double-range-value value-1" placeholder="1">
-                    </div>
-                    <div class="c-form-dr-row__sep"></div>
-                    <div class="c-form-dr-field">
-                      <div class="c-form-dr-label">Rating you want</div>
-                      <input type="text" class="c-form-dr-input double-range-value value-2" placeholder="60">
-                    </div>
-                  </div>
-                  <div class="c-form-dr-range__wrap double-range__inner">
-                    <div class="double-range-track"></div>
-                    <input type="range" class="c-form-dr-range form-range double-range-input range-1" min="1" max="60" value="10">
-                    <input type="range" class="c-form-dr-range form-range double-range-input range-2" min="1" max="60" value="40">
-                  </div>
-                </div><!-- /.c-form-dr (double range) -->
-                <div class="c-form-checkbox-grid2">
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">60 lvl</div>
-                  </label>
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">120 lvl</div>
-                  </label>
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">30 lvl</div>
-                  </label>
-                </div>
-              </div>
-              <div class="c-form-block c-form-block-grid2">
-                <div class="c-form-title">Start time</div>
-                <div class="form-tab-grid _type1 _mid _short _days">
-                  <label class="form-tab">
-                    <input name="day" type="radio" checked>
-                    <div class="form-tab-plate">23.09</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="day" type="radio">
-                    <div class="form-tab-plate">24.09</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="day" type="radio">
-                    <div class="form-tab-plate">25.09</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="day" type="radio">
-                    <div class="form-tab-plate">26.09</div>
-                  </label>
-                </div>
-                <div class="form-tab-grid _type2 _small _short _time">
-                  <label class="form-tab">
-                    <input name="time" type="radio" checked>
-                    <div class="form-tab-plate">12:00</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="time" type="radio">
-                    <div class="form-tab-plate">13:00</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="time" type="radio">
-                    <div class="form-tab-plate">14:00</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="time" type="radio">
-                    <div class="form-tab-plate">15:00</div>
-                  </label>
-                </div>
-              </div>
-              <div class="c-form-block">
-                <div class="c-form-title">Options</div>
-                <div class="c-form-checkbox-grid">
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">Best boost</div>
-                    <div class="c-form-plate _primary">+239$</div>
-                  </label>
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">Level up</div>
-                    <div class="c-form-plate _primary">+10$</div>
-                  </label>
-                  <label class="c-form-checkbox">
-                    <div class="checkbox2">
-                      <input type="checkbox">
-                      <div class="checkbox2-plate">
-                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>    
-                      </div>                  
-                    </div>
-                    <div class="c-form-checkbox-label">Personal controle</div>
-                    <div class="c-form-plate _primary">+40$</div>
-                  </label>
-                </div>
-              </div>
-              <div class="c-form-block">
-                <div class="c-form-title">Choose your class</div>
-                <div class="form-tab-grid _type1 _big _short">
-                  <label class="form-tab">
-                    <input name="class" type="radio" checked>
-                    <div class="form-tab-plate">Class one</div>
-                  </label>
-                  <label class="form-tab">
-                    <input name="class" type="radio">
-                    <div class="form-tab-plate">Class two</div>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="c-form__sum c-form-sum">
-              <div class="c-form-sum-b">
-                <div class="c-form-sum-h">
-                  <div class="c-form-sum-value">$320.49</div>
-                  <div class="c-form-sum-h-sub">
-                    <div class="c-form-plate _primary">$30</div>
-                    <div class="c-form-sum-h-sub-text">GET BACK BY CASHBACK</div>
+            <div class="c-info c-ms__text">
+              <h2 class="c-h2 h3">What you get</h2>
+              <div class="c-list">
+                <div class="c-list-item">
+                  <div class="c-list-sign _primary">1</div>
+                  <div class="c-list-text">
+                    Shadowlands Mythic+ Dungeon runs with the best professional boosting teams. We can use your keystone or provide one;
                   </div>
                 </div>
-                <div class="c-form-sum-amount range">
-                  <div class="c-form-sum-amount-value">Amount: <span class="range-value">1</span></div>
-                  <input type="range" name="amount" min="0" max="10" step="1" value="1" class="form-range c-form-sum-amount-range range range-input">
+                <div class="c-list-item">
+                  <div class="c-list-sign _primary">2</div>
+                  <div class="c-list-text">
+                    <a href="#">Guaranteed 304 ilvl gear from the Great Vault.</a> The ilvl of the loot depends on the highest level of the dungeon you completed during the previous week;
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-primary c-form-btn-submit">Buy now</button>
-                <div class="c-form-sum-pays">
-                  <img src="./assets/static/card-pays-bg.svg" alt="payment methods">
+                <div class="c-list-item">
+                  <div class="c-list-sign _primary">3</div>
+                  <div class="c-list-text">
+                    Chance to get up to 288 ilvl items from the chest at the end of the dungeon (depends on chosen key);
+                  </div>
+                </div>
+                <div class="c-list-item">
+                  <div class="c-list-sign _primary">4</div>
+                  <div class="c-list-text">
+                    135 Valor from each Mythic + dungeon which are required to upgrade the ilvl of epic items, including those from Mythic+ dungeons;
+                  </div>
                 </div>
               </div>
-              <div class="c-form-sum-f">
-                <div class="c-form-sum-f-row">
-                  <div class="c-form-sum-f-info">
-                    <div class="c-form-sum-f-subtitle">HELP</div>
-                    <div class="c-form-sum-f-title h6">Have questions?</div>
-                  </div>
-                  <button type="button" class="btn btn-dark c-form-sum-btn">
-                    <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.625 9H5.6325M9 9H9.0075M12.375 9H12.3825M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 9.89786 2.4253 10.7548 2.74355 11.5384C2.80446 11.6884 2.83491 11.7633 2.8485 11.824C2.86179 11.8833 2.86665 11.9271 2.86666 11.9879C2.86666 12.05 2.85539 12.1177 2.83283 12.253L2.3881 14.9214C2.34152 15.2009 2.31824 15.3406 2.36157 15.4416C2.3995 15.53 2.46996 15.6005 2.55839 15.6384C2.65942 15.6818 2.79914 15.6585 3.07857 15.6119L5.74699 15.1672C5.88231 15.1446 5.94998 15.1333 6.0121 15.1333C6.07286 15.1334 6.11675 15.1382 6.17604 15.1515C6.23666 15.1651 6.31164 15.1955 6.46162 15.2565C7.24523 15.5747 8.10214 15.75 9 15.75ZM6 9C6 9.20711 5.83211 9.375 5.625 9.375C5.41789 9.375 5.25 9.20711 5.25 9C5.25 8.79289 5.41789 8.625 5.625 8.625C5.83211 8.625 6 8.79289 6 9ZM9.375 9C9.375 9.20711 9.20711 9.375 9 9.375C8.79289 9.375 8.625 9.20711 8.625 9C8.625 8.79289 8.79289 8.625 9 8.625C9.20711 8.625 9.375 8.79289 9.375 9ZM12.75 9C12.75 9.20711 12.5821 9.375 12.375 9.375C12.1679 9.375 12 9.20711 12 9C12 8.79289 12.1679 8.625 12.375 8.625C12.5821 8.625 12.75 8.79289 12.75 9Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+              <h2 class="c-h2 h3">Requirements</h2>
+              <div class="c-list">
+                <div class="c-list-item">
+                  <div class="c-list-sign _green">
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.41776 9.3307C4.11909 9.3307 3.82043 9.21737 3.59243 8.98937L0.428426 5.82537C-0.0275742 5.36937 -0.0275742 4.6307 0.428426 4.17603C0.884426 3.72003 1.62176 3.7187 2.07776 4.1747L4.41776 6.5147L9.92176 1.0107C10.3778 0.554701 11.1151 0.554701 11.5711 1.0107C12.0271 1.4667 12.0271 2.20537 11.5711 2.66137L5.24309 8.98937C5.01509 9.21737 4.71643 9.3307 4.41776 9.3307Z" fill="#00B654"/>
                     </svg>
-                    Chat
-                  </button>
+                  </div>
+                  <div class="c-list-text">
+                    Level 60 Character;              
+                    </div>
                 </div>
-                <div class="c-form-bnr _type1">
-                  <img src="./assets/static/c-form-bnr-coin-1.png" alt="coin" class="coin-1">
-                  <img src="./assets/static/c-form-bnr-coin-2.png" alt="coin" class="coin-2">
-                  <div class="c-form-bnr__inner">
-                    <div class="c-form-bnr-subtitle">Found cheaper?</div>
-                    <div class="c-form-bnr-title">We beat price of competitors</div>
-                    <button type="button" class="btn btn-dark c-form-bnr-btn">What’s next?</button>
+                <div class="c-list-item">
+                  <div class="c-list-sign _green">
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.41776 9.3307C4.11909 9.3307 3.82043 9.21737 3.59243 8.98937L0.428426 5.82537C-0.0275742 5.36937 -0.0275742 4.6307 0.428426 4.17603C0.884426 3.72003 1.62176 3.7187 2.07776 4.1747L4.41776 6.5147L9.92176 1.0107C10.3778 0.554701 11.1151 0.554701 11.5711 1.0107C12.0271 1.4667 12.0271 2.20537 11.5711 2.66137L5.24309 8.98937C5.01509 9.21737 4.71643 9.3307 4.41776 9.3307Z" fill="#00B654"/>
+                    </svg>
+                  </div>
+                  <div class="c-list-text">
+                    Sharing your login information (if you need an account share option).
+                  </div>
+                </div>
+                <div class="c-list-item">
+                  <div class="c-list-sign _danger">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.02085 7.36042L6.64885 4.98976L9.01952 2.61909C9.47552 2.16442 9.47552 1.42442 9.01952 0.969757C8.56352 0.51109 7.82619 0.512423 7.37019 0.968423L4.99819 3.33909L2.62619 0.965757C2.17019 0.509757 1.43152 0.512423 0.975522 0.965757C0.520855 1.42176 0.520855 2.16176 0.975522 2.61642L3.34885 4.98976L0.980855 7.35642C0.524855 7.81242 0.524855 8.55242 0.980855 9.00576C1.20885 9.23509 1.50619 9.34842 1.80485 9.34842C2.10485 9.34842 2.40219 9.23509 2.63019 9.00709L4.99819 6.63909L7.37152 9.01109C7.59952 9.23909 7.89686 9.35242 8.19552 9.35242C8.49419 9.35242 8.79286 9.23776 9.02085 9.01109C9.47686 8.55509 9.47686 7.81642 9.02085 7.36042Z" fill="#D53D33"/>
+                    </svg>
+                  </div>
+                  <div class="c-list-text">
+                    Sharing your login information (if you need an account share option).
                   </div>
                 </div>
               </div>
             </div>
-          </form>
-        </div>
-      </div>
-      <div class="container">
-        <div class="c-info">
-          <h2 class="c-h2 h3">What you get</h2>
-          <div class="c-list">
-            <div class="c-list-item">
-              <div class="c-list-sign _primary">1</div>
-              <div class="c-list-text">
-                Shadowlands Mythic+ Dungeon runs with the best professional boosting teams. We can use your keystone or provide one;
-              </div>
-            </div>
-            <div class="c-list-item">
-              <div class="c-list-sign _primary">2</div>
-              <div class="c-list-text">
-                <a href="#">Guaranteed 304 ilvl gear from the Great Vault.</a> The ilvl of the loot depends on the highest level of the dungeon you completed during the previous week;
-              </div>
-            </div>
-            <div class="c-list-item">
-              <div class="c-list-sign _primary">3</div>
-              <div class="c-list-text">
-                Chance to get up to 288 ilvl items from the chest at the end of the dungeon (depends on chosen key);
-              </div>
-            </div>
-            <div class="c-list-item">
-              <div class="c-list-sign _primary">4</div>
-              <div class="c-list-text">
-                135 Valor from each Mythic + dungeon which are required to upgrade the ilvl of epic items, including those from Mythic+ dungeons;
-              </div>
-            </div>
-          </div>
-
-          <h2 class="c-h2 h3">Requirements</h2>
-          <div class="c-list">
-            <div class="c-list-item">
-              <div class="c-list-sign _green">
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.41776 9.3307C4.11909 9.3307 3.82043 9.21737 3.59243 8.98937L0.428426 5.82537C-0.0275742 5.36937 -0.0275742 4.6307 0.428426 4.17603C0.884426 3.72003 1.62176 3.7187 2.07776 4.1747L4.41776 6.5147L9.92176 1.0107C10.3778 0.554701 11.1151 0.554701 11.5711 1.0107C12.0271 1.4667 12.0271 2.20537 11.5711 2.66137L5.24309 8.98937C5.01509 9.21737 4.71643 9.3307 4.41776 9.3307Z" fill="#00B654"/>
-                </svg>
-              </div>
-              <div class="c-list-text">
-                Level 60 Character;              
+            <div class="c-ms__form-track">
+              <form class="c-form c-ms__form">
+                <div class="c-form__bar">
+                  <div class="c-form-block">
+                    <div class="c-form-title">Region</div>
+                    <div class="c-form-block-grid">
+                      <div class="form-tab-grid _type1 _big _short">
+                        <label class="form-tab">
+                          <input name="language" type="radio" checked>
+                          <div class="form-tab-plate">EU</div>
+                        </label>
+                        <label class="form-tab">
+                          <input name="language" type="radio">
+                          <div class="form-tab-plate">US</div>
+                        </label>
+                      </div>
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">I want to start withinn 1 hour</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-form-block">
+                    <div class="c-form-title">Rating</div>
+                    <div class="c-form-dr double-range">
+                      <div class="c-form-dr-row">
+                        <div class="c-form-dr-field">
+                          <div class="c-form-dr-label">Your rating</div>
+                          <input type="text" class="c-form-dr-input double-range-value value-1" placeholder="1">
+                        </div>
+                        <div class="c-form-dr-row__sep"></div>
+                        <div class="c-form-dr-field">
+                          <div class="c-form-dr-label">Rating you want</div>
+                          <input type="text" class="c-form-dr-input double-range-value value-2" placeholder="60">
+                        </div>
+                      </div>
+                      <div class="c-form-dr-range__wrap double-range__inner">
+                        <div class="double-range-track"></div>
+                        <input type="range" class="c-form-dr-range form-range double-range-input range-1" min="1" max="60" value="10">
+                        <input type="range" class="c-form-dr-range form-range double-range-input range-2" min="1" max="60" value="40">
+                      </div>
+                    </div><!-- /.c-form-dr (double range) -->
+                    <div class="c-form-checkbox-grid2">
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">60 lvl</div>
+                      </label>
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">120 lvl</div>
+                      </label>
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">30 lvl</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-form-block c-form-block-grid2">
+                    <div class="c-form-title">Start time</div>
+                    <div class="form-tab-grid _type1 _mid _short _days">
+                      <label class="form-tab">
+                        <input name="day" type="radio" checked>
+                        <div class="form-tab-plate">23.09</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="day" type="radio">
+                        <div class="form-tab-plate">24.09</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="day" type="radio">
+                        <div class="form-tab-plate">25.09</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="day" type="radio">
+                        <div class="form-tab-plate">26.09</div>
+                      </label>
+                    </div>
+                    <div class="form-tab-grid _type2 _small _short _time">
+                      <label class="form-tab">
+                        <input name="time" type="radio" checked>
+                        <div class="form-tab-plate">12:00</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="time" type="radio">
+                        <div class="form-tab-plate">13:00</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="time" type="radio">
+                        <div class="form-tab-plate">14:00</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="time" type="radio">
+                        <div class="form-tab-plate">15:00</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-form-block">
+                    <div class="c-form-title">Options</div>
+                    <div class="c-form-checkbox-grid">
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">Best boost</div>
+                        <div class="c-form-plate _primary">+239$</div>
+                      </label>
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">Level up</div>
+                        <div class="c-form-plate _primary">+10$</div>
+                      </label>
+                      <label class="c-form-checkbox">
+                        <div class="checkbox2">
+                          <input type="checkbox">
+                          <div class="checkbox2-plate">
+                            <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                          </div>                  
+                        </div>
+                        <div class="c-form-checkbox-label">Personal controle</div>
+                        <div class="c-form-plate _primary">+40$</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-form-block">
+                    <div class="c-form-title">Choose your class</div>
+                    <div class="form-tab-grid _type1 _big _short">
+                      <label class="form-tab">
+                        <input name="class" type="radio" checked>
+                        <div class="form-tab-plate">Class one</div>
+                      </label>
+                      <label class="form-tab">
+                        <input name="class" type="radio">
+                        <div class="form-tab-plate">Class two</div>
+                      </label>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="c-list-item">
-              <div class="c-list-sign _green">
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.41776 9.3307C4.11909 9.3307 3.82043 9.21737 3.59243 8.98937L0.428426 5.82537C-0.0275742 5.36937 -0.0275742 4.6307 0.428426 4.17603C0.884426 3.72003 1.62176 3.7187 2.07776 4.1747L4.41776 6.5147L9.92176 1.0107C10.3778 0.554701 11.1151 0.554701 11.5711 1.0107C12.0271 1.4667 12.0271 2.20537 11.5711 2.66137L5.24309 8.98937C5.01509 9.21737 4.71643 9.3307 4.41776 9.3307Z" fill="#00B654"/>
-                </svg>
-              </div>
-              <div class="c-list-text">
-                Sharing your login information (if you need an account share option).
-              </div>
-            </div>
-            <div class="c-list-item">
-              <div class="c-list-sign _danger">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.02085 7.36042L6.64885 4.98976L9.01952 2.61909C9.47552 2.16442 9.47552 1.42442 9.01952 0.969757C8.56352 0.51109 7.82619 0.512423 7.37019 0.968423L4.99819 3.33909L2.62619 0.965757C2.17019 0.509757 1.43152 0.512423 0.975522 0.965757C0.520855 1.42176 0.520855 2.16176 0.975522 2.61642L3.34885 4.98976L0.980855 7.35642C0.524855 7.81242 0.524855 8.55242 0.980855 9.00576C1.20885 9.23509 1.50619 9.34842 1.80485 9.34842C2.10485 9.34842 2.40219 9.23509 2.63019 9.00709L4.99819 6.63909L7.37152 9.01109C7.59952 9.23909 7.89686 9.35242 8.19552 9.35242C8.49419 9.35242 8.79286 9.23776 9.02085 9.01109C9.47686 8.55509 9.47686 7.81642 9.02085 7.36042Z" fill="#D53D33"/>
-                </svg>
-              </div>
-              <div class="c-list-text">
-                Sharing your login information (if you need an account share option).
-              </div>
+                <div class="c-form__sum c-form-sum">
+                  <div class="c-form-sum-b">
+                    <div class="c-form-sum-amount range">
+                      <div class="c-form-sum-amount-value">Amount: <span class="range-value">1</span></div>
+                      <input type="range" name="amount" min="0" max="10" step="1" value="1" class="form-range c-form-sum-amount-range range range-input">
+                    </div>
+                    <div class="c-form-promo">
+                      <div class="promo">
+                        <div class="c-form-promo-link promo-link">
+                          <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.51373 10.5864L8.60696 6.34139C9.25667 5.95256 9.25533 5.01075 8.60451 4.62378L1.51128 0.406169C0.844691 0.00982083 0.000200229 0.490189 0.000200195 1.26571L0.000199825 9.72833C0.000199791 10.5051 0.847183 10.9853 1.51373 10.5864Z" fill="#3474EE"/>
+                          </svg>
+                          I have promocode
+                        </div>
+                        <div class="promo-field hidden">
+                          <input type="text" class="promo-input form-input" placeholder="Enter promocode">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-form-sum-h">
+                      <div class="c-form-sum-value">
+                        <div class="value">$320.49</div>
+                        <div class="oldvalue">$140.50</div>
+                      </div>
+                      <div class="c-form-sum-h-sub">
+                        <div class="c-form-plate _orange _rounded">$30</div>
+                        <div class="c-form-sum-h-sub-text">GET BACK BY CASHBACK</div>
+                      </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary c-form-btn-submit">
+                      Buy now per $320.49
+                      <div class="c-form-btn-submit__plate">$30 Cashback</div>
+                    </button>
+                    <label class="c-form-sum-checkbox _bordered">
+                      <div class="checkbox _green">
+                        <input type="checkbox">
+                        <div class="checkbox-plate">
+                          <div class="checkbox-trigger"></div>
+                        </div>
+                      </div>
+                      <div class="c-form-sum-checkbox-label">
+                        Use 10$ from your cashback
+                        <div class="sub">Your balance <b>$294.05</b></div>
+                      </div>
+                    </label>
+                    <div class="c-form-sum-pays">
+                      <img src="./assets/static/card-pays-bg.svg" alt="payment methods">
+                    </div>
+                  </div>
+                  <div class="c-form-sum-f">
+                    <div class="c-form-sum-f-row">
+                      <div class="c-form-sum-f-info">
+                        <div class="c-form-sum-f-subtitle">HELP</div>
+                        <div class="c-form-sum-f-title h6">Have questions?</div>
+                      </div>
+                      <button type="button" class="btn btn-dark c-form-sum-btn">
+                        <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.625 9H5.6325M9 9H9.0075M12.375 9H12.3825M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 9.89786 2.4253 10.7548 2.74355 11.5384C2.80446 11.6884 2.83491 11.7633 2.8485 11.824C2.86179 11.8833 2.86665 11.9271 2.86666 11.9879C2.86666 12.05 2.85539 12.1177 2.83283 12.253L2.3881 14.9214C2.34152 15.2009 2.31824 15.3406 2.36157 15.4416C2.3995 15.53 2.46996 15.6005 2.55839 15.6384C2.65942 15.6818 2.79914 15.6585 3.07857 15.6119L5.74699 15.1672C5.88231 15.1446 5.94998 15.1333 6.0121 15.1333C6.07286 15.1334 6.11675 15.1382 6.17604 15.1515C6.23666 15.1651 6.31164 15.1955 6.46162 15.2565C7.24523 15.5747 8.10214 15.75 9 15.75ZM6 9C6 9.20711 5.83211 9.375 5.625 9.375C5.41789 9.375 5.25 9.20711 5.25 9C5.25 8.79289 5.41789 8.625 5.625 8.625C5.83211 8.625 6 8.79289 6 9ZM9.375 9C9.375 9.20711 9.20711 9.375 9 9.375C8.79289 9.375 8.625 9.20711 8.625 9C8.625 8.79289 8.79289 8.625 9 8.625C9.20711 8.625 9.375 8.79289 9.375 9ZM12.75 9C12.75 9.20711 12.5821 9.375 12.375 9.375C12.1679 9.375 12 9.20711 12 9C12 8.79289 12.1679 8.625 12.375 8.625C12.5821 8.625 12.75 8.79289 12.75 9Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Chat
+                      </button>
+                    </div>
+                    <div class="c-form-bnr _type1">
+                      <img src="./assets/static/c-form-bnr-coin-1.png" alt="coin" class="coin-1">
+                      <img src="./assets/static/c-form-bnr-coin-2.png" alt="coin" class="coin-2">
+                      <div class="c-form-bnr__inner">
+                        <div class="c-form-bnr-subtitle">Found cheaper?</div>
+                        <div class="c-form-bnr-title">We beat price of competitors</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-dark c-form-sum-f-btn btn-open-modal" data-modal="steps">What’s next?</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="c-h2 h2">Popular products</div>
-        <div class="pc">
-          <div class="pc-card">
-            <div class="pc-card-preview">
-              <img src="./assets/static/product-card-preview.png" alt="preview">
-            </div>
-            <div class="pc-card-subtitle">Mounts</div>
-            <h3 class="pc-card-title">Castle Narthia Fated</h3>
-            <div class="pc-card-f">
-              <div class="pc-card-price">
-                <div class="pc-card-price__value">$120.30</div>
+        <div class="container">
+          <div class="c-h2 h2">Popular products</div>
+          <div class="pc c__pc">
+            <a href="./card.html" class="pc-card parallax-container">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
               </div>
-              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
-            </div>
-          </div><!-- /.pc-card -->
-          <div class="pc-card">
-            <div class="pc-card-preview">
-              <img src="./assets/static/product-card-preview.png" alt="preview">
-            </div>
-            <div class="pc-card-subtitle">Mounts</div>
-            <h3 class="pc-card-title">Castle Narthia Fated</h3>
-            <div class="pc-card-f">
-              <div class="pc-card-price">
-                <div class="pc-card-price__through">$160.30</div>
-                <div class="pc-card-price__value">$120.30</div>
+              <div class="pc-card-backdrop"></div>
+              <img src="./assets/static/product-card-character.png" alt="character" class="pc-card-character parallax-element" data-direction="direct">
+              <div class="pc-card__inner">
+                <div class="pc-card-plate-grid">
+                  <div class="pc-card-plate _primary">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6666 4.85185L7.99998 8M7.99998 8L2.33331 4.85185M7.99998 8L8 14.3333M14 10.7057V5.29431C14 5.06588 14 4.95167 13.9663 4.8498C13.9366 4.75969 13.8879 4.67696 13.8236 4.60717C13.7509 4.52828 13.651 4.47281 13.4514 4.36188L8.51802 1.62114C8.32895 1.5161 8.23442 1.46358 8.1343 1.44299C8.0457 1.42477 7.95431 1.42477 7.8657 1.44299C7.76559 1.46358 7.67105 1.5161 7.48198 1.62114L2.54865 4.36188C2.34896 4.47281 2.24912 4.52828 2.17642 4.60717C2.11211 4.67697 2.06343 4.75969 2.03366 4.84981C2 4.95167 2 5.06588 2 5.29431V10.7057C2 10.9341 2 11.0484 2.03366 11.1502C2.06343 11.2403 2.11211 11.3231 2.17642 11.3929C2.24912 11.4718 2.34897 11.5272 2.54865 11.6382L7.48198 14.3789C7.67105 14.4839 7.76559 14.5365 7.8657 14.557C7.95431 14.5753 8.0457 14.5753 8.1343 14.557C8.23442 14.5365 8.32895 14.4839 8.51802 14.3789L13.4514 11.6382C13.651 11.5272 13.7509 11.4718 13.8236 11.3929C13.8879 11.3231 13.9366 11.2403 13.9663 11.1502C14 11.0484 14 10.9341 14 10.7057Z" stroke="#FBFBFB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11 6.33333L5 3" stroke="#FBFBFB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    Fast delievery
+                  </div>
+                  <div class="pc-card-plate _orange">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 10.6667C7.86814 10.6667 7.73925 10.7058 7.62962 10.779C7.51999 10.8523 7.43454 10.9564 7.38408 11.0782C7.33362 11.2 7.32042 11.3341 7.34614 11.4634C7.37186 11.5927 7.43536 11.7115 7.52859 11.8048C7.62183 11.898 7.74062 11.9615 7.86994 11.9872C7.99926 12.0129 8.1333 11.9997 8.25512 11.9493C8.37694 11.8988 8.48106 11.8134 8.55431 11.7037C8.62757 11.5941 8.66667 11.4652 8.66667 11.3334C8.66667 11.1565 8.59643 10.987 8.4714 10.8619C8.34638 10.7369 8.17681 10.6667 8 10.6667ZM15.1133 11.6467L9.74667 2.31335C9.5732 2.00236 9.31985 1.74332 9.01279 1.563C8.70573 1.38267 8.35609 1.2876 8 1.2876C7.6439 1.2876 7.29426 1.38267 6.9872 1.563C6.68014 1.74332 6.42679 2.00236 6.25333 2.31335L0.919999 11.6467C0.740529 11.9494 0.644094 12.294 0.640428 12.6459C0.636763 12.9978 0.725997 13.3444 0.899123 13.6507C1.07225 13.9571 1.32313 14.2123 1.62645 14.3907C1.92977 14.5691 2.27479 14.6643 2.62667 14.6667H13.3733C13.728 14.6702 14.0773 14.5793 14.3853 14.4033C14.6933 14.2273 14.9489 13.9726 15.126 13.6652C15.3031 13.3579 15.3952 13.009 15.393 12.6542C15.3908 12.2995 15.2943 11.9518 15.1133 11.6467ZM13.96 12.98C13.9016 13.084 13.8163 13.1704 13.7131 13.2302C13.6099 13.29 13.4926 13.321 13.3733 13.32H2.62667C2.50741 13.321 2.39006 13.29 2.28688 13.2302C2.18369 13.1704 2.09843 13.084 2.04 12.98C1.98149 12.8787 1.95068 12.7637 1.95068 12.6467C1.95068 12.5297 1.98149 12.4147 2.04 12.3134L7.37333 2.98002C7.42928 2.87082 7.51427 2.77917 7.61896 2.71518C7.72365 2.65119 7.84397 2.61733 7.96666 2.61733C8.08936 2.61733 8.20968 2.65119 8.31437 2.71518C8.41906 2.77917 8.50405 2.87082 8.56 2.98002L13.9267 12.3134C13.9928 12.4132 14.0308 12.5291 14.0367 12.6488C14.0425 12.7684 14.0161 12.8875 13.96 12.9934V12.98ZM8 5.33335C7.82319 5.33335 7.65362 5.40359 7.52859 5.52861C7.40357 5.65364 7.33333 5.82321 7.33333 6.00002V8.66669C7.33333 8.8435 7.40357 9.01307 7.52859 9.13809C7.65362 9.26311 7.82319 9.33335 8 9.33335C8.17681 9.33335 8.34638 9.26311 8.4714 9.13809C8.59643 9.01307 8.66667 8.8435 8.66667 8.66669V6.00002C8.66667 5.82321 8.59643 5.65364 8.4714 5.52861C8.34638 5.40359 8.17681 5.33335 8 5.33335Z" fill="white"/>
+                      </svg>                        
+                    </div>
+                    Hot offer
+                  </div>
+                  <div class="pc-card-plate _green2">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 8.5L7.33333 9.83333L10 7.16667M14 8.5C14 11.8137 11.3137 14.5 8 14.5C4.68629 14.5 2 11.8137 2 8.5C2 5.18629 4.68629 2.5 8 2.5C11.3137 2.5 14 5.18629 14 8.5Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>                                               
+                    </div>
+                    Weekly Offer
+                  </div>
+                </div>
+                <div class="pc-card-head">
+                  <div class="pc-card-subtitle">Mounts</div>
+                  <h3 class="pc-card-title">Castle Narthia Fated</h3>
+                </div>
+                <div class="pc-card-tag-grid">
+                  <div class="pc-card-tag active">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Gift inside
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    281-288 ilvl gear
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Quick Start
+                  </div>
+                </div>
+                <div class="pc-card-f">
+                  <div class="pc-card-price">
+                    <div class="pc-card-price__through">$120.30</div>
+                    <div class="pc-card-price__value">$120.30</div>
+                  </div>
+                  <div class="pc-card-btn btn btn-primary">Buy now</div>
+                </div>
+                <div class="pc-card-f-attach">save up to 15%</div>
               </div>
-              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
-            </div>
-          </div><!-- /.pc-card -->
-          <div class="pc-card">
-            <div class="pc-card-preview">
-              <div class="pc-card__plate _orange">hot offer</div>
-              <img src="./assets/static/product-card-preview.png" alt="preview">
-            </div>
-            <div class="pc-card-subtitle">Mounts</div>
-            <h3 class="pc-card-title">Castle Narthia Fated</h3>
-            <div class="pc-card-f">
-              <div class="pc-card-price">
-                <div class="pc-card-price__through">$160.30</div>
-                <div class="pc-card-price__value">$120.30</div>
+            </a><!-- /.pc-card -->
+
+            <a href="./card.html" class="pc-card parallax-container">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
               </div>
-              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
-            </div>
-          </div><!-- /.pc-card -->
-          <div class="pc-card">
-            <div class="pc-card-preview">
-              <img src="./assets/static/product-card-preview.png" alt="preview">
-            </div>
-            <div class="pc-card-subtitle">Mounts</div>
-            <h3 class="pc-card-title">Castle Narthia Fated</h3>
-            <div class="pc-card-f">
-              <div class="pc-card-price">
-                <div class="pc-card-price__through">$160.30</div>
-                <div class="pc-card-price__value">$120.30</div>
+              <div class="pc-card-backdrop"></div>
+              <img src="./assets/static/product-card-character.png" alt="character" class="pc-card-character parallax-element" data-direction="direct">
+              <div class="pc-card__inner">
+                <div class="pc-card-plate-grid">
+                  <div class="pc-card-plate _primary">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5.33333V14M8 5.33333C8 5.33333 8 4.33815 8 4C8 3.26362 8.59695 2.66667 9.33333 2.66667C10.0697 2.66667 10.6667 3.26362 10.6667 4C10.6667 4.73638 10.0697 5.33333 9.33333 5.33333C8.9351 5.33333 8 5.33333 8 5.33333ZM8 5.33333C8 5.33333 8 4.04194 8 3.66667C8 2.74619 7.25381 2 6.33333 2C5.41286 2 4.66667 2.74619 4.66667 3.66667C4.66667 4.58714 5.41286 5.33333 6.33333 5.33333C6.87853 5.33333 8 5.33333 8 5.33333ZM3.33333 8H12.6667M3.33333 8C2.59695 8 2 7.40305 2 6.66667C2 5.93029 2.59695 5.33333 3.33333 5.33333H12.6667C13.403 5.33333 14 5.93029 14 6.66667C14 7.40305 13.403 8 12.6667 8M3.33333 8L3.33333 12.6667C3.33333 13.403 3.93029 14 4.66667 14H11.3333C12.0697 14 12.6667 13.403 12.6667 12.6667V8" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>                        
+                    </div>
+                    GIFT INSIDE
+                  </div>
+                  <div class="pc-card-plate _green1">
+                    281-288 ilvl gear
+                  </div>
+                </div>
+                <div class="pc-card-head">
+                  <div class="pc-card-subtitle">Mounts</div>
+                  <h3 class="pc-card-title">Castle Narthia Fated</h3>
+                </div>
+                <div class="pc-card-tag-grid">
+                  <div class="pc-card-tag active">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Gift inside
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    281-288 ilvl gear
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Quick Start
+                  </div>
+                </div>
+                <div class="pc-card-f">
+                  <div class="pc-card-price">
+                    <div class="pc-card-price__value">$120.30</div>
+                  </div>
+                  <div class="pc-card-btn btn btn-primary">Buy now</div>
+                </div>
+                <div class="pc-card-f-attach">save up to 15%</div>
               </div>
-              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+            </a><!-- /.pc-card -->
+
+            <a href="./card.html" class="pc-card parallax-container">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-backdrop"></div>
+              <img src="./assets/static/product-card-character.png" alt="character" class="pc-card-character parallax-element" data-direction="direct">
+              <div class="pc-card__inner">
+                <div class="pc-card-plate-grid">
+                  <div class="pc-card-plate _purple">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.99995 10.5001L8.66661 13.8334L5.99995 6.50008L13.3333 9.16675L9.99995 10.5001ZM9.99995 10.5001L13.3333 13.8334M4.7921 1.99243L5.30974 3.92428M3.4241 5.8099L1.49225 5.29226M9.29975 3.20028L7.88554 4.61449M4.11437 8.38566L2.70015 9.79987" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>                               
+                    </div>
+                    Quick Start
+                  </div>
+                  <div class="pc-card-plate _light-primary">
+                    291-304 weekly chest
+                  </div>
+                </div>
+                <div class="pc-card-head">
+                  <div class="pc-card-subtitle">Mounts</div>
+                  <h3 class="pc-card-title">Castle Narthia Fated</h3>
+                </div>
+                <div class="pc-card-tag-grid">
+                  <div class="pc-card-tag active">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Gift inside
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    281-288 ilvl gear
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Quick Start
+                  </div>
+                </div>
+                <div class="pc-card-f">
+                  <div class="pc-card-price">
+                    <div class="pc-card-price__value">$120.30</div>
+                  </div>
+                  <div class="pc-card-btn btn btn-primary">Buy now</div>
+                </div>
+                <div class="pc-card-f-attach">save up to 15%</div>
+              </div>
+            </a><!-- /.pc-card -->
+            
+            <a href="./card.html" class="pc-card parallax-container">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-backdrop"></div>
+              <img src="./assets/static/product-card-character.png" alt="character" class="pc-card-character parallax-element" data-direction="direct">
+              <div class="pc-card__inner">
+                <div class="pc-card-plate-grid">
+                  <div class="pc-card-plate _primary">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.6667 14.6667L13.6667 13.6667M14.6667 6.66671H1.33333M14.6667 8.00004V5.46671C14.6667 4.71997 14.6667 4.3466 14.5213 4.06139C14.3935 3.81051 14.1895 3.60653 13.9386 3.4787C13.6534 3.33337 13.2801 3.33337 12.5333 3.33337H3.46666C2.71993 3.33337 2.34656 3.33337 2.06134 3.4787C1.81046 3.60653 1.60648 3.8105 1.47865 4.06139C1.33333 4.3466 1.33333 4.71997 1.33333 5.46671V10.5334C1.33333 11.2801 1.33333 11.6535 1.47865 11.9387C1.60648 12.1896 1.81046 12.3936 2.06134 12.5214C2.34656 12.6667 2.71992 12.6667 3.46666 12.6667H7M14.3333 12C14.3333 13.2887 13.2887 14.3334 12 14.3334C10.7113 14.3334 9.66666 13.2887 9.66666 12C9.66666 10.7114 10.7113 9.66671 12 9.66671C13.2887 9.66671 14.3333 10.7114 14.3333 12Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    Payment methods
+                  </div>
+                  <div class="pc-card-plate _primary">
+                    <div class="pc-card-plate-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.99996 8.66667V8C1.99996 6.4087 2.6321 4.88258 3.75732 3.75736C4.88254 2.63214 6.40866 2 7.99996 2V2C9.59126 2 11.1174 2.63214 12.2426 3.75736C13.3678 4.88258 14 6.4087 14 8V8.66667M1.99996 8.66667H3.33329V14H1.99996C1.64634 14 1.3072 13.8595 1.05715 13.6095C0.807102 13.3594 0.666626 13.0203 0.666626 12.6667V10C0.666626 9.64638 0.807102 9.30724 1.05715 9.05719C1.3072 8.80714 1.64634 8.66667 1.99996 8.66667V8.66667ZM12.6666 8.66667H14C14.3536 8.66667 14.6927 8.80714 14.9428 9.05719C15.1928 9.30724 15.3333 9.64638 15.3333 10V12.6667C15.3333 13.0203 15.1928 13.3594 14.9428 13.6095C14.6927 13.8595 14.3536 14 14 14H12.6666V8.66667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    24/7 Support
+                  </div>
+                </div>
+                <div class="pc-card-head">
+                  <div class="pc-card-subtitle">Mounts</div>
+                  <h3 class="pc-card-title">Castle Narthia Fated</h3>
+                </div>
+                <div class="pc-card-tag-grid">
+                  <div class="pc-card-tag active">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Gift inside
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    281-288 ilvl gear
+                  </div>
+                  <div class="pc-card-tag">
+                    <svg class="pc-card-tag__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_669_18564)">
+                      <path d="M5.61149 1.71588C5.75329 1.6371 5.82419 1.59771 5.89927 1.58227C5.96573 1.5686 6.03427 1.5686 6.10073 1.58227C6.17581 1.59771 6.24671 1.6371 6.38851 1.71588L10.0885 3.77144C10.2383 3.85464 10.3132 3.89624 10.3677 3.95541C10.4159 4.00775 10.4524 4.06979 10.4748 4.13738C10.5 4.21378 10.5 4.29944 10.5 4.47076V8.52932C10.5 8.70064 10.5 8.7863 10.4748 8.8627C10.4524 8.93029 10.4159 8.99233 10.3677 9.04467C10.3132 9.10384 10.2383 9.14544 10.0885 9.22865L6.38851 11.2842C6.24671 11.363 6.17581 11.4024 6.10073 11.4178C6.03427 11.4315 5.96573 11.4315 5.89927 11.4178C5.82419 11.4024 5.75329 11.363 5.61149 11.2842L1.91149 9.22865C1.76172 9.14544 1.68684 9.10384 1.63232 9.04467C1.58408 8.99233 1.54757 8.93029 1.52524 8.8627C1.5 8.7863 1.5 8.70064 1.5 8.52932V4.47076C1.5 4.29944 1.5 4.21378 1.52524 4.13738C1.54757 4.06979 1.58408 4.00775 1.63232 3.95541C1.68684 3.89624 1.76172 3.85464 1.91149 3.77144L5.61149 1.71588Z" stroke="#3474EE" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_669_18564">
+                      <rect width="12" height="12" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    Quick Start
+                  </div>
+                </div>
+                <div class="pc-card-f">
+                  <div class="pc-card-price">
+                    <div class="pc-card-price__value">$120.30</div>
+                  </div>
+                  <div class="pc-card-btn btn btn-primary">Buy now</div>
+                </div>
+                <div class="pc-card-f-attach">save up to 15%</div>
+              </div>
+            </a><!-- /.pc-card -->
+
+          </div><!-- /.pc (product cards) -->
+          <section class="rv ct__rv">
+            <div class="rv-h">
+              <div class="rv-h__inner">
+                <h2 class="rv-title h2">REVIEWS OF OUR CLIENTS</h2>
+                <div class="rv-h-link__wrap">
+                  <div class="rv-h-link-label text">Rated more than 4.9 out of 5 on</div>
+                  <a href="#" class="rv-h-link">
+                    <svg class="rv-h-link__icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_43_911)">
+                        <path
+                          d="M20.9978 7.64336H12.9802L10.5036 0L8.01947 7.64336L0.00183105 7.63574L6.49495 12.3643L4.01052 20L10.5036 15.2791L16.9889 20L14.5123 12.3643L20.9978 7.64336Z"
+                          fill="#00B67A" />
+                        <path d="M15.0698 14.093L14.5125 12.3643L10.5038 15.2791L15.0698 14.093Z" fill="#005128" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_43_911">
+                          <rect width="21" height="20" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    trustpilot.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="rv-sum">
+                <div class="rating intersection-element">
+                  <svg class="rating__fill" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  <svg class="rating__fill" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  <svg class="rating__fill" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  <svg class="rating__half" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                      fill="#D2D3D4" />
+                    <path class="rating__half_fill" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M17 1.86377C16.8154 1.96855 16.6601 2.13643 16.5693 2.36741L13.2692 10.7618C13.1268 11.124 12.7873 11.3707 12.3989 11.3941L3.39549 11.9387C2.48866 11.9936 2.11891 13.1316 2.82031 13.709L9.7841 19.4416C10.0845 19.6889 10.2142 20.088 10.1165 20.4647L7.85226 29.1957C7.6242 30.0751 8.59222 30.7784 9.35811 30.2897L16.9621 25.4383C16.9746 25.4303 16.9872 25.4226 17 25.4153V1.86377Z"
+                      fill="#00B654" />
+                  </svg>
+                  <svg class="rating__empty" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                      fill="#D2D3D4" />
+                  </svg>
+                </div>
+                <div class="rv-sum-value">4.4</div>
+                <div class="rv-sum-sub">(34 043 reviews)</div>
+              </div>
             </div>
-          </div><!-- /.pc-card -->
-        </div><!-- /.pc (product cards) -->
+            <div class="rv__inner">
+              <a href="#" class="rv-item">
+                <div class="rv-item-h">
+                  <div class="rv-item-username">Jaha K.</div>
+                  <div class="rv-item-rating">
+                    <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                        fill="#00B654" />
+                    </svg>
+                    4.9
+                  </div>
+                </div>
+                <div class="rv-item-plate">
+                  <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      fill="#3474EE" />
+                    <path
+                      d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Verified customer
+                </div>
+                <p class="rv-item-text text">
+                  “A nice platform… good customer services and good transparency too”
+                </p>
+                <div class="rv-item-f">
+                  <div class="rv-item-f-item">20 May, 2022</div>
+                  <div class="rv-item-f__sep"></div>
+                  <div class="rv-item-f-item">Sweden</div>
+                </div>
+              </a>
+              <a href="#" class="rv-item">
+                <div class="rv-item-h">
+                  <div class="rv-item-username">Jaha K.</div>
+                  <div class="rv-item-rating">
+                    <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                        fill="#00B654" />
+                    </svg>
+                    4.9
+                  </div>
+                </div>
+                <div class="rv-item-plate">
+                  <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      fill="#3474EE" />
+                    <path
+                      d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Verified customer
+                </div>
+                <p class="rv-item-text text">
+                  “A nice platform… good customer services and good transparency too”
+                </p>
+                <div class="rv-item-f">
+                  <div class="rv-item-f-item">20 May, 2022</div>
+                  <div class="rv-item-f__sep"></div>
+                  <div class="rv-item-f-item">Sweden</div>
+                </div>
+              </a>
+              <a href="#" class="rv-item">
+                <div class="rv-item-h">
+                  <div class="rv-item-username">Jaha K.</div>
+                  <div class="rv-item-rating">
+                    <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                        fill="#00B654" />
+                    </svg>
+                    4.9
+                  </div>
+                </div>
+                <div class="rv-item-plate">
+                  <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      fill="#3474EE" />
+                    <path
+                      d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Verified customer
+                </div>
+                <p class="rv-item-text text">
+                  “A nice platform… good customer services and good transparency too”
+                </p>
+                <div class="rv-item-f">
+                  <div class="rv-item-f-item">20 May, 2022</div>
+                  <div class="rv-item-f__sep"></div>
+                  <div class="rv-item-f-item">Sweden</div>
+                </div>
+              </a>
+              <a href="#" class="rv-item">
+                <div class="rv-item-h">
+                  <div class="rv-item-username">Jaha K.</div>
+                  <div class="rv-item-rating">
+                    <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                        fill="#00B654" />
+                    </svg>
+                    4.9
+                  </div>
+                </div>
+                <div class="rv-item-plate">
+                  <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      fill="#3474EE" />
+                    <path
+                      d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Verified customer
+                </div>
+                <p class="rv-item-text text">
+                  “A nice platform… good customer services and good transparency too”
+                </p>
+                <div class="rv-item-f">
+                  <div class="rv-item-f-item">20 May, 2022</div>
+                  <div class="rv-item-f__sep"></div>
+                  <div class="rv-item-f-item">Sweden</div>
+                </div>
+              </a>
+            </div>
+          </section><!-- /.rv (reviews) -->
+        </div>
+
+        <section class="ct-steps ct__steps">
+          <div class="container">
+            <h2 class="ct-steps-title h2">
+              GET YOUR ORDER STARTED
+              <div class="gradient-primary">IN 15 MINUTES</div>
+            </h2>
+            <div class="stc step-animate">
+              <div class="stc-row">
+                <div class="stc-card__wrap step-animate-element">
+                  <div class="stc-card">
+                    <div class="stc-card-icon__wrap">
+                      <img src="./assets/static/icon-gamepad.svg" alt="gamepad" class="stc-card-icon">
+                    </div>
+                    <h3 class="stc-card-title">CHOOSE SERVICE</h3>
+                    <p class="stc-card-text">Each service except WoW Raid will be started in 15 Minutes</p>
+                  </div>
+                  <div class="stc-card-step__wrap">
+                    <div class="stc-card-step-line"></div>
+                    <div class="stc-card-step">01</div>
+                    <div class="stc-card-step-line"></div>
+                  </div>
+                </div>
+                <div class="stc-card__wrap step-animate-element">
+                  <div class="stc-card">
+                    <div class="stc-card-icon__wrap">
+                      <img src="./assets/static/icon-shopcart.svg" alt="shopcart" class="stc-card-icon">
+                    </div>
+                    <h3 class="stc-card-title">MAKE AN ORDER</h3>
+                    <p class="stc-card-text">Fill up your character details and pay for it</p>
+                  </div>
+                  <div class="stc-card-step__wrap">
+                    <div class="stc-card-step-line"></div>
+                    <div class="stc-card-step">02</div>
+                    <div class="stc-card-step-line"></div>
+                  </div>
+                </div>
+                <div class="stc-card__wrap step-animate-element">
+                  <div class="stc-card">
+                    <div class="stc-card-icon__wrap">
+                      <img src="./assets/static/icon-support.svg" alt="support" class="stc-card-icon">
+                    </div>
+                    <h3 class="stc-card-title">GET CONTACTED</h3>
+                    <p class="stc-card-text">Our support will contact you within 3 minutes</p>
+                  </div>
+                  <div class="stc-card-step__wrap">
+                    <div class="stc-card-step-line"></div>
+                    <div class="stc-card-step">03</div>
+                    <div class="stc-card-step-line"></div>
+                  </div>
+                </div>
+                <div class="stc-card__wrap step-animate-element">
+                  <div class="stc-card">
+                    <div class="stc-card-icon__wrap">
+                      <img src="./assets/static/icon-rocket.svg" alt="rocket" class="stc-card-icon">
+                    </div>
+                    <h3 class="stc-card-title">GET STARTED</h3>
+                    <p class="stc-card-text gradient-primary">In 15 minutes get your order begun!</p>
+                  </div>
+                  <div class="stc-card-step__wrap">
+                    <div class="stc-card-step-line"></div>
+                    <div class="stc-card-step">04</div>
+                    <div class="stc-card-step-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <section class="bnr1 ct__bnr1">
+            <div class="bnr1-b">
+              <div class="bnr1-b__inner">
+                <h2 class="bnr1-title">YOU ARE PROTECTED BY BUYER PROTECTION PROGRAMS</h2>
+                <div class="bnr1-sub text">There is no reason for you to be worried.</div>
+                <div class="bnr1-rowplate">
+                  <div class="bnr1-plate">
+                    <svg class="bnr1-plate__icon intersection-element" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.3765 6.24813C22.6339 6.87067 23.1279 7.3655 23.7501 7.62384L25.9315 8.52747C26.5541 8.78535 27.0487 9.27999 27.3066 9.90257C27.5645 10.5252 27.5645 11.2247 27.3066 11.8473L26.4036 14.0273C26.1457 14.6501 26.1453 15.3503 26.4045 15.9729L27.3058 18.1522C27.4337 18.4606 27.4995 18.7911 27.4996 19.1249C27.4996 19.4587 27.4339 19.7893 27.3062 20.0977C27.1784 20.4061 26.9912 20.6863 26.7551 20.9223C26.519 21.1583 26.2388 21.3455 25.9304 21.4731L23.7504 22.3761C23.1279 22.6335 22.6331 23.1276 22.3748 23.7497L21.4712 25.9313C21.2133 26.5539 20.7187 27.0485 20.0961 27.3064C19.4736 27.5643 18.7741 27.5643 18.1515 27.3064L15.9716 26.4034C15.349 26.1462 14.6498 26.1467 14.0276 26.4049L11.8461 27.3072C11.2239 27.5645 10.525 27.5643 9.90296 27.3066C9.28091 27.0489 8.78657 26.5549 8.52852 25.9329L7.62465 23.7507C7.36725 23.1282 6.87318 22.6334 6.25106 22.375L4.06958 21.4714C3.44729 21.2136 2.95282 20.7193 2.69485 20.0971C2.43689 19.4749 2.43654 18.7757 2.69388 18.1532L3.59683 15.9732C3.85407 15.3506 3.85354 14.6513 3.59537 14.0291L2.69372 11.846C2.56588 11.5376 2.50005 11.2071 2.5 10.8733C2.49995 10.5395 2.56567 10.2089 2.6934 9.90054C2.82114 9.59214 3.00839 9.31194 3.24446 9.07594C3.48053 8.83994 3.76078 8.65277 4.06921 8.52513L6.24912 7.62215C6.87109 7.36496 7.36561 6.8715 7.62413 6.25007L8.52773 4.06851C8.7856 3.44593 9.28022 2.95129 9.90278 2.69341C10.5253 2.43553 11.2248 2.43553 11.8474 2.69341L14.0273 3.59639C14.6499 3.85364 15.3491 3.85312 15.9713 3.59493L18.1537 2.69481C18.7762 2.43707 19.4755 2.43713 20.098 2.69496C20.7204 2.95279 21.215 3.44729 21.4729 4.0697L22.3767 6.25191L22.3765 6.24813Z"
+                        fill="#3474EE" />
+                      <path
+                        d="M11.25 15L13.75 17.5L19.375 11.875M22.3765 6.24813C22.6339 6.87067 23.1279 7.3655 23.7501 7.62384L25.9315 8.52747C26.5541 8.78535 27.0487 9.27999 27.3066 9.90257C27.5645 10.5252 27.5645 11.2247 27.3066 11.8473L26.4036 14.0273C26.1457 14.6501 26.1453 15.3503 26.4045 15.9729L27.3058 18.1522C27.4337 18.4606 27.4995 18.7911 27.4996 19.1249C27.4996 19.4587 27.4339 19.7893 27.3062 20.0977C27.1784 20.4061 26.9912 20.6863 26.7551 20.9223C26.519 21.1583 26.2388 21.3455 25.9304 21.4731L23.7504 22.3761C23.1279 22.6335 22.6331 23.1276 22.3748 23.7497L21.4712 25.9313C21.2133 26.5539 20.7187 27.0485 20.0961 27.3064C19.4736 27.5643 18.7741 27.5643 18.1515 27.3064L15.9716 26.4034C15.349 26.1462 14.6498 26.1467 14.0276 26.4049L11.8461 27.3072C11.2239 27.5645 10.525 27.5643 9.90296 27.3066C9.28091 27.0489 8.78657 26.5549 8.52852 25.9329L7.62465 23.7507C7.36725 23.1282 6.87318 22.6334 6.25106 22.375L4.06958 21.4714C3.44729 21.2136 2.95282 20.7193 2.69485 20.0971C2.43689 19.4749 2.43654 18.7757 2.69388 18.1532L3.59683 15.9732C3.85407 15.3506 3.85354 14.6513 3.59537 14.0291L2.69372 11.846C2.56588 11.5376 2.50005 11.2071 2.5 10.8733C2.49995 10.5395 2.56567 10.2089 2.6934 9.90054C2.82114 9.59214 3.00839 9.31194 3.24446 9.07594C3.48053 8.83994 3.76078 8.65277 4.06921 8.52513L6.24912 7.62215C6.87109 7.36496 7.36561 6.8715 7.62413 6.25007L8.52773 4.06851C8.7856 3.44593 9.28022 2.95129 9.90278 2.69341C10.5253 2.43553 11.2248 2.43553 11.8474 2.69341L14.0273 3.59639C14.6499 3.85364 15.3491 3.85312 15.9713 3.59493L18.1537 2.69481C18.7762 2.43707 19.4755 2.43713 20.098 2.69496C20.7204 2.95279 21.215 3.44729 21.4729 4.0697L22.3767 6.25191L22.3765 6.24813Z"
+                        stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Official payment systems
+                  </div>
+                  <div class="bnr1-plate">
+                    <svg class="bnr1-plate__icon intersection-element" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M26.25 12.5C26.25 12.5 23.7438 9.08527 21.7077 7.0478C19.6716 5.01034 16.858 3.75 13.75 3.75C7.5368 3.75 2.5 8.7868 2.5 15C2.5 21.2132 7.5368 26.25 13.75 26.25C18.8789 26.25 23.2061 22.8179 24.5603 18.125M26.25 12.5V5M26.25 12.5H18.75"
+                        stroke="#3474EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Refund guarantee
+                  </div>
+                </div>
+              </div>
+              <div class="bnr1-pic intersection-element">
+                <img src="./assets/static/banner1-item-1.png" alt="picture">
+              </div>
+            </div>
+            <div class="bnr1-f intersection-element">
+              <div class="bnr1-f-item">
+                <img src="./assets/static/visa.svg" alt="visa">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/mastercard.svg" alt="mastercard">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/american-express.svg" alt="american express">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/googlepay.svg" alt="googlepay">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/applepay.svg" alt="applepay">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/skrill.svg" alt="skrill">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/klarna.svg" alt="klarna">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/paypal.svg" alt="paypal">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/paysafecard.svg" alt="paysafecard">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/giropay.svg" alt="giropay">
+              </div>
+              <div class="bnr1-f-item">
+                <img src="./assets/static/bank-transfer.svg" alt="bank transfer">
+              </div>
+            </div>
+          </section><!-- /.bnr1 (banner type 1) -->
+
+          <section class="faq-grid ct__faq">
+            <div class="faq-grid__h">
+              <div class="faq-subtitle subtitle">FAQ</div>
+              <h2 class="faq-title h2">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid__inner">
+              <div class="faq step-animate" data-animation-fillmode="backwards">
+                <div class="faq-item drop">
+                  <div class="faq-item-h drop-trigger">
+                    <div class="faq-item-label step-animate-element">Who are you?</div>
+                    <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="faq-item-b text drop-block">
+                    <p>
+                      We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                      covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                      impossible for us to get your moneywithout actually completing the service.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item drop">
+                  <div class="faq-item-h drop-trigger">
+                    <div class="faq-item-label step-animate-element">Why prices are so low?</div>
+                    <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="faq-item-b text drop-block">
+                    <p>
+                      We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                      covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                      impossible for us to get your moneywithout actually completing the service.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item drop">
+                  <div class="faq-item-h drop-trigger">
+                    <div class="faq-item-label step-animate-element">Why should I trust you? </div>
+                    <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="faq-item-b text drop-block">
+                    <p>
+                      We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                      covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                      impossible for us to get your moneywithout actually completing the service.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item drop">
+                  <div class="faq-item-h drop-trigger">
+                    <div class="faq-item-label step-animate-element">How can I be sure in quality? </div>
+                    <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="faq-item-b text drop-block">
+                    <p>
+                      We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                      covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                      impossible for us to get your moneywithout actually completing the service.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item drop">
+                  <div class="faq-item-h drop-trigger">
+                    <div class="faq-item-label step-animate-element">Who are you?</div>
+                    <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="faq-item-b text drop-block">
+                    <p>
+                      We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                      covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                      impossible for us to get your moneywithout actually completing the service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq-grid__info">
+              <div class="faq-inf">
+                <div class="faq-inf-h">
+                  <svg class="faq-inf-h__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.09 9.5C9.3251 8.83167 9.78915 8.26811 10.4 7.90913C11.0108 7.55016 11.7289 7.41894 12.4272 7.53871C13.1255 7.65849 13.7588 8.02152 14.2151 8.56353C14.6713 9.10553 14.9211 9.79152 14.92 10.5C14.92 12.5 11.92 13.5 11.92 13.5M12 17.5H12.01M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                      stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <h4 class="faq-inf-title h4">Any more questions?</h4>
+                </div>
+                <p class="faq-inf-text">
+                  We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard)
+                </p>
+                <a href="#" class="btn btn-dark faq-inf-btn">Ask it</a>
+              </div>
+            </div>
+          </section><!-- /.faq -->
+
+          <section class="bnr2">
+            <div class="bnr2__inner">
+              <h2 class="bnr2-title h2 step-animate" data-animation-delay="100" data-animation-iteration="infinite">
+                <div class="word">
+                  <span class="step-animate-element">w</span>
+                  <span class="step-animate-element">o</span>
+                  <span class="step-animate-element">u</span>
+                  <span class="step-animate-element">l</span>
+                  <span class="step-animate-element">d</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">y</span>
+                  <span class="step-animate-element">o</span>
+                  <span class="step-animate-element">u</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">l</span>
+                  <span class="step-animate-element">i</span>
+                  <span class="step-animate-element">k</span>
+                  <span class="step-animate-element">e</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">t</span>
+                  <span class="step-animate-element">o</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">g</span>
+                  <span class="step-animate-element">i</span>
+                  <span class="step-animate-element">v</span>
+                  <span class="step-animate-element">e</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">u</span>
+                  <span class="step-animate-element">s</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">a</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">t</span>
+                  <span class="step-animate-element">r</span>
+                  <span class="step-animate-element">y</span>
+                </div>
+                <div class="word">
+                  <span class="step-animate-element">?</span>
+                </div>
+              </h2>
+              <div class="bnr2-f step-animate" data-animation-iteration="infinite">
+                <a href="#" class="btn btn-dark bnr2-btn step-animate-element">Yes, let’s try</a>
+                <a href="#" class="btn btn-primary bnr2-btn">No, thanks</a>
+              </div>
+            </div>
+            <img src="./assets/static/bnr2-pic-1.svg" alt="picture" class="bnr2-pic-1">
+            <div class="bnr2-pic-2">
+              <picture>
+                <source srcset="./assets/static/bnr2-pic-2-lg.png" media="(min-width: 768px)">
+                <source srcset="./assets/static/bnr2-pic-2-sm.png" media="(min-width: 0px)">
+                <img src="./assets/static/bnr2-pic-2-lg.png" alt="picture">
+              </picture>
+            </div>
+          </section>
+        </div>
       </div>
     </main><!-- /.main (card) -->
     <footer class="f">
@@ -649,6 +1499,68 @@
         </div>
         <div class="m-f m-f-row">
           <button type="button" class="btn btn-primary m-btn">Move to Checkout</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="m__wrapper" data-modal="steps">
+    <form action="#" class="m m-steps _ultra-wide">
+      <div class="m__inner">
+        <div class="m-h _mb">
+          <div class="m-title _fz2">What's next?</div>
+          <div class="m-btn-close m-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="m-b">
+          <div class="stc-row step-animate">
+            <div class="stc-card__wrap step-animate-element">
+              <div class="stc-card">
+                <h3 class="stc-card-title">STEP 1</h3>
+                <p class="stc-card-text">You tell us what you need by filling in the order form</p>
+              </div>
+              <div class="stc-card-step__wrap">
+                <div class="stc-card-step">01</div>
+                <div class="stc-card-step-line"></div>
+              </div>
+            </div>
+            <div class="stc-card__wrap step-animate-element">
+              <div class="stc-card">
+                <h3 class="stc-card-title">STEP 2</h3>
+                <p class="stc-card-text">We confirm your order by contacting you via your preferred method</p>
+              </div>
+              <div class="stc-card-step__wrap">
+                <div class="stc-card-step">02</div>
+                <div class="stc-card-step-line"></div>
+              </div>
+            </div>
+            <div class="stc-card__wrap step-animate-element">
+              <div class="stc-card">
+                <h3 class="stc-card-title">STEP 3</h3>
+                <p class="stc-card-text">PRO player works on your order, and we track the progress</p>
+              </div>
+              <div class="stc-card-step__wrap">
+                <div class="stc-card-step">03</div>
+                <div class="stc-card-step-line"></div>
+              </div>
+            </div>
+            <div class="stc-card__wrap step-animate-element">
+              <div class="stc-card">
+                <h3 class="stc-card-title">STEP 4</h3>
+                <p class="stc-card-text">You check if everything's ok and accept your order as completed</p>
+              </div>
+              <div class="stc-card-step__wrap">
+                <div class="stc-card-step">04</div>
+                <div class="stc-card-step-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-f m-f-row">
+          <button type="button" class="btn btn-light-primary m-btn">Continue shopping</button>
         </div>
       </div>
     </form>

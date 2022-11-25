@@ -42,13 +42,20 @@
       +inter-semibold
       font-size: 18px
       color: $grey70
+    .rating
+      &.animate-active
+        .rating__fill path, .rating__half_fill
+          animation: ratingBlink 0.5s ease-in-out 0.5s 10 alternate backwards
   &__inner
     max-width: 100%
-    padding-bottom: 15px
+    padding: 15px 0
     overflow-x: auto
     display: flex
-    // align-items: center
     gap: 20px
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
   &-item
     border-radius: 8px
     flex: 0 0 300px
@@ -58,6 +65,9 @@
     flex-direction: column
     background-color: $grey0
     box-shadow: 0px 4px 23px #eff2f8
+    transition: 0.1s
+    &:hover
+      transform: scale(1.04)
     &-h
       margin-bottom: 24px
       display: flex

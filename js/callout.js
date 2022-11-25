@@ -1,7 +1,7 @@
 class Callout {
-  constructor(callout, timeout, closeAxis = "y") {
+  constructor(callout, timeout, closeAxis) {
     this.$callout = callout;
-    this.$close = this.$callout.querySelector(".callout-close");
+    this.$close = this.$callout.querySelector(".js-callout-close");
     this.timeout = timeout;
     this.closeAxis = closeAxis;
     this.setup();
@@ -34,8 +34,8 @@ class Callout {
 
 }
 
-const calloutList = document.querySelectorAll(".callout");
+const calloutList = document.querySelectorAll(".js-callout");
 
 calloutList.forEach(item => {
-  const callout = new Callout(item, 300, "y");
+  const callout = new Callout(item, 300, item.dataset.closeAxis);
 });

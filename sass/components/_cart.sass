@@ -1,0 +1,178 @@
+.cart
+  &-item
+    border-bottom: 1px solid $grey10
+    padding: 24px 40px
+    display: grid
+    grid-template-columns: min-content 1fr min-content min-content min-content
+    grid-template-rows: repeat(2, auto)
+    gap: 0 16px
+    &:nth-last-of-type(1)
+      border-bottom: none
+    &__preview
+      grid-column: 1/2
+      grid-row: 1/3
+    &__info
+      grid-column: 2/3
+      grid-row: 1/2
+    &__counter
+      margin: 0 10px
+      align-self: center
+      grid-column: 3/4
+      grid-row: 1/3
+    &__total
+      margin: 0 10px
+      align-self: center
+      grid-column: 4/5
+      grid-row: 1/3
+    &__remove
+      align-self: center
+      grid-column: 5/6
+      grid-row: 1/3
+    &-preview
+      position: relative
+      border-radius: 8px
+      width: 135px
+      height: 100px
+      img, svg
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &-remove
+        display: none
+        position: absolute
+        top: -10px
+        left: -10px
+        border-radius: 50%
+        border: 5px solid $grey0
+        width: 39px
+        height: 39px
+        align-items: center
+        justify-content: center
+        background-color: $danger
+        cursor: pointer
+        transition: 0.2s
+        &:hover
+          transform: scale(1.04)
+        svg, img
+          width: 18px
+          height: 18px
+    &-title
+      +inter-bold
+      font-size: 20px
+      color: $grey100
+    &-text
+      +inter-reg
+      font-size: 14px
+      color: $grey70
+    &-counter
+      border-radius: 8px
+      border: 1px solid $grey10
+      height: 52px
+      display: inline-flex
+      user-select: none
+      &-sign
+        flex: 0 0 auto
+        border: none
+        width: 50px
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        cursor: pointer
+        transition: 0.1s
+        &:not(:disabled)
+          &:hover
+            background-color: $light
+            path
+              stroke: $primary
+          &:active
+            svg
+              transform: translateY(1px)
+        &:disabled
+          cursor: not-allowed
+          opacity: 0.5
+        svg
+          max-width: 100%
+          max-height: 100%
+        &.counter
+          &-minus
+            border-top-left-radius: 8px
+            border-bottom-left-radius: 8px
+          &-plus
+            border-top-right-radius: 8px
+            border-bottom-right-radius: 8px
+      &-value
+        flex: 0 0 auto
+        width: 60px
+        border-right: 1px solid $grey10
+        border-left: 1px solid $grey10
+        display: flex
+        align-items: center
+        justify-content: center
+        +inter-bold
+        font-size: 20px
+        color: $grey100
+    &-total
+      +stolzl-med
+      font-size: 24px
+      color: $grey100
+    &-remove
+      border: none
+      width: 32px
+      height: 32px
+      padding: 0
+      background-color: transparent
+      cursor: pointer
+      transition: 0.2s
+      &:hover
+        transform: scale(1.08)
+
+@media ( max-width: 768px )
+  .cart
+    &-item
+      padding: 17px 24px
+      grid-template-columns: 110px auto
+      grid-template-rows: repeat(3, auto)
+      gap: 12px
+      &__info
+        grid-column: 2/3
+        grid-row: 1/3
+      &__counter
+        margin: 0
+        grid-column: 1/2
+        grid-row: 3/4
+      &__total
+        margin: 0
+        grid-column: 2/3
+        grid-row: 3/4
+      &-preview
+        width: 106px
+        height: 76px
+        &-remove
+          display: flex
+      &-title
+        margin-bottom: 5px
+        font-size: 16px
+      &-counter
+        width: 106px
+        height: 33px
+        &-sign
+          width: 34px
+          svg
+            width: 18px
+            height: 18px
+        &-value
+          flex: 1 1 auto
+          padding: 0
+          font-size: 14px
+      &-total
+        font-size: 18px
+      &-remove
+        display: none
+
+@media ( max-width: 520px )
+  .cart
+    &-item
+      &-text
+        font-size: 12px

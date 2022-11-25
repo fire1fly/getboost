@@ -25,6 +25,8 @@ input, textarea
 .root
   overflow-x: hidden
   min-height: 100vh
+  &._overflow
+    overflow-x: initial
 
 .container
   margin: 0 auto
@@ -33,7 +35,8 @@ input, textarea
 
 .main
   position: relative
-  min-height: calc(100vh - 64px - 56px)
+  min-height: 100vh
+  margin: 64px 0 56px
   background-color: $five
 
 // INPUT RANGE
@@ -143,7 +146,7 @@ input, textarea
     .dd-list
       opacity: 0
       transform: translateY(-5px)
-      transition: 0.2s ease-in-out
+      transition: 0.1s
   &.fadeUp
     &.active
       .dd-list
@@ -152,7 +155,7 @@ input, textarea
     .dd-list
       opacity: 0
       transform: translateY(5px)
-      transition: 0.2s ease-in-out
+      transition: 0.1s
 
 .btn
   border: none
@@ -160,6 +163,7 @@ input, textarea
   align-items: center
   justify-content: center
   cursor: pointer
+  transition: 0.1s
   &-primary
     background-color: $primary
     color: $grey0
@@ -192,9 +196,9 @@ input, textarea
     background-color: $button1
     color: $grey0
     &:hover
-      background-color: #302D4F
-    &:active
       background-color: #14131F
+    &:active
+      background-color: #302D4F
   &-light
     border: 1px solid $grey20
     background-color: $five
@@ -249,7 +253,7 @@ input, textarea
     padding: 2px
     display: flex
     background: rgba(120, 120, 128, 0.16)
-    transition: 0.2s ease-in-out
+    transition: 0.1s
     cursor: pointer
     &:hover
       background: rgba(101, 101, 107, 0.16)
@@ -263,7 +267,7 @@ input, textarea
     height: 26px
     background-color: $five
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06)
-    transition: 0.2s ease-in-out
+    transition: 0.1s
   input[type="checkbox"]
     display: none
     &:checked +
@@ -271,6 +275,11 @@ input, textarea
         background-color: $primary
         .checkbox-trigger
           left: 22px
+  &._green
+    input[type="checkbox"]
+      &:checked +
+        .checkbox-plate
+          background-color: $green
 
 .checkbox2
   &-plate
@@ -393,6 +402,28 @@ input, textarea
     background-color: #D9EDE8
     color: $green2
 
+.promo
+  &-link
+    &.hidden
+      display: none
+  &-field
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%) rotate(-45deg)
+      right: 24px
+      width: 8px
+      height: 8px
+      border-right: 2px solid $grey50
+      border-bottom: 2px solid $grey50
+    &.hidden
+      display: none
+    .promo-input
+      width: 100%
+      padding-right: 34px
+
 @media ( max-width: 1024px )
   .h1
     font-size: 48px
@@ -413,11 +444,13 @@ input, textarea
     line-height: 28px
 
   .main
-    min-height: calc(100vh - 60px - 56px)
+    min-height: 100vh
+    margin: 60px 0 56px
 
 @media ( max-width: 991px )
   .main
-    min-height: calc(100vh - 56px - 56px)
+    min-height: 100vh
+    margin: 56px 0
 
 @media ( max-width: 768px )
   .h1

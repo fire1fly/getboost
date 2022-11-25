@@ -2,6 +2,7 @@
   padding-bottom: 25px
   &-fs
     position: relative
+    padding-top: 20px
     margin-bottom: 32px
     min-height: 250px
     &-bg
@@ -55,11 +56,11 @@
     &__tab
       flex: 0 0 auto
     &__select
-      flex: 1 1 470px
+      flex: 0 1 470px
     &-reset
       border: none
       height: 56px
-      display: flex
+      // display: flex
       align-items: center
       justify-content: center
       background-color: transparent
@@ -69,6 +70,7 @@
       color: $grey70
       cursor: pointer
     &__reset
+      display: none
       flex: 0 0 auto
       align-self: end
       transform: translateY(-6px)
@@ -164,7 +166,6 @@
         justify-content: flex-start
         align-items: flex-start
         width: 100%
-        padding: 0 8px 16px
         &-icon
           &__wrap
             margin-bottom: 0
@@ -179,6 +180,10 @@
           color: $grey90
         &-step
           margin: 0 24px 0 0
+  &__bnr1
+    .bnr1-plate__icon
+      &.animate-active
+        animation: spinningAndBlink 2s linear 0s 1 normal forwards
   &-inf
     &-list
       margin-bottom: 32px
@@ -193,6 +198,16 @@
           margin-bottom: 0
         svg
           flex: 0 0 auto
+          transition-duration: 0.4s
+          transition-delay: 0.5s
+          path
+            fill: $grey0
+            transition-duration: 0.4s
+            transition-delay: 0.5s
+          &.animate-active
+            path
+              fill: $primary
+              stroke: $primary
     &-text
       margin-bottom: 12px
       +inter-reg
@@ -231,13 +246,12 @@
   .g
     padding-bottom: 12px
     &-fs
-      margin-bottom: 80px
       min-height: auto
       height: 190px
       &__inner
         display: flex
         flex-direction: column
-        padding-top: 15px
+        padding-top: 20px
         padding-bottom: 0
         height: 100%
       &-title
@@ -249,6 +263,7 @@
         color: $grey50
         backdrop-filter: none
         &-grid
+          display: none
           position: relative
           bottom: -64px
           margin-top: auto
@@ -258,6 +273,9 @@
           &::-webkit-scrollbar
             width: 0
             height: 0
+    &-subtitle
+      &__first
+        display: none
     &-bar
       flex-wrap: wrap
       gap: 18px 7px
@@ -273,6 +291,7 @@
         height: auto
         font-size: 14px
       &__reset
+        display: none
         margin: 0 auto
         align-self: center
     &-form
@@ -330,7 +349,6 @@
         text-align: left
       .stc
         &-card
-          padding: 0
           flex-direction: row
           flex-wrap: wrap
           align-items: center

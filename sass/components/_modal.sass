@@ -6,9 +6,13 @@
   width: 100%
   &._wide
     max-width: 620px
+  &._long-wide
+    max-width: 840px
+  &._ultra-wide
+    max-width: 1046px
   &__wrapper
     position: fixed
-    top: 0
+    top: -5000px
     left: 0
     overflow-x: hidden
     overflow-y: auto
@@ -21,11 +25,12 @@
     background-color: rgba(27, 25, 48, 0.3)
     visibility: hidden
     opacity: 0
-    transition: 0.2s ease-in-out
+    transition: opacity 0.2s, visibility 0.2s
     z-index: 10
     &.active
       visibility: visible
       opacity: 1
+      top: 0
   &__inner
     padding: 24px 32px
   &-h
@@ -49,6 +54,8 @@
     color: $grey100
     &._mb
       margin-bottom: 16px
+    &._fz2
+      font-size: 34px
   &-btn
     border-radius: 30px
     height: 54px
@@ -92,6 +99,8 @@
       align-items: center
       flex-wrap: wrap
       gap: 10px
+      &._end
+        justify-content: flex-end
     &-text
       margin: 12px 0
       display: flex
@@ -132,11 +141,255 @@
       img
         max-width: 100%
         max-height: 100%
+  &-steps
+    .stc
+      &-row
+        gap: 24px
+      &-card
+        padding-bottom: 20px
+        width: 100%
+        min-height: auto
+        justify-content: flex-start
+        gap: 8px
+        background-color: transparent
+        box-shadow: none
+        &-title
+          margin-bottom: 0
+          text-align: left
+        &-text
+          text-align: left
+        &-step
+          margin-left: 0
+  &-buyp
+    .m
+      &-h
+        padding: 32px 32px 16px
+      &-b
+        padding: 0 16px 24px
+    &-text
+      +inter-semibold
+      font-size: 16px
+      color: $button1
+    &-subtext
+      +inter-reg
+      font-size: 12px
+      line-height: 1.5
+      color: $grey70
+    &-card
+      border-radius: 8px
+      padding: 20px 16px 12px
+      background-color: $five
+      &-bottext
+        margin: 12px auto 0
+        width: 85%
+        text-align: center
+    &-bar
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 16px
+    &-prof
+      display: flex
+      align-items: center
+      gap: 12px
+      &-preview
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 48px
+        height: 48px
+        overflow: hidden
+        img, svg
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &-subtext
+        margin-bottom: 4px
+      &-title
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 4px
+        ._sub
+          +inter-reg
+          color: $grey60
+    &-total
+      text-align: right
+      &-subtext
+        margin-bottom: 4px
+    &-counter
+      border-radius: 12px
+      border: 1px solid $grey10
+      height: 50px
+      padding: 0 40px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 25px
+      background-color: $grey0
+      user-select: none
+      &-sign
+        border: none
+        background-color: transparent
+        cursor: pointer
+        line-height: 0
+        transition: 0.1s
+        &:not(:disabled)
+          &:hover
+            path
+              stroke: $primary
+          &:active
+            transform: translateY(2px)
+        &:disabled
+          cursor: not-allowed
+          opacity: 0.5
+      &__inner
+        display: flex
+        align-items: center
+        gap: 6px
+      &-placeholder
+        +inter-reg
+        font-size: 14px
+        color: $grey70
+      &-value
+        +inter-semibold
+        font-size: 14px
+        color: $grey90
+    &-tbl
+      padding: 16px
+      display: flex
+      flex-wrap: wrap
+      gap: 16px 32px
+      &-label
+        margin-bottom: 5px
+        +inter-semibold
+        font-size: 12px
+        color: $grey70
+      &-value
+        +inter-semibold
+        font-size: 16px
+        color: $button1
+    &-f
+      border-top: 1px solid $grey10
+      padding: 24px 32px
+      display: flex
+      align-items: center
+      justify-content: space-between
+  &-chs
+    &-search
+      margin-bottom: 18px
+      border-radius: 8px
+      border: 1px solid $grey10
+      height: 60px
+      padding: 0 20px
+      display: flex
+      align-items: center
+      gap: 15px
+      background-color: $grey0
+      box-shadow: 0px 8px 27px rgba(49, 59, 67, 0.14)
+      &__icon
+        flex: 0 0 auto
+        width: 24px
+        height: 24px
+      &__input
+        flex: 1 1 auto
+        border: none
+        width: 100%
+        background-color: transparent
+        +inter-semibold
+        font-size: 16px
+        color: $grey70
+        &::placeholder
+          color: $grey30
+    &-tab
+      display: none
+      margin-bottom: 10px
+      height: 64px
+      width: 100%
+    &-row
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 16px
+    &-group
+      flex: 1 1 48%
+      display: flex
+      flex-direction: column
+      gap: 4px
+      &-label
+        margin-bottom: 14px
+        +inter-semibold
+        font-size: 14px
+        color: $grey70
+    &-item
+      border-radius: 8px
+      border: 1px solid $grey10
+      height: 50px
+      padding: 0 10px
+      display: flex
+      align-items: center
+      gap: 10px
+      &__wrap
+        width: 100%
+        cursor: pointer
+        input[type="radio"]
+          display: none
+          &:checked + .m-chs-item
+            border-color: $primary
+            .m-chs-item-title
+              +inter-semibold
+              color: $primary
+      &-preview
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 32px
+        height: 32px
+        display: flex
+        align-items: center
+        justify-content: center
+        +inter-semibold
+        font-size: 14px
+        color: $primary
+        background-color: $light
+        img, svg
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &-title
+        +inter-reg
+        font-size: 14px
+        color: $grey70
+      &-label
+        margin-left: auto
+        +inter-reg
+        text-transform: uppercase
+        font-size: 14px
+        color: $grey30
+  &-cart
+    .m
+      &-f
+        border-top: 1px solid $grey10
+        padding: 20px 40px 26px
 
 @media ( max-width: 1024px )
   .m
+    &._ultra-wide
+      max-width: 840px
     &__wrapper
       padding: 180px 15px
+    &-buyp
+      &-card
+        &-bottext
+          font-size: 16px
+    &-chs
+      &-tab
+        display: flex
+      &-row
+        flex-direction: column
+        gap: 4px
+      &-group
+        &-label
+          display: none
 
 @media ( max-width: 768px )
   .m
@@ -156,6 +409,8 @@
         height: 24px
     &-title
       font-size: 20px
+      &._fz2
+        font-size: 24px
     &-subtext
       font-size: 14px
     &-link
@@ -175,3 +430,85 @@
         margin-bottom: 16px
         width: 54px
         height: 54px
+    &-steps
+      .stc
+        &-row
+          gap: 12px
+    &-buyp
+      .m
+        &-h
+          padding: 24px 24px 12px
+        &-b
+          padding: 0 10px 20px
+      &-text
+        font-size: 14px
+      &-bar
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 12px
+        .m-buyp
+          &-prof
+            grid-column: 1/2
+            grid-row: 1/2
+          &-total
+            grid-column: 2/3
+            grid-row: 1/2
+          &-counter
+            grid-column: 1/3
+            grid-row: 2/3
+      &-bar
+        margin-bottom: 8px
+      &-prof
+        &-preview
+          width: 40px
+          height: 40px
+      &-counter
+        justify-content: center
+      &-card
+        padding: 10px
+        &-bottext
+          margin: 8px 0
+          width: 100%
+          font-size: 12px
+      &-tbl
+        padding: 10px
+      &-f
+        flex-direction: column
+        padding: 0
+        align-items: flex-start
+        .m-buyp-prof
+          width: 100%
+          padding: 12px 20px
+        &-info
+          width: 100%
+          border-top: 1px solid $grey10
+          padding: 16px 20px
+    &-chs
+      .m
+        &-h
+          padding: 0 12px
+        &__inner
+          padding: 24px 12px
+      &-search
+        margin-bottom: 8px
+        height: 50px
+        padding: 0 16px
+        gap: 8px
+        &__icon
+          width: 20px
+          height: 20px
+        &__input
+          font-size: 14px
+      &-tab
+        height: 50px !important
+        .form-tab-plate
+          font-size: 14px !important
+    &-cart
+      .m-f
+        padding: 18px 14px
+        &-row
+          flex-direction: row
+        .m-btn
+          padding: 0 24px
+          width: auto
+          font-size: 14px

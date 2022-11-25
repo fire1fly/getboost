@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link type="image/x-icon" rel="icon" href="./favicon.ico">
+  <link type="image/png" sizes="16x16" rel="icon" href="./favicon-16x16.png">
+  <link type="image/png" sizes="32x32" rel="icon" href="./favicon-32x32.png">
+  <link type="image/png" sizes="64x64" rel="icon" href="./favicon-64x64.png">
+  <link type="image/png" sizes="128x128" rel="icon" href="./favicon-128x128.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon-180x180.png">
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.min.css">
 
@@ -70,290 +77,255 @@
         </div>
       </div>
     </header><!-- /.header -->
-    <div class="callout _green2">
-      <div class="container callout__inner">
-        <div class="callout-msg">
-          Check our <b>4 503</b> reviews on 
-          <a href="#">
-            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.7195 6.36129H10.953L8.86302 0L6.76646 6.36129L0 6.35484L5.47979 10.2903L3.38323 16.6452L8.86302 12.7161L14.3363 16.6452L12.2463 10.2903L17.7195 6.36129Z" fill="white"/>
-              <path d="M12.7163 11.7287L12.246 10.29L8.86279 12.7158L12.7163 11.7287Z" fill="#B1B1B1"/>
-            </svg>
-            Trustpilot
-          </a>
-        </div>
-        <div class="callout-close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 7L7 17M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <main class="main cht">
-      <div class="container">
-        <div class="breads">
-          <a href="./cabinet.html" class="breads-item">
-            <svg class="breads-item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.75 15.75V10.2C6.75 9.78001 6.75 9.56999 6.83175 9.40956C6.90365 9.26843 7.01839 9.1537 7.15951 9.08179C7.31994 9.00005 7.52996 9.00005 7.95 9.00005H10.05C10.47 9.00005 10.6801 9.00005 10.8405 9.08179C10.9816 9.1537 11.0963 9.26843 11.1683 9.40956C11.25 9.56999 11.25 9.78001 11.25 10.2V15.75M8.26327 2.07306L3.17654 6.0294C2.83652 6.29387 2.6665 6.4261 2.54402 6.5917C2.43552 6.73839 2.3547 6.90365 2.30552 7.07935C2.25 7.2777 2.25 7.49308 2.25 7.92385V13.35C2.25 14.1901 2.25 14.6102 2.41349 14.931C2.5573 15.2133 2.78677 15.4427 3.06901 15.5866C3.38988 15.75 3.80992 15.75 4.65 15.75H13.35C14.1901 15.75 14.6101 15.75 14.931 15.5866C15.2132 15.4427 15.4427 15.2133 15.5865 14.931C15.75 14.6102 15.75 14.1901 15.75 13.35V7.92385C15.75 7.49308 15.75 7.2777 15.6945 7.07935C15.6453 6.90365 15.5645 6.73839 15.456 6.5917C15.3335 6.4261 15.1635 6.29387 14.8235 6.02941L9.73673 2.07306C9.47324 1.86812 9.34149 1.76565 9.19601 1.72626C9.06765 1.69151 8.93235 1.69151 8.80399 1.72626C8.65851 1.76565 8.52677 1.86812 8.26327 2.07306Z"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            User cabinet
-          </a>
-          <div class="breads__sep">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke-width="1.92857" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <a href="#" class="breads-item">Chats</a>
-        </div>
-        <div class="cht-grid">
-          <div class="cht-grid__list">
-            <h1 class="cht-title h2">Your chats</h1>
-            <div class="cht-list">
-              <div class="cht-list__track">
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                    <div class="cht-item-status _online"></div>
+    <main class="main">
+      <div class="cht">
+        <div class="container">
+          <div class="cht-grid">
+            <div class="cht-grid__list">
+              <h1 class="cht-title h2">Your chats</h1>
+              <div class="cht-list">
+                <div class="cht-list__track">
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                      <div class="cht-item-status _online"></div>
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">1</div>
+                    </div>
+                    <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">1</div>
+                  <div class="cht-item active">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                      <div class="cht-item-status _online"></div>
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                    </div>
+                    <div class="cht-item-text">$767.50</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">12</div>
+                    </div>
+                    <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                    <div class="cht-item-date">11 July, 2022</div>
+                  </div>
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                    </div>
+                    <div class="cht-item-username">
+                      Kathryn Murphy
+                    </div>
+                    <div class="cht-item-text">(808) 555-0111</div>
+                    <div class="cht-item-date">11 July, 2022</div>
+                  </div>
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                      <div class="cht-item-status _online"></div>
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">1</div>
+                    </div>
+                    <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                    <div class="cht-item-date">11 July, 2022</div>
+                  </div>
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                    </div>
+                    <div class="cht-item-text">$767.50</div>
                   <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item active">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                    <div class="cht-item-status _online"></div>
                   </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                      <div class="cht-item-status _online"></div>
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">12</div>
+                    </div>
+                    <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-text">$767.50</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">1</div>
+                    </div>
+                    <div class="cht-item-text">(808) 555-0111</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">12</div>
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                      <div class="cht-item-status _online"></div>
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">1</div>
+                    </div>
+                    <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                  <div class="cht-item active">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                      <div class="cht-item-status _online"></div>
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                    </div>
+                    <div class="cht-item-text">$767.50</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-username">
-                    Kathryn Murphy
+                  <div class="cht-item">
+                    <div class="cht-item-preview">
+                      <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
+                    </div>
+                    <div class="cht-item-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">12</div>
+                    </div>
+                    <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
+                    <div class="cht-item-date">11 July, 2022</div>
                   </div>
-                  <div class="cht-item-text">(808) 555-0111</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                    <div class="cht-item-status _online"></div>
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">1</div>
-                  </div>
-                  <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                  </div>
-                  <div class="cht-item-text">$767.50</div>
-                <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                    <div class="cht-item-status _online"></div>
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">12</div>
-                  </div>
-                  <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">1</div>
-                  </div>
-                  <div class="cht-item-text">(808) 555-0111</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                    <div class="cht-item-status _online"></div>
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">1</div>
-                  </div>
-                  <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item active">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                    <div class="cht-item-status _online"></div>
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                  </div>
-                  <div class="cht-item-text">$767.50</div>
-                  <div class="cht-item-date">11 July, 2022</div>
-                </div>
-                <div class="cht-item">
-                  <div class="cht-item-preview">
-                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                  </div>
-                  <div class="cht-item-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">12</div>
-                  </div>
-                  <div class="cht-item-text">I want to make an order as soon possible as soon possible as soon possible</div>
-                  <div class="cht-item-date">11 July, 2022</div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="cht-grid__chat">
-            <div class="chat-frame">
-              <div class="chat-h">
-                <div class="chat-avatar">
-                  <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
-                </div>
-                <div class="chat-h-info">
-                  <div class="chat-username">
-                    Darrell Steward
-                    <div class="chat-indicator-count">1</div>
+            <div class="cht-grid__chat">
+              <div class="chat-frame">
+                <div class="chat-h">
+                  <div class="chat-avatar">
+                    <img src="./assets/static/chat-avatar-example-1.png" alt="avatar">
                   </div>
-                  <div class="chat-userstatus">Online</div>
-                </div>
-                <button type="button" class="btn chat-btn-more">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="chat-pinned">
-                <div class="chat-pinned-text">
-                  #32945934 Mythic +15 Timed run (Season 2) (1-1) + Specific Dungeon Pick (10%)
-                </div>
-                <a href="./order.html" class="chat-pinned-link">
-                  Go to order
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>             
-                </a>
-              </div>
-              <div class="chat">
-                <div class="chat-track">
-                  <div class="chat-track-date">11 July, 2022</div>
-                  <div class="chat-msg-group _my">
-                    <div class="chat-msg _attach">
-                      <div class="chat-msg-text">Please tap the button and go though the last step before we can find a pro player for you</div>
-                      <div class="chat-msg-time">
-                        11:43
-                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
-                        </svg>                          
-                      </div>
-                      <div class="chat-msg-attach">
-                        <button class="btn chat-msg-btn">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 6L9 17L4 12" stroke="#3474EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>                            
-                        </button>
-                      </div>
+                  <div class="chat-h-info">
+                    <div class="chat-username">
+                      Darrell Steward
+                      <div class="chat-indicator-count">1</div>
                     </div>
+                    <div class="chat-userstatus">Online</div>
                   </div>
-                  <div class="chat-msg-group">
-                    <div class="chat-msg">
-                      <div class="chat-msg-text">Hi</div>
-                      <div class="chat-msg-time">
-                        11:43
-                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
-                        </svg>                          
-                      </div>
-                    </div>
-                    <div class="chat-msg">
-                      <div class="chat-msg-text">Nope. What is that?</div>
-                      <div class="chat-msg-time">
-                        11:43
-                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
-                        </svg>                          
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-msg-group _my">
-                    <div class="chat-msg">
-                      <div class="chat-msg-text">Hi</div>
-                      <div class="chat-msg-time">
-                        11:43
-                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
-                        </svg>                          
-                      </div>
-                    </div>
-                    <div class="chat-msg">
-                      <div class="chat-msg-text">Nope. What is that?</div>
-                      <div class="chat-msg-time">
-                        11:43
-                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
-                        </svg>                          
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="chat-bar">
-                <div class="chat-presets">
-                  <div class="chat-msg">
-                    <div class="chat-msg-text">Hello Sir!</div>
-                  </div>
-                  <div class="chat-msg">
-                    <div class="chat-msg-text">Hi =)</div>
-                  </div>
-                  <div class="chat-msg">
-                    <div class="chat-msg-text">Hi! I’m ready to start now</div>
-                  </div>
-                </div>
-                <div class="chat-enter">
-                  <button class="btn chat-attach">
+                  <button type="button" class="btn chat-btn-more">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.0204 5.16384C17.2691 4.41686 16.2539 3.99591 15.1945 3.99217C14.1351 3.98842 13.1169 4.40219 12.3604 5.14384L5.70036 11.6878C5.51152 11.8738 5.25671 11.9773 4.99171 11.9758C4.7267 11.9743 4.47309 11.8679 4.28636 11.6798C4.19407 11.5868 4.12109 11.4764 4.07161 11.3551C4.02213 11.2337 3.99714 11.1038 3.99807 10.9728C3.999 10.8417 4.02583 10.7122 4.07703 10.5915C4.12822 10.4709 4.20276 10.3616 4.29636 10.2698L10.9544 3.72784C12.0871 2.61594 13.6124 1.99516 15.1997 2.00003C16.787 2.0049 18.3084 2.63501 19.4344 3.75384C19.9929 4.30904 20.4362 4.96921 20.7387 5.69635C21.0412 6.4235 21.1969 7.20329 21.1969 7.99084C21.1969 8.7784 21.0412 9.55818 20.7387 10.2853C20.4362 11.0125 19.9929 11.6726 19.4344 12.2278L10.7704 20.8558C10.0337 21.5881 9.03711 21.9992 7.99836 21.9992C6.95961 21.9992 5.96306 21.5881 5.22636 20.8558C4.86251 20.494 4.57377 20.0638 4.37674 19.5899C4.17972 19.1161 4.07829 18.608 4.07829 18.0948C4.07829 17.5817 4.17972 17.0736 4.37674 16.5997C4.57377 16.1259 4.86251 15.6957 5.22636 15.3338L13.3064 7.28784C13.4941 7.10147 13.7478 6.99687 14.0124 6.99687C14.2769 6.99687 14.5307 7.10147 14.7184 7.28784C14.811 7.38018 14.8845 7.4899 14.9347 7.61071C14.9848 7.73152 15.0106 7.86104 15.0106 7.99184C15.0106 8.12265 14.9848 8.25216 14.9347 8.37297C14.8845 8.49378 14.811 8.6035 14.7184 8.69584L6.64036 16.7418C6.46203 16.9192 6.32052 17.13 6.22395 17.3622C6.12738 17.5944 6.07767 17.8434 6.07767 18.0948C6.07767 18.3463 6.12738 18.5953 6.22395 18.8275C6.32052 19.0597 6.46203 19.2705 6.64036 19.4478C7.0014 19.8079 7.49048 20.0101 8.00036 20.0101C8.51024 20.0101 8.99932 19.8079 9.36036 19.4478L18.0204 10.8198C18.3931 10.4492 18.6889 10.0086 18.8907 9.52325C19.0926 9.03792 19.1965 8.51747 19.1965 7.99184C19.1965 7.46621 19.0926 6.94576 18.8907 6.46043C18.6889 5.9751 18.3931 5.53445 18.0204 5.16384Z" fill="#3474EE"/>
-                    </svg>                        
+                      <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </button>
-                  <input type="text" class="chat-enter-field" placeholder="Write an message">
+                </div>
+                <div class="chat-pinned">
+                  <div class="chat-pinned-text">
+                    #32945934 Mythic +15 Timed run (Season 2) (1-1) + Specific Dungeon Pick (10%)
+                  </div>
+                  <a href="./order.html" class="chat-pinned-link">
+                    Go to order
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>             
+                  </a>
+                </div>
+                <div class="chat">
+                  <div class="chat-track">
+                    <div class="chat-track-date">11 July, 2022</div>
+                    <div class="chat-msg-group _my">
+                      <div class="chat-msg _attach">
+                        <div class="chat-msg-text">Please tap the button and go though the last step before we can find a pro player for you</div>
+                        <div class="chat-msg-time">
+                          11:43
+                          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
+                          </svg>                          
+                        </div>
+                        <div class="chat-msg-attach">
+                          <button class="btn chat-msg-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M20 6L9 17L4 12" stroke="#3474EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-msg-group">
+                      <div class="chat-msg">
+                        <div class="chat-msg-text">Hi</div>
+                        <div class="chat-msg-time">
+                          11:43
+                          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
+                          </svg>                          
+                        </div>
+                      </div>
+                      <div class="chat-msg">
+                        <div class="chat-msg-text">Nope. What is that?</div>
+                        <div class="chat-msg-time">
+                          11:43
+                          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
+                          </svg>                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-msg-group _my">
+                      <div class="chat-msg">
+                        <div class="chat-msg-text">Hi</div>
+                        <div class="chat-msg-time">
+                          11:43
+                          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
+                          </svg>                          
+                        </div>
+                      </div>
+                      <div class="chat-msg">
+                        <div class="chat-msg-text">Nope. What is that?</div>
+                        <div class="chat-msg-time">
+                          11:43
+                          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.43573 7.19363L9.63521 0.768778C9.82405 0.573063 10.1405 0.563124 10.3419 0.746578C10.521 0.909647 10.549 1.17063 10.4204 1.36407L10.3648 1.43312L3.80333 8.23312C3.62866 8.41414 3.34667 8.43523 3.14702 8.2957L3.07639 8.23585L0.137853 5.23717C-0.0525441 5.04288 -0.0447525 4.73543 0.155256 4.55047C0.333042 4.38607 0.602859 4.37378 0.794346 4.50954L0.862149 4.56738L3.43573 7.19363L9.63521 0.768778L3.43573 7.19363Z" fill="#141619"/>
+                          </svg>                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-bar">
+                  <div class="chat-presets">
+                    <div class="chat-msg">
+                      <div class="chat-msg-text">Hello Sir!</div>
+                    </div>
+                    <div class="chat-msg">
+                      <div class="chat-msg-text">Hi =)</div>
+                    </div>
+                    <div class="chat-msg">
+                      <div class="chat-msg-text">Hi! I’m ready to start now</div>
+                    </div>
+                  </div>
+                  <div class="chat-enter">
+                    <button class="btn chat-attach">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.0204 5.16384C17.2691 4.41686 16.2539 3.99591 15.1945 3.99217C14.1351 3.98842 13.1169 4.40219 12.3604 5.14384L5.70036 11.6878C5.51152 11.8738 5.25671 11.9773 4.99171 11.9758C4.7267 11.9743 4.47309 11.8679 4.28636 11.6798C4.19407 11.5868 4.12109 11.4764 4.07161 11.3551C4.02213 11.2337 3.99714 11.1038 3.99807 10.9728C3.999 10.8417 4.02583 10.7122 4.07703 10.5915C4.12822 10.4709 4.20276 10.3616 4.29636 10.2698L10.9544 3.72784C12.0871 2.61594 13.6124 1.99516 15.1997 2.00003C16.787 2.0049 18.3084 2.63501 19.4344 3.75384C19.9929 4.30904 20.4362 4.96921 20.7387 5.69635C21.0412 6.4235 21.1969 7.20329 21.1969 7.99084C21.1969 8.7784 21.0412 9.55818 20.7387 10.2853C20.4362 11.0125 19.9929 11.6726 19.4344 12.2278L10.7704 20.8558C10.0337 21.5881 9.03711 21.9992 7.99836 21.9992C6.95961 21.9992 5.96306 21.5881 5.22636 20.8558C4.86251 20.494 4.57377 20.0638 4.37674 19.5899C4.17972 19.1161 4.07829 18.608 4.07829 18.0948C4.07829 17.5817 4.17972 17.0736 4.37674 16.5997C4.57377 16.1259 4.86251 15.6957 5.22636 15.3338L13.3064 7.28784C13.4941 7.10147 13.7478 6.99687 14.0124 6.99687C14.2769 6.99687 14.5307 7.10147 14.7184 7.28784C14.811 7.38018 14.8845 7.4899 14.9347 7.61071C14.9848 7.73152 15.0106 7.86104 15.0106 7.99184C15.0106 8.12265 14.9848 8.25216 14.9347 8.37297C14.8845 8.49378 14.811 8.6035 14.7184 8.69584L6.64036 16.7418C6.46203 16.9192 6.32052 17.13 6.22395 17.3622C6.12738 17.5944 6.07767 17.8434 6.07767 18.0948C6.07767 18.3463 6.12738 18.5953 6.22395 18.8275C6.32052 19.0597 6.46203 19.2705 6.64036 19.4478C7.0014 19.8079 7.49048 20.0101 8.00036 20.0101C8.51024 20.0101 8.99932 19.8079 9.36036 19.4478L18.0204 10.8198C18.3931 10.4492 18.6889 10.0086 18.8907 9.52325C19.0926 9.03792 19.1965 8.51747 19.1965 7.99184C19.1965 7.46621 19.0926 6.94576 18.8907 6.46043C18.6889 5.9751 18.3931 5.53445 18.0204 5.16384Z" fill="#3474EE"/>
+                      </svg>                        
+                    </button>
+                    <input type="text" class="chat-enter-field" placeholder="Write an message">
+                  </div>
                 </div>
               </div>
             </div>

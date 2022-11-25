@@ -46,7 +46,7 @@
     +inter-semibold
     font-size: 16px
     color: $grey100
-    transition: 0.2s ease-in-out
+    transition: 0.1s
     &::placeholder
       color: $grey30
     &:hover
@@ -67,7 +67,7 @@
     font-size: 16px
     color: $grey100
     resize: none
-    transition: 0.2s ease-in-out
+    transition: 0.1s
     &::placeholder
       color: $grey30
     &:hover
@@ -113,7 +113,7 @@
     &-arrow
       stroke: $grey40
       line-height: 0
-      transition: 0.2s ease-in-out
+      transition: 0.1s
     &-list
       top: calc(100% + 5px)
       border-radius: 8px
@@ -164,6 +164,7 @@
   &-tab
     &-grid
       display: flex
+      user-select: none
       &._type1
         border-radius: 8px
         padding: 4px
@@ -176,6 +177,10 @@
             &:checked + .form-tab-plate
               background-color: $grey0
               box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+              &._blue
+                background-color: $light
+              &._red
+                background-color: rgba($danger, 0.2)
           &-plate
             border-radius: 8px
             width: 100%
@@ -186,6 +191,9 @@
             +inter-semibold
             font-size: 16px
             color: $button1
+            transition: 0.2s
+            &:hover
+              background-color: rgba($grey0, 0.7)
       &._type2
         gap: 4px
         .form-tab
@@ -209,6 +217,9 @@
             +inter-semibold
             font-size: 14px
             color: $button1
+            transition: 0.2s
+            &:hover
+              background-color: darken($five, 10%)
       &._big
         height: 56px
       &._mid

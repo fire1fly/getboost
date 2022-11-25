@@ -12,8 +12,7 @@
     display: flex
     flex-direction: column
     justify-content: space-between
-    background-color: $grey0
-    box-shadow: 0px 4px 23px #EFF2F8
+    transition: 0.5s
     &__wrap
       flex: 1 1 auto
       display: flex
@@ -29,6 +28,12 @@
           .stc-card-step-line
             &:last-child
               visibility: hidden
+      &.animate-active
+        .stc-card
+          background-color: $grey0
+          box-shadow: 0px 4px 23px #EFF2F8
+          &-step__wrap
+            opacity: 1
     &-icon
       max-width: 64px
       max-height: 100%
@@ -74,6 +79,8 @@
         width: 100%
         display: flex
         align-items: center
+        opacity: 0
+        transition: 0.5s
       &-line
         flex: 1 1 auto
         border-top: 1px dashed $grey30

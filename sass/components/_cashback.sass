@@ -22,6 +22,10 @@
       padding-top: 100px
       flex: 0 0 480px
       z-index: 2
+    &-pic
+      flex: 1 1 auto
+      img
+        width: 900px
   &-subtitle
     margin-bottom: 8px
     +stolzl-reg
@@ -40,18 +44,37 @@
     justify-content: space-between
     gap: 20px
   &-card
-    border: 1px solid $grey10
-    border-radius: 16px
-    min-height: 280px
-    padding: 0 0 0 30px
-    display: flex
-    background-color: $grey0
-    box-shadow: 0px 4px 23px rgba(201, 204, 213, 0.46)
-    overflow: hidden
     &__inner
-      flex: 0 0 280px
-      padding-bottom: 20px
-      align-self: end
+      margin-bottom: 15px
+      border-radius: 16px
+      position: relative
+      line-height: 0
+      height: 280px
+      overflow: hidden
+      transition-duration: 0.3s
+      transition-delay: 0.3s
+      &.animate-active
+        background-color: $primary
+      img, svg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: left center
+    &-info
+      +inter-med
+      font-size: 18px
+      color: $grey60
+      &-icon
+        margin-right: 10px
+        float: left
+        width: 20px
+        height: 20px
+      b
+        +inter-bold
+        color: $grey100
     &-title
       margin: 0
       margin-bottom: 10px
@@ -84,7 +107,9 @@
               fill: $grey0
               stroke: transparent
         &-label
-          +stolzl-med
+          +stolzl-reg
+          &.animate-active
+            +stolzl-med
 
 @media ( max-width: 1024px )
   .cb
@@ -121,7 +146,7 @@
 
 @media ( max-width: 768px )
   .cb
-    padding-top: 15px
+    padding-top: 40px
     padding-bottom: 40px
     &__offer
       margin-bottom: 35px
@@ -135,23 +160,27 @@
         padding-top: 20px
         flex: auto
       &-pic
-        align-self: end
         margin-top: -50px
         margin-right: -15px
+        flex: auto
+        img
+          width: 690px
       &-btn
         height: 50px
     &-title
       margin-bottom: 20px
       font-size: 26px
     &-offer
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+      grid-template-columns: 1fr
     &-card
-      &-title
-        margin-bottom: 4px
-        font-size: 30px
-      &-pic
-        img
-          max-width: 100%
+      &__inner
+        margin-right: 10px
+      &-info
+        font-size: 14px
+        &-icon
+          margin-right: 5px
+          width: 16px
+          height: 16px
     &-faq
       .faq
         &-subtitle

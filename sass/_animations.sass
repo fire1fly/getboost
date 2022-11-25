@@ -1,0 +1,56 @@
+@keyframes blink
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes ratingBlink
+  0%
+    fill: #D2D3D4
+  100%
+    fill: #00B654
+
+@keyframes spinning
+  100%
+    transform: rotate(360deg)
+
+@keyframes spinningAndBlink
+  0%
+    transform: rotate(0deg)
+  20%
+    transform: rotate(360deg)
+  35%
+    opacity: 0.3
+  50%
+    opacity: 1
+  70%
+    opacity: 0.3
+  100%
+    opacity: 1
+    transform: rotate(360deg)
+
+@keyframes stepsBlink
+  0%
+    opacity: 1
+  6%
+    opacity: 0
+  12%
+    opacity: 1
+  18%
+    opacity: 0
+  24%
+    opacity: 1
+  30%
+    opacity: 0
+  36%
+    opacity: 1
+  100%
+    opacity: 1
+
+@keyframes blinkAndScale
+  0%
+    opacity: 0.3
+    transform: scale(1)
+  100%
+    opacity: 1
+    transform: scale(1.1)

@@ -46,6 +46,9 @@
       font-size: 16px
       color: $grey70
       cursor: pointer
+      transition: 0.1s
+      &:hover
+        background-color: $light
       &.active
         border-color: $primary
         background-color: $primary
@@ -94,7 +97,7 @@
 
 @media ( max-width: 991px )
   .ct
-    padding-top: 15px
+    padding-top: 40px
     &-h
       &-btn
         display: none
@@ -151,6 +154,8 @@
         +inter-semibold
         font-size: 16px
         color: $grey70
+        &:hover
+          background-color: inherit
         &.selected
           margin-right: auto
           display: block
@@ -159,14 +164,14 @@
       &-arrow
         display: block
         line-height: 0
-        transition: 0.2s ease-in-out
+        transition: 0.1s
         svg
           stroke: $grey70
       &-list
         opacity: 0
         transform: translateY(-5px)
         position: absolute
-        transition: 0.2s ease-in-out
+        transition: 0.1s
         visibility: hidden
         display: block
         top: calc(100% + 5px)
