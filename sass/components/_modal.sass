@@ -1,0 +1,177 @@
+.m
+  border-radius: 24px
+  background-color: $grey0
+  flex: 0 1 auto
+  max-width: 420px
+  width: 100%
+  &._wide
+    max-width: 620px
+  &__wrapper
+    position: fixed
+    top: 0
+    left: 0
+    overflow-x: hidden
+    overflow-y: auto
+    width: 100%
+    height: 100%
+    padding: 120px 15px
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    background-color: rgba(27, 25, 48, 0.3)
+    visibility: hidden
+    opacity: 0
+    transition: 0.2s ease-in-out
+    z-index: 10
+    &.active
+      visibility: visible
+      opacity: 1
+  &__inner
+    padding: 24px 32px
+  &-h
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 8px 0
+    &._mb
+      margin-bottom: 32px
+    &._bordered
+      border-bottom: 1px solid $grey10
+      padding: 32px 24px 20px
+    .m
+      &-title
+        flex: 0 1 calc(100% - 32px)
+      &-subtext
+        flex: 1 1 100%
+  &-title
+    +stolzl-med
+    font-size: 24px
+    color: $grey100
+    &._mb
+      margin-bottom: 16px
+  &-btn
+    border-radius: 30px
+    height: 54px
+    padding: 0 40px
+    +inter-semibold
+    font-size: 16px
+    &-close
+      margin-left: auto
+      flex: 0 0 auto
+      width: 32px
+      height: 32px
+      cursor: pointer
+      line-height: 0
+      svg
+        max-width: 100%
+        max-height: 100%
+    &._wide
+      width: 100%
+  &-subtext
+    +inter-reg
+    font-size: 16px
+    color: $grey70
+    b
+      +inter-semibold
+  &-text
+    +inter-med
+    color: $grey100
+  &-link
+    +inter-semibold
+    font-size: 16px
+    color: $primary
+    cursor: pointer
+  &-form
+    display: flex
+    flex-direction: column
+    gap: 23px
+  &-f
+    padding-top: 16px
+    &-row
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 10px
+    &-text
+      margin: 12px 0
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 8px
+      &._center
+        justify-content: center
+      &._end
+        justify-content: flex-end
+  &-sign
+    &-status
+      flex: 1 1 auto
+      input[type="radio"]
+        display: none
+        &:checked + .m-sign-status__inner
+          border-color: $primary
+          +inter-semibold
+          color: $primary
+      &__inner
+        border-bottom: 4px solid $grey10
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        +inter-reg
+        font-size: 16px
+        color: $grey60
+        cursor: pointer
+      &-bar
+        display: flex
+        align-items: center
+  &-msg
+    &-emoji
+      margin-bottom: 20px
+      width: 80px
+      height: 80px
+      img
+        max-width: 100%
+        max-height: 100%
+
+@media ( max-width: 1024px )
+  .m
+    &__wrapper
+      padding: 180px 15px
+
+@media ( max-width: 768px )
+  .m
+    &__wrapper
+      padding: 30px 15px
+    &__inner
+      padding: 20px 24px
+    &-h
+      &._mb
+        margin-bottom: 25px
+      &._bordered
+        padding: 24px 24px 20px
+    &-btn
+      height: 50px
+      &-close
+        width: 24px
+        height: 24px
+    &-title
+      font-size: 20px
+    &-subtext
+      font-size: 14px
+    &-link
+      font-size: 14px
+    &-f
+      &-row
+        flex-direction: column
+        .m-btn
+          width: 100%
+    &-sign
+      &-status
+        &__inner
+          height: 48px
+          font-size: 14px
+    &-msg
+      &-emoji
+        margin-bottom: 16px
+        width: 54px
+        height: 54px

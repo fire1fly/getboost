@@ -1,0 +1,265 @@
+.form
+  &-block
+    margin-bottom: 32px
+    &:last-child
+      margin-bottom: 0
+  &-part
+    display: flex
+    flex-direction: column
+    &._error
+      .form
+        &-input, &-select
+          border-color: $danger
+        &-part-msg
+          color: $danger
+    &-grid
+      margin-bottom: 20px
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(1px, 1fr))
+      gap: 16px
+    &-msg
+      margin-top: 4px
+      +inter-reg
+      font-size: 14px
+      color: $grey70
+    &-link
+      margin-top: 4px
+      display: flex
+      align-items: center
+      gap: 10px
+      &._center
+        justify-content: center
+      &._end
+        justify-content: flex-end
+  &-label
+    margin-bottom: 8px
+    +inter-reg
+    font-size: 14px
+    color: $grey70
+  &-input
+    border-radius: 8px
+    border: 1px solid $grey10
+    background-color: $grey0
+    width: 100%
+    height: 56px
+    padding: 0 24px
+    +inter-semibold
+    font-size: 16px
+    color: $grey100
+    transition: 0.2s ease-in-out
+    &::placeholder
+      color: $grey30
+    &:hover
+      border-color: $grey30
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+    &:disabled
+      border-color: $grey10
+      background-color: $grey10
+      box-shadow: none
+  &-textarea
+    border-radius: 8px
+    border: 1px solid $grey10
+    background-color: $grey0
+    width: 100%
+    height: 165px
+    padding: 18px 24px
+    +inter-semibold
+    font-size: 16px
+    color: $grey100
+    resize: none
+    transition: 0.2s ease-in-out
+    &::placeholder
+      color: $grey30
+    &:hover
+      border-color: $grey30
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+    &:disabled
+      border-color: $grey10
+      background-color: $grey10
+      box-shadow: none
+    &._sm-height
+      height: 90px
+  &-select
+    border-radius: 8px
+    border: 1px solid $grey10
+    background-color: $grey0
+    width: 100%
+    height: 56px
+    padding: 0 24px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +inter-semibold
+    font-size: 16px
+    cursor: pointer
+    user-select: none
+    &.active
+      .form-select
+        &-arrow
+          transform: scale(1, -1)
+          svg
+            stroke: $primary
+    .placeholder
+      color: $grey40
+    &-item
+      display: flex
+      align-items: center
+      +inter-semibold
+      font-size: 16px
+      color: $grey70
+      &-icon
+        margin-right: 12px
+        max-width: 24px
+    &-arrow
+      stroke: $grey40
+      line-height: 0
+      transition: 0.2s ease-in-out
+    &-list
+      top: calc(100% + 5px)
+      border-radius: 8px
+      border: 1px solid $grey20
+      padding: 12px 0
+      background-color: $grey0
+      box-shadow: 0px 22px 35px rgba(26, 31, 36, 0.25)
+      .form-select
+        &-item
+          height: 56px
+          padding: 0 24px
+          &:hover
+            background-color: $light
+          &.active
+            color: $grey100
+            background-color: $light
+            &::before
+              content: "•"
+              margin-right: 13px
+              color: $primary
+  &-checkbox
+    display: flex
+    cursor: pointer
+    &-label
+      margin-left: 12px
+      +inter-reg
+      font-size: 16px
+      color: $grey70
+  &-radio
+    input[type="radio"]
+      display: none
+      &:checked
+        & + .form-radio__inner
+          .form-radio-plate
+            border: 5px solid $primary
+    &-plate
+      border-radius: 50%
+      border: 1px solid $grey20
+      width: 20px
+      height: 20px
+      background-color: $grey0
+  &-text
+    margin: 0
+    margin-bottom: 8px
+    +inter-reg
+    font-size: 16px
+    color: $grey70
+  &-tab
+    &-grid
+      display: flex
+      &._type1
+        border-radius: 8px
+        padding: 4px
+        background-color: $grey10
+        .form-tab
+          flex: 1 1 auto
+          cursor: pointer
+          input[type="radio"]
+            display: none
+            &:checked + .form-tab-plate
+              background-color: $grey0
+              box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+          &-plate
+            border-radius: 8px
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            +inter-semibold
+            font-size: 16px
+            color: $button1
+      &._type2
+        gap: 4px
+        .form-tab
+          flex: 1 1 auto
+          cursor: pointer
+          input[type="radio"]
+            display: none
+            &:checked + .form-tab-plate
+              border-color: $button1
+              background-color: $button1
+              color: $grey0
+          &-plate
+            border-radius: 8px
+            border: 1px solid $grey10
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color: $five
+            +inter-semibold
+            font-size: 14px
+            color: $button1
+      &._big
+        height: 56px
+      &._mid
+        height: 40px
+        .form-tab-plate
+          font-size: 14px
+      &._small
+        height: 33px
+      &._short
+        display: inline-flex
+        .form-tab-plate
+          padding: 0 12px
+  &-range
+
+@media ( max-width: 767px )
+  .form
+    &-block
+      margin-bottom: 24px
+    &-part
+      &-grid
+        margin-bottom: 8px
+        grid-template-columns: 1fr
+        gap: 8px
+      &-msg
+        font-size: 12px
+    &-label
+      margin-bottom: 4px
+      font-size: 12px
+    &-input
+      height: 50px
+      font-size: 14px
+    &-textarea
+      height: 150px
+      font-size: 14px
+      padding: 16px 24px
+      &._sm-height
+        height: 50px
+    &-select
+      height: 50px
+      &-item
+        font-size: 14px
+      &-list
+        .form-select-item
+          height: 50px
+    &-checkbox
+      &-label
+        font-size: 14px
+    &-text
+      font-size: 14px
+    &-tab
+      &-grid
+        &._short
+          .form-tab-plate
+            padding: 0 8px

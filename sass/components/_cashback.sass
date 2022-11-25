@@ -1,0 +1,160 @@
+.cb
+  padding-top: 40px
+  padding-bottom: 60px
+  &__offer
+    margin-bottom: 70px
+  &__chart
+    margin-bottom: 60px
+  &__bnr
+    margin-bottom: 65px
+  &-fs
+    display: flex
+    &-btn
+      border-radius: 30px
+      display: inline-flex
+      height: 60px
+      padding: 0 32px
+      +inter-semibold
+      font-size: 16px
+      color: $grey0
+      z-index: 1
+    &-info
+      padding-top: 100px
+      flex: 0 0 480px
+      z-index: 2
+  &-subtitle
+    margin-bottom: 8px
+    +stolzl-reg
+    text-transform: uppercase
+    color: $primary
+  &-title
+    margin: 0
+    margin-bottom: 24px
+    +stolzl-reg
+    font-size: 44px
+    text-transform: uppercase
+    color: $grey100
+  &-offer
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    justify-content: space-between
+    gap: 20px
+  &-card
+    border: 1px solid $grey10
+    border-radius: 16px
+    min-height: 280px
+    padding: 0 0 0 30px
+    display: flex
+    background-color: $grey0
+    box-shadow: 0px 4px 23px rgba(201, 204, 213, 0.46)
+    overflow: hidden
+    &__inner
+      flex: 0 0 280px
+      padding-bottom: 20px
+      align-self: end
+    &-title
+      margin: 0
+      margin-bottom: 10px
+      +stolzl-reg
+      font-size: 44px
+      text-transform: uppercase
+      color: $primary
+    &-subtitle
+      +stolzl-med
+      font-size: 20px
+      text-transform: uppercase
+      color: $grey100
+  &-faq
+    margin: 0 auto
+    max-width: 835px
+    .faq
+      &-subtitle
+        text-align: center
+        color: $primary
+      &-title
+        text-align: center
+        margin-bottom: 32px
+      &-item
+        &.active
+          .faq-item-arrow
+            &__bg
+              fill: $primary
+              opacity: 1
+            &__arrow
+              fill: $grey0
+              stroke: transparent
+        &-label
+          +stolzl-med
+
+@media ( max-width: 1024px )
+  .cb
+    padding-top: 58px
+    padding-bottom: 64px
+    &__offer
+      margin-bottom: 110px
+    &__chart
+      margin-bottom: 40px
+    &-title
+      font-size: 40px
+    &-card
+      &__inner
+        flex: 0 0 220px
+      &-subtitle
+        font-size: 16px
+
+@media ( max-width: 991px )
+  .cb
+    &-fs
+      &-info
+        flex: 0 0 390px
+    &-card
+      flex-direction: column
+      padding-left: 0
+      &__inner
+        align-self: auto
+        padding: 24px
+        padding-top: 0
+        flex: auto
+        order: 1
+      &-pic
+        align-self: end
+
+@media ( max-width: 768px )
+  .cb
+    padding-top: 15px
+    padding-bottom: 40px
+    &__offer
+      margin-bottom: 35px
+    &__chart
+      margin-bottom: 30px
+    &__bnr
+      margin-bottom: 24px
+    &-fs
+      flex-direction: column
+      &-info
+        padding-top: 20px
+        flex: auto
+      &-pic
+        align-self: end
+        margin-top: -50px
+        margin-right: -15px
+      &-btn
+        height: 50px
+    &-title
+      margin-bottom: 20px
+      font-size: 26px
+    &-offer
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    &-card
+      &-title
+        margin-bottom: 4px
+        font-size: 30px
+      &-pic
+        img
+          max-width: 100%
+    &-faq
+      .faq
+        &-subtitle
+          text-align: left
+        &-title
+          text-align: left

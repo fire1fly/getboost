@@ -1,0 +1,956 @@
+.cbn
+  padding-top: 30px
+  padding-bottom: 60px
+  &__form
+    margin-bottom: 60px
+  &__stc
+    margin-bottom: 65px
+  &-h
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-btn
+    border-radius: 30px
+    height: 50px
+    padding: 0 24px
+    +inter-semibold
+    font-size: 16px
+  &-title
+    margin: 0
+    +stolzl-med
+    font-weight: normal
+    font-size: 34px
+    color: $button1
+  &-top
+    margin-bottom: 24px
+    display: flex
+    gap: 20px
+    .cbn
+      &-stat
+        flex: 0 1 300px
+      &-bar
+        flex: 1 1 auto
+  &-prof
+    &._mobile
+      display: none
+  &-stat
+    border-radius: 12px
+    border: 1px solid $grey10
+    padding: 24px 16px
+    background-color: $grey0
+    box-shadow: 0px 4px 23px #EFF2F8
+    &-grid
+      margin-bottom: 30px
+      &._reset
+        margin-bottom: 0
+        .cbn-stat-item
+          &:last-child
+            border-bottom: none
+      .cbn-btn
+        margin-top: 20px
+        width: 100%
+    &-item
+      border-bottom: 1px solid $grey10
+      padding: 16px 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &:first-child
+        padding-top: 0
+      &:nth-last-of-type(1)
+        border-bottom: none
+        padding-bottom: 0
+      &-icon
+        margin-right: 12px
+        flex: 0 0 auto
+        line-height: 0
+      &-label
+        margin-right: auto
+        +inter-semibold
+        font-size: 16px
+        color: $grey70
+      &-value
+        +stolzl-med
+        font-size: 16px
+        color: $grey100
+  &-progress
+    margin-bottom: 12px
+    border-radius: 10px
+    width: 100%
+    height: 10px
+    background-color: $grey10
+    .progress
+      border-radius: 10px
+      height: 100%
+      background-color: $primary
+    &-f
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-value
+      +inter-semibold
+      font-size: 14px
+      color: $grey60
+      b
+        +stolzl-reg
+        font-size: 16px
+        color: $grey100
+    &-total
+      text-align: right
+      +inter-semibold
+      text-transform: uppercase
+      font-size: 14px
+      color: $grey60
+  &-bar
+    border-radius: 12px
+    border: 1px solid $grey10
+    display: flex
+    background-color: $grey0
+    box-shadow: 0px 4px 23px #EFF2F8
+    overflow: hidden
+    .cbn-card
+      flex: 0 0 200px
+      &:nth-last-of-type(1)
+        border-top-right-radius: 12px
+        border-bottom-right-radius: 12px
+    &-part
+      flex: 1 1 auto
+      margin: 24px 0
+      padding: 0 24px
+      border-right: 1px solid $grey10
+      &-f
+        border-top: 1px solid $grey10
+        padding-top: 28px
+        display: flex
+        align-items: center
+        gap: 10px
+        &-btns
+          flex: 0 0 42%
+          display: flex
+          flex-wrap: wrap
+          gap: 6px
+          .cbn-btn
+            flex: 1 1 auto
+            height: 60px
+            &._mobile
+              display: none
+        &-attach
+          flex: 1 1 auto
+          display: flex
+          flex-wrap: wrap
+          gap: 4px
+      .cbn-invite
+        margin-bottom: 20px
+    &-tooltips
+      margin: 14px 0 20px
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      gap: 10px 30px
+  &-attach-shield
+    border-radius: 6px
+    display: flex
+    align-items: center
+    gap: 6px
+    padding: 2px 12px
+    background-color: $grey10
+    +inter-semibold
+    font-size: 14px
+    color: $grey90
+    &-close
+      flex: 0 0 auto
+      cursor: pointer
+  &-invite
+    &-label
+      margin-bottom: 8px
+      display: block
+      +inter-reg
+      font-size: 14px
+      color: $grey70
+      b
+        +inter-semibold
+        color: $grey100
+    &-field
+      border-radius: 30px
+      border: 1px solid $grey10
+      height: 56px
+      padding: 4px
+      display: flex
+      align-items: center
+    &-input
+      border: none
+      flex: 1 1 auto
+      width: 100%
+      padding: 0 22px
+      height: 100%
+      background-color: transparent
+      +inter-semibold
+      font-size: 16px
+      color: $grey100
+      &::placeholder
+        color: $grey40
+    &-btn
+      border-radius: 30px
+      height: 100%
+      padding: 0 24px
+      +inter-semibold
+      font-size: 16px
+      color: $grey0
+  &-lvl
+    position: relative
+    &-grid
+      position: relative
+      z-index: 2
+      display: flex
+      justify-content: space-between
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-plate
+      margin-bottom: 3px
+      border-radius: 6px
+      border: 1px solid $grey20
+      padding: 8px 16px
+      display: flex
+      align-items: center
+      justify-content: center
+      +stolzl-med
+      text-align: center
+      font-size: 16px
+      color: $button1
+      &.active
+        border-color: $light
+        background-color: $light
+        color: $primary
+    &-value
+      margin-bottom: 10px
+      border-radius: 16px
+      border: 3px solid $five
+      padding: 0 5px
+      height: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $grey10
+      +inter-semibold
+      text-transform: uppercase
+      font-size: 12px
+      color: $grey60
+      &.active
+        background-color: $primary
+        color: $grey0
+    &-label
+      +inter-semibold
+      font-size: 14px
+      color: $grey50
+    &-progress
+      position: absolute
+      z-index: 1
+      top: 50px
+      left: 0
+      border-radius: 10px
+      width: 100%
+      height: 10px
+      background-color: $grey10
+      .progress
+        border-radius: 10px
+        height: 100%
+        background-color: $primary
+  &-card
+    padding: 16px 11px
+    display: flex
+    flex-direction: column
+    &._light
+      background-color: $five
+    &-h
+      min-height: 42px
+    &-title
+      +stolzl-med
+      font-size: 16px
+      color: $grey100
+    &-sub
+      +inter-reg
+      text-align: center
+      font-size: 14px
+      color: $grey70
+    &-label
+      margin-bottom: 2px
+      +inter-semibold
+      font-size: 12px
+      color: $grey70
+    &-plate
+      border-radius: 6px
+      border: 1px solid $grey20
+      padding: 6px 12px
+      background-color: $grey0
+      +inter-semibold
+      font-size: 14px
+      color: $button1
+    &-bar
+      margin-top: 8px
+      display: flex
+      flex-direction: column
+      gap: 6px
+    &-btn
+      border-radius: 4px
+      padding: 8px 10px
+      width: 100%
+      min-height: 50px
+      justify-content: flex-start
+      gap: 8px
+      text-align: left
+      +inter-semibold
+      font-size: 14px
+      &._centered
+        justify-content: center
+      &-icon
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 32px
+        height: 32px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $primary
+        img
+          object-fit: cover
+          width: 100%
+          height: 100%
+        svg
+          max-width: 100%
+    &-prof
+      display: flex
+      align-items: center
+      gap: 10px
+      &-avatar
+        flex: 0 0 auto
+        width: 42px
+        height: 42px
+        img, svg
+          object-fit: cover
+          width: 100%
+          height: 100%
+  &-stc
+    &-subtitle
+      margin-bottom: 8px
+      +stolzl-reg
+      text-transform: uppercase
+      color: $primary
+    &-title
+      margin: 0
+      margin-bottom: 32px
+      +stolzl-med
+      color: $grey100
+  &-takeorders
+    margin-top: 40px
+  &-tord
+    border-radius: 8px
+    border: 1px solid $grey10
+    background-color: $grey0
+    &-grid
+      margin-top: 25px
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+      gap: 24px 20px
+    &-h
+      padding: 18px 24px 20px
+      border-bottom: 1px solid $grey10
+      &__head
+        margin-bottom: 10px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, auto)
+        gap: 10px
+        .cbn-tord
+          &-title
+            grid-column: 1/3
+            grid-row: 1/2
+          &-sum
+            grid-column: 1/2
+            grid-row: 2/3
+          &-preview
+            justify-self: end
+            grid-column: 2/3
+            grid-row: 2/3
+    &-title
+      +stolzl-med
+      font-size: 16px
+      color: $grey60
+    &-sum
+      +stolzl-med
+      font-size: 24px
+      color: $button1
+    &-preview
+      width: 30px
+      height: 30px
+      img, svg
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-subtext
+      +inter-reg
+      font-size: 14px
+      color: $grey70
+    &-bar
+      margin-top: 16px
+      display: flex
+      align-items: center
+      gap: 4px
+      .cbn-tord-btn
+        flex: 1 1 auto
+    &-btn
+      border-radius: 30px
+      height: 50px
+      +inter-semibold
+      font-size: 16px
+      padding: 0 5px
+    &-b
+      padding: 16px 24px
+    &-label
+      margin-bottom: 16px
+      +stolzl-med
+      text-transform: uppercase
+      font-size: 12px
+      color: $grey60
+    .cbnord-tbl
+      gap: 16px 30px
+    &-f
+      border-top: 1px solid $grey10
+      padding: 16px 24px 22px
+.cbnord
+  margin-bottom: 12px
+  border-radius: 12px
+  border: 1px solid $grey20
+  padding: 20px
+  background-color: $grey0
+  display: grid
+  grid-template-columns: 1fr 1fr auto auto auto
+  grid-template-rows: repeat(2, auto)
+  grid-gap: 10px 30px
+  align-items: center
+  &:nth-last-of-type(1)
+    margin-bottom: 0
+  &-subtext
+    +inter-reg
+    font-size: 14px
+    color: $grey60
+  &__details
+    grid-column: 1 / 2
+    grid-row: 2 / 3
+  &-title
+    +stolzl-med
+    font-size: 16px
+    color: $grey100
+  &-checkbox
+    grid-row: 1/3
+    display: flex
+    align-items: center
+    &-label
+      margin-left: 10px
+      +inter-semibold
+      font-size: 16px
+      color: $grey90
+  &-status
+    border-radius: 6px
+    padding: 8px 16px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    +stolzl-med
+    font-size: 16px
+    line-height: 1
+    &__wrap
+      grid-row: 1/3
+  &__sum
+    grid-row: 1/3
+  &-sum
+    +stolzl-med
+    font-size: 16px
+    color: $grey100
+  &-btn
+    grid-row: 1/3
+    border-radius: 30px
+    height: 48px
+    padding: 0 24px
+    display: inline-flex
+    +inter-semibold
+    font-size: 16px
+    color: $grey0
+    &-circle
+      border-radius: 50%
+      height: 42px
+      width: 42px
+      align-items: center
+      justify-content: center
+      gap: 10px
+      svg
+        flex: 0 0 auto
+        max-width: 90%
+      &-text
+        display: none
+        +inter-semibold
+        font-size: 16px
+        color: $grey70
+  &-sep
+    display: none
+  &-tbl
+    display: flex
+    flex-wrap: wrap
+    gap: 10px 24px
+    &-label
+      margin-bottom: 5px
+      +inter-semibold
+      font-size: 12px
+      color: $grey70
+    &-value
+      +inter-semibold
+      font-size: 16px
+      color: $button1
+  &-bar
+    display: flex
+    align-items: center
+    gap: 6px
+
+.cbnboost
+  &-ord
+    margin-bottom: 12px
+    border-radius: 12px
+    border: 1px solid $grey20
+    padding: 20px
+    background-color: $grey0
+    display: grid
+    grid-template-columns: 1.5fr 2fr min-content min-content
+    grid-template-rows: repeat(2, auto)
+    grid-gap: 10px
+    align-items: center
+    &:nth-last-of-type(1)
+      margin-bottom: 0px
+    &__head
+      align-self: start
+      grid-column: 1/2
+      grid-row: 1/3
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 10px
+      .cbnord-status
+        font-size: 12px
+    &__status
+      grid-column: 1/2
+      grid-row: 2/3
+      .cbnord-status
+        font-size: 12px
+    &__tbl
+      grid-column: 2/3
+      grid-row: 1/2
+    &__sum
+      grid-column: 3/4
+      grid-row: 1/2
+      font-size: 24px
+    &__bar
+      grid-column: 5/6
+      grid-row: 1/2
+    &__details
+      grid-column: 2/5
+      grid-row: 2/3
+
+@media ( max-width: 1200px )
+  .cbn
+    padding-top: 15px
+    padding-bottom: 65px
+    &__form
+      margin-bottom: 80px
+    &__stc
+      margin-bottom: 42px
+    &-title
+      font-size: 36px
+    &-top
+      flex-direction: column
+      gap: 12px
+      .cbn
+        &-stat
+          flex: auto
+        &-bar
+          flex: auto
+    &-bar
+      &-part
+        &-f
+          padding-top: 20px
+    &-stat
+      order: 1
+      border: none
+      padding: 0
+      background-color: transparent
+      box-shadow: none
+      &-grid
+        margin-bottom: 12px
+        display: flex
+        gap: 6px
+        .cbn-btn
+          margin-top: 0
+          flex: 1 1 auto
+          width: auto
+          align-self: center
+      &-item
+        flex-wrap: wrap
+        gap: 3px
+        flex: 1 1 auto
+        border-radius: 12px
+        border: 1px solid $grey10
+        padding: 16px
+        background-color: $grey0
+        box-shadow: 0px 4px 23px #EFF2F8
+        &:first-child
+          padding-top: 16px
+        &:nth-last-of-type(1)
+          border-bottom: 1px solid $grey10
+          padding-bottom: 16px
+    &-takeorders
+      margin-top: 50px
+  .cbnord
+    grid-template-columns: 2fr auto auto
+    grid-template-rows: repeat(3, auto)
+    grid-gap: 10px 15px
+    &-title
+      font-size: 20px
+    &-checkbox
+      grid-column: 1/2
+      grid-row: 3/4
+    &-status
+      &__wrap
+        grid-column: 3/4
+        grid-row: 1/3
+        align-self: center
+    &__sum
+      grid-column: 2/3
+      grid-row: 1/3
+      align-self: center
+    &-sum
+      font-size: 20px
+    &-btn
+      grid-column: 3/4
+      grid-row: 3/4
+      height: 60px
+      font-size: 18px
+  .cbnboost
+    &-ord
+      grid-template-columns: 1fr min-content 1fr
+      padding: 20px 0
+      gap: 0
+      &__head
+        grid-row: 1/2
+        padding: 0 24px
+        .cbnord-status
+          padding: 8px 16px
+          font-size: 16px
+      &__sum
+        margin-right: 16px
+        justify-self: end
+        grid-column: 2/3
+      &__bar
+        grid-column: 3/4
+        justify-self: end
+        padding-right: 20px
+        flex-wrap: wrap
+        justify-content: flex-end
+        .cbnord-btn
+          flex: 1 1 auto
+          height: 48px
+          font-size: 16px
+          &-circle
+            flex: 1 1 auto
+            border-radius: 30px
+            width: auto
+            height: 48px
+            padding: 0 16px
+            &-text
+              display: block
+      &__tbl
+        margin-top: 15px
+        align-self: start
+        border-top: 1px solid $grey10
+        padding: 18px 24px 0
+        grid-column: 1/3
+        grid-row: 2/3
+      &__details
+        margin-top: 15px
+        align-self: start
+        border-top: 1px solid $grey10
+        padding-top: 18px
+        padding-right: 20px
+        grid-column: 3/4
+        grid-row: 2/3
+
+@media ( max-width: 991px )
+  .cbn
+    &-prof
+      max-width: 100%
+      border-radius: 8px
+      border: 1px solid $grey10
+      padding: 12px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background-color: $grey0
+      &._mobile
+        display: flex
+      &-avatar
+        margin-right: 13px
+        border-radius: 50%
+        flex: 0 0 auto
+        width: 40px
+        height: 40px
+        overflow: hidden
+        img, svg
+          width: 100%
+      &-info
+        flex: 0 1 auto
+        margin-right: auto
+        word-wrap: break-word
+      &-username
+        margin-bottom: 4px
+        +stolzl-med
+        font-size: 16px
+        color: $button1
+      &-sub
+        +inter-semibold
+        font-size: 12px
+        color: $grey70
+        word-break: break-all
+      &-btn
+        margin-left: 4px
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 36px
+        height: 36px
+        display: flex
+        align-items: center
+        justify-content: center
+        svg, img
+          max-width: 100%
+    &-card
+      display: none
+    &-bar
+      &-part
+        border-right: none
+
+@media ( max-width: 768px )
+  .cbn
+    padding-bottom: 40px
+    &__stc
+      margin-bottom: 36px
+    &-h
+      margin-bottom: 12px
+      flex-direction: column
+      align-items: flex-start
+      gap: 12px
+      .cbn-btn
+        width: 100%
+    &-title
+      font-size: 26px
+    &-stat
+      &-grid
+        .cbn-btn
+          display: none
+      &-item
+        padding: 10px
+        &:first-child
+          padding-top: 10px
+        &:last-child
+          padding-bottom: 10px
+        &-icon
+          margin-right: 0
+          width: 20px
+          height: 20px
+          svg, img
+            max-width: 100%
+        &-label
+          font-size: 14px
+    &-bar
+      &-part
+        margin: 16px 0
+        padding: 0 20px
+        .cbn-invite
+          margin-bottom: 12px
+        &-f
+          padding-top: 10px
+          flex-direction: column
+          gap: 10px
+          &-btns
+            flex-direction: column
+            flex: auto
+            width: 100%
+            .cbn-btn
+              width: 100%
+              height: 50px
+              font-size: 14px
+              &._mobile
+                display: flex
+          &-attach
+            width: 100%
+            justify-content: center
+      &-tooltips
+        gap: 5px
+    &-invite
+      &-label
+        font-size: 12px
+      &-field
+        height: 43px
+      &-input
+        font-size: 14px
+      &-btn
+        font-size: 14px
+    &-lvl
+      &-grid
+        gap: 4px
+      &-item
+        flex: 1 1 auto
+      &-plate
+        width: 100%
+        padding: 8px 0
+        font-size: 12px
+      &-value
+        margin-bottom: 6px
+      &-label
+        font-size: 12px
+      &-progress
+        top: 46px
+        height: 8px
+    &-stc
+      &-title
+        margin-bottom: 16px
+    &-takeorders
+      margin-top: 20px
+    &-tord
+      &-grid
+        margin-top: 16px
+        gap: 10px
+      &-h
+        padding: 16px 20px 20px
+        &__head
+          grid-template-columns: auto min-content
+          gap: 4px
+          .cbn-tord
+            &-title
+              grid-column: 1/2
+            &-preview
+              grid-row: 1/3
+      &-title
+        font-size: 14px
+      &-sum
+        font-size: 20px
+      &-btn
+        height: 44px
+        font-size: 14px
+      &-b
+        padding: 20px 16px 16px
+      &-f
+        padding: 16px
+      .cbnord-tbl
+        gap: 12px 20px
+  .cbnord
+    grid-template-columns: min-content auto
+    grid-template-rows: auto
+    padding: 16px 0
+    grid-gap: 8px
+    &__date
+      white-space: nowrap
+      padding-left: 16px
+    &-subtext
+      font-size: 12px
+    &__details
+      padding: 0 16px
+      grid-column: 1/3
+      grid-row: auto
+    &-title
+      font-size: 16px
+    &-checkbox
+      margin: 0 16px
+      grid-column: 1/3
+      grid-row: auto
+      order: 1
+      &-label
+        font-size: 14px
+    &-status
+      width: auto
+      font-size: 12px
+      padding: 4px 8px
+      &__wrap
+        margin-right: 16px
+        grid-column: 2/3
+        grid-row: 1/2
+    &__sum
+      margin: 12px 0
+      padding: 0 16px
+      grid-column: 1/3
+      grid-row: auto
+      justify-self: center
+    &-btn
+      margin: 0 auto 20px
+      grid-column: 1/3
+      grid-row: auto
+      width: 95%
+      height: 40px
+      font-size: 14px
+    &-sep
+      margin-top: 6px
+      display: block
+      grid-column: 1/3
+      background-color: $grey20
+      height: 1px
+  .cbnboost
+    &-ord
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      padding: 16px 0
+      &__head
+        grid-column: 1/2
+        grid-row: 1/2
+        padding: 0 16px
+        flex-direction: column-reverse
+        .cbnord-status
+          padding: 4px 8px
+          font-size: 12px
+      &__tbl
+        border-bottom: 1px solid $grey10
+        grid-column: 1/2
+        grid-row: 2/3
+        padding: 16px
+      &__sum
+        justify-self: center
+        margin: 0
+        padding: 16px 0
+        grid-column: 1/2
+        grid-row: 3/4
+      &__bar
+        justify-self: center
+        grid-column: 1/2
+        grid-row: 4/5
+        width: 100%
+        flex-wrap: nowrap
+        padding: 0 16px
+        flex-direction: row-reverse
+        .cbnord-btn
+          margin: 0
+          height: 40px
+          font-size: 14px
+          &-circle
+            flex: 0 0 auto
+            width: 40px
+            height: 40px
+            padding: 0
+            gap: 0
+            &-text
+              display: none
+      &__details
+        display: none
+
+@media ( max-width: 420px )
+  .cbn
+    &-stat
+      &-item
+        flex-direction: column
+        align-items: flex-start

@@ -1,0 +1,143 @@
+.f
+  border-top: 1px solid $grey20
+  height: 56px
+  background-color: #FFFFFF
+  &__inner
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-copy
+    margin-right: 40px
+    +inter-reg
+    font-size: 14px
+    color: $grey60
+  &-links
+    margin-right: auto
+    display: flex
+    align-items: center
+    &__sep
+      margin: 0 12px
+      flex: 0 0 auto
+      width: 1px
+      height: 17px
+      background-color: $grey80
+  &-link
+    +inter-semibold
+    font-size: 14px
+    color: $grey80
+  &-bar
+    display: flex
+    align-items: center
+    &__sep
+      margin: 0 22px
+      flex: 0 0 auto
+      width: 1px
+      height: 33px
+      background-color: $grey30
+  &-dd
+    margin-right: 10px
+    display: flex
+    align-items: center
+    cursor: pointer
+    user-select: none
+    &__language
+      margin-right: 10px
+      .f-dd-list
+        width: 140px
+    &-icon
+      margin-right: 10px
+      flex: 0 0 24px
+      width: 24px
+      line-height: 0
+      img, svg
+        width: 100%
+    &-label
+      +inter-semibold
+      font-size: 14px
+      color: $grey80
+    &-list
+      top: auto
+      bottom: calc(100% + 30px)
+      border-radius: 8px
+      border: 1px solid $grey10
+      padding: 12px 0
+      background-color: #FFFFFF
+      box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.07)
+    &-item
+      display: block
+      height: 38px
+      line-height: 38px
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      padding: 0 20px
+      +inter-semibold
+      font-size: 14px
+      color: $grey80
+      &:hover
+        color: $grey100
+      &.active
+        color: $grey100
+        &::before
+          content: '•'
+          color: $primary
+          margin-right: 6px
+  &-btn
+    margin: 0 4px
+    border-radius: 8px
+    padding: 0 16px
+    height: 33px
+    +inter-semibold
+    font-size: 14px
+    &._mobile
+      display: none
+    &._light
+      border: 1px solid $grey10
+      background-color: $grey10
+      color: $grey80
+      &:hover
+        border-color: $grey30
+        background-color: $grey0
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.07)
+      &:active
+        border-color: $grey10
+        background-color: $grey0
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.07)
+    &._primary
+      background-color: $primary
+      color: $grey0
+      &:hover
+        background-color: $hover
+      &:active
+        background-color: #2560CF
+
+@media ( max-width: 1024px )
+  .f
+    &-copy
+      margin-right: 15px
+    &-links
+      &__sep
+        margin: 0 8px
+    &-bar
+      &__sep
+        margin: 0 12px
+
+@media ( max-width: 991px )
+  .f
+    &-copy, &-links
+      display: none
+    &-bar
+      flex: 1 1 auto
+      &__sep
+        display: none
+    &-dd
+      &-icon
+        margin-right: 9px
+        flex: 0 0 18px
+    &-btn
+      &._sign
+        display: none
+      &._mobile
+        margin-left: auto
+        display: flex

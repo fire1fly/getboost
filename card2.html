@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.min.css">
+
+  <script defer src="./js/dropdown.js"></script>
+  <script defer src="./js/mobileMenu.js"></script>
+  <script defer src="./js/range.js"></script>
+  <script defer src="./js/double-range.js"></script>
+  <script defer src="./js/modal.js"></script>
+
+  <title>Card - Getboost.gg</title>
+</head>
+
+<body>
+  <div class="root">
+    <header class="h">
+      <div class="h__inner container">
+        <a href="./index.html" class="h-logo h__logo">
+          <img src="./assets/static/logo.svg" alt="getboost.gg">
+        </a>
+        <div class="h-dd h-dd__game dd fadeDown">
+          <div class="h-dd-label">Select a game</div>
+          <div class="h-dd-arrow">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1.25L6 5.75L10.5 1.25" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="h-dd-list dd-list">
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-1.png" alt="WoW WOTLK">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW WOTLK</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW Shadowlands</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">Destiny 2</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div><!-- /.h-dd__game -->
+        <nav class="h-nav">
+          <a href="#" class="h-nav-link">Loalty</a>
+          <a href="#" class="h-nav-link">Reviews</a>
+        </nav>
+        <a href="#" class="h-wilink h__wilink">
+          <div class="h-wilink-icon">
+            <img src="./assets/static/icon-headphones.svg" alt="headphones">
+          </div>
+          <div class="h-wilink-label">24/7 Support</div>
+        </a><!-- /.h-wilink (link with icon) -->
+        <div class="h-bar">
+          <button type="button" class="btn btn-dark h-btn">
+            <div class="h-btn-icon h-btn-cart">
+              <img src="./assets/static/icon-cart.svg" alt="cart">
+              <div class="h-btn-cart-sign">1</div>
+            </div>
+            <div class="h-btn-label">Cart</div>
+          </button>
+          <button type="button" class="btn btn-primary h-btn btn-open-modal" data-modal="signin">Authorization</button>
+        </div>
+        <div class="h-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="h-menu">
+          <nav class="h-nav">
+            <a href="#" class="h-nav-link">Loalty</a>
+            <a href="#" class="h-nav-link">Reviews</a>
+          </nav>
+          <div class="h-dd-list h-menu__list">
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-1.png" alt="WoW WOTLK">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW WOTLK</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW Shadowlands</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">Destiny 2</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="h-wilink h__wilink">
+            <div class="h-wilink-icon">
+              <img src="./assets/static/icon-headphones.svg" alt="headphones">
+            </div>
+            <div class="h-wilink-label">24/7 Support</div>
+          </a><!-- /.h-wilink (link with icon) -->
+          <div class="h-bar">
+            <button type="button" class="btn btn-dark h-btn">
+              <div class="h-btn-icon h-btn-cart">
+                <img src="./assets/static/icon-cart.svg" alt="cart">
+                <div class="h-btn-cart-sign">1</div>
+              </div>
+              <div class="h-btn-label">Cart</div>
+            </button>
+            <button type="button" class="btn btn-primary h-btn btn-open-modal" data-modal="signin">Authorization</button>
+          </div>
+        </div>
+      </div>
+    </header><!-- /.header -->
+    <main class="main c">
+      <div class="c-ms-frame">
+        <img src="./assets/static/card-screen-bg.png" alt="card background" class="c-ms-bg">
+        <div class="c-ms container">
+          <div class="c-ms__inner">
+            <div class="c-ms__info">
+              <div class="breads _dark">
+                <a href="./index.html" class="breads-item">
+                  <svg class="breads-item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.75 15.75V10.2C6.75 9.78001 6.75 9.56999 6.83175 9.40956C6.90365 9.26843 7.01839 9.1537 7.15951 9.08179C7.31994 9.00005 7.52996 9.00005 7.95 9.00005H10.05C10.47 9.00005 10.6801 9.00005 10.8405 9.08179C10.9816 9.1537 11.0963 9.26843 11.1683 9.40956C11.25 9.56999 11.25 9.78001 11.25 10.2V15.75M8.26327 2.07306L3.17654 6.0294C2.83652 6.29387 2.6665 6.4261 2.54402 6.5917C2.43552 6.73839 2.3547 6.90365 2.30552 7.07935C2.25 7.2777 2.25 7.49308 2.25 7.92385V13.35C2.25 14.1901 2.25 14.6102 2.41349 14.931C2.5573 15.2133 2.78677 15.4427 3.06901 15.5866C3.38988 15.75 3.80992 15.75 4.65 15.75H13.35C14.1901 15.75 14.6101 15.75 14.931 15.5866C15.2132 15.4427 15.4427 15.2133 15.5865 14.931C15.75 14.6102 15.75 14.1901 15.75 13.35V7.92385C15.75 7.49308 15.75 7.2777 15.6945 7.07935C15.6453 6.90365 15.5645 6.73839 15.456 6.5917C15.3335 6.4261 15.1635 6.29387 14.8235 6.02941L9.73673 2.07306C9.47324 1.86812 9.34149 1.76565 9.19601 1.72626C9.06765 1.69151 8.93235 1.69151 8.80399 1.72626C8.65851 1.76565 8.52677 1.86812 8.26327 2.07306Z"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Main page
+                </a>
+                <div class="breads__sep">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke-width="1.92857" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <a href="#" class="breads-item">Categories</a>
+                <div class="breads__sep">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke-width="1.92857" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <a href="#" class="breads-item">Name of item</a>
+              </div>
+              <div class="c-ms-h">
+                <img src="./assets/static/card-title-icon.png" alt="icon" class="c-ms-h-icon">
+                <h1 class="c-title h2">Castle Narthia Fated</h1>
+              </div>
+
+              <div class="c-ms-tag-grid">
+                <div class="c-ms-tag">
+                  <div class="c-ms-tag-icon">
+                    <img src="./assets/static/icon-headphones.svg" alt="headphones">
+                  </div>
+                  <div class="c-ms-tag-label">24/7 Support</div>
+                </div>
+                <div class="c-ms-tag">
+                  <div class="c-ms-tag-icon">
+                    <img src="./assets/static/icon-package.svg" alt="package">
+                  </div>
+                  <div class="c-ms-tag-label">Fast delievery</div>
+                </div>
+                <div class="c-ms-tag">
+                  <div class="c-ms-tag-icon">
+                    <img src="./assets/static/icon-credit-card-search.svg" alt="credit card">
+                  </div>
+                  <div class="c-ms-tag-label">Payment methods</div>
+                </div>
+              </div>
+
+              <div class="c-ms-plate-grid">
+                <div class="c-ms-plate">Start time 1-2 H</div>
+                <div class="c-ms-plate">ETA 1-2 H</div>
+              </div>
+              
+            </div>
+            
+          </div>
+          <form class="c-form c-ms__form">
+            <div class="c-form__bar">
+              <div class="c-form-block">
+                <div class="c-form-title">Region</div>
+                <div class="c-form-block-grid">
+                  <div class="form-tab-grid _type1 _big _short">
+                    <label class="form-tab">
+                      <input name="language" type="radio" checked>
+                      <div class="form-tab-plate">EU</div>
+                    </label>
+                    <label class="form-tab">
+                      <input name="language" type="radio">
+                      <div class="form-tab-plate">US</div>
+                    </label>
+                  </div>
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">I want to start withinn 1 hour</div>
+                  </label>
+                </div>
+              </div>
+              <div class="c-form-block">
+                <div class="c-form-title">Rating</div>
+                <div class="c-form-dr double-range">
+                  <div class="c-form-dr-row">
+                    <div class="c-form-dr-field">
+                      <div class="c-form-dr-label">Your rating</div>
+                      <input type="text" class="c-form-dr-input double-range-value value-1" placeholder="1">
+                    </div>
+                    <div class="c-form-dr-row__sep"></div>
+                    <div class="c-form-dr-field">
+                      <div class="c-form-dr-label">Rating you want</div>
+                      <input type="text" class="c-form-dr-input double-range-value value-2" placeholder="60">
+                    </div>
+                  </div>
+                  <div class="c-form-dr-range__wrap double-range__inner">
+                    <div class="double-range-track"></div>
+                    <input type="range" class="c-form-dr-range form-range double-range-input range-1" min="1" max="60" value="10">
+                    <input type="range" class="c-form-dr-range form-range double-range-input range-2" min="1" max="60" value="40">
+                  </div>
+                </div><!-- /.c-form-dr (double range) -->
+                <div class="c-form-checkbox-grid2">
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">60 lvl</div>
+                  </label>
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">120 lvl</div>
+                  </label>
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">30 lvl</div>
+                  </label>
+                </div>
+              </div>
+              <div class="c-form-block c-form-block-grid2">
+                <div class="c-form-title">Start time</div>
+                <div class="form-tab-grid _type1 _mid _short _days">
+                  <label class="form-tab">
+                    <input name="day" type="radio" checked>
+                    <div class="form-tab-plate">23.09</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="day" type="radio">
+                    <div class="form-tab-plate">24.09</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="day" type="radio">
+                    <div class="form-tab-plate">25.09</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="day" type="radio">
+                    <div class="form-tab-plate">26.09</div>
+                  </label>
+                </div>
+                <div class="form-tab-grid _type2 _small _short _time">
+                  <label class="form-tab">
+                    <input name="time" type="radio" checked>
+                    <div class="form-tab-plate">12:00</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="time" type="radio">
+                    <div class="form-tab-plate">13:00</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="time" type="radio">
+                    <div class="form-tab-plate">14:00</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="time" type="radio">
+                    <div class="form-tab-plate">15:00</div>
+                  </label>
+                </div>
+              </div>
+              <div class="c-form-block">
+                <div class="c-form-title">Options</div>
+                <div class="c-form-checkbox-grid">
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">Best boost</div>
+                    <div class="c-form-plate _primary">+239$</div>
+                  </label>
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">Level up</div>
+                    <div class="c-form-plate _primary">+10$</div>
+                  </label>
+                  <label class="c-form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="c-form-checkbox-label">Personal controle</div>
+                    <div class="c-form-plate _primary">+40$</div>
+                  </label>
+                </div>
+              </div>
+              <div class="c-form-block">
+                <div class="c-form-title">Choose your class</div>
+                <div class="form-tab-grid _type1 _big _short">
+                  <label class="form-tab">
+                    <input name="class" type="radio" checked>
+                    <div class="form-tab-plate">Class one</div>
+                  </label>
+                  <label class="form-tab">
+                    <input name="class" type="radio">
+                    <div class="form-tab-plate">Class two</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="c-form__sum c-form-sum">
+              <div class="c-form-sum-b">
+                <div class="c-form-sum-h">
+                  <div class="c-form-sum-value">$320.49</div>
+                  <div class="c-form-sum-h-sub">
+                    <div class="c-form-plate _primary">$30</div>
+                    <div class="c-form-sum-h-sub-text">GET BACK BY CASHBACK</div>
+                  </div>
+                </div>
+                <div class="c-form-sum-amount range">
+                  <div class="c-form-sum-amount-value">Amount: <span class="range-value">1</span></div>
+                  <input type="range" name="amount" min="0" max="10" step="1" value="1" class="form-range c-form-sum-amount-range range range-input">
+                </div>
+                <button type="submit" class="btn btn-primary c-form-btn-submit">Buy now</button>
+                <div class="c-form-sum-pays">
+                  <img src="./assets/static/card-pays-bg.svg" alt="payment methods">
+                </div>
+              </div>
+              <div class="c-form-sum-f">
+                <div class="c-form-sum-f-row">
+                  <div class="c-form-sum-f-info">
+                    <div class="c-form-sum-f-subtitle">HELP</div>
+                    <div class="c-form-sum-f-title h6">Have questions?</div>
+                  </div>
+                  <button type="button" class="btn btn-dark c-form-sum-btn">
+                    <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.625 9H5.6325M9 9H9.0075M12.375 9H12.3825M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 9.89786 2.4253 10.7548 2.74355 11.5384C2.80446 11.6884 2.83491 11.7633 2.8485 11.824C2.86179 11.8833 2.86665 11.9271 2.86666 11.9879C2.86666 12.05 2.85539 12.1177 2.83283 12.253L2.3881 14.9214C2.34152 15.2009 2.31824 15.3406 2.36157 15.4416C2.3995 15.53 2.46996 15.6005 2.55839 15.6384C2.65942 15.6818 2.79914 15.6585 3.07857 15.6119L5.74699 15.1672C5.88231 15.1446 5.94998 15.1333 6.0121 15.1333C6.07286 15.1334 6.11675 15.1382 6.17604 15.1515C6.23666 15.1651 6.31164 15.1955 6.46162 15.2565C7.24523 15.5747 8.10214 15.75 9 15.75ZM6 9C6 9.20711 5.83211 9.375 5.625 9.375C5.41789 9.375 5.25 9.20711 5.25 9C5.25 8.79289 5.41789 8.625 5.625 8.625C5.83211 8.625 6 8.79289 6 9ZM9.375 9C9.375 9.20711 9.20711 9.375 9 9.375C8.79289 9.375 8.625 9.20711 8.625 9C8.625 8.79289 8.79289 8.625 9 8.625C9.20711 8.625 9.375 8.79289 9.375 9ZM12.75 9C12.75 9.20711 12.5821 9.375 12.375 9.375C12.1679 9.375 12 9.20711 12 9C12 8.79289 12.1679 8.625 12.375 8.625C12.5821 8.625 12.75 8.79289 12.75 9Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Chat
+                  </button>
+                </div>
+                <div class="c-form-bnr _type1">
+                  <img src="./assets/static/c-form-bnr-coin-1.png" alt="coin" class="coin-1">
+                  <img src="./assets/static/c-form-bnr-coin-2.png" alt="coin" class="coin-2">
+                  <div class="c-form-bnr__inner">
+                    <div class="c-form-bnr-subtitle">Found cheaper?</div>
+                    <div class="c-form-bnr-title">We beat price of competitors</div>
+                    <button type="button" class="btn btn-dark c-form-bnr-btn">What’s next?</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="c-info">
+          <h2 class="c-h2 h3">What you get</h2>
+          <div class="c-list">
+            <div class="c-list-item">
+              <div class="c-list-sign _primary">1</div>
+              <div class="c-list-text">
+                Shadowlands Mythic+ Dungeon runs with the best professional boosting teams. We can use your keystone or provide one;
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div class="c-list-sign _primary">2</div>
+              <div class="c-list-text">
+                <a href="#">Guaranteed 304 ilvl gear from the Great Vault.</a> The ilvl of the loot depends on the highest level of the dungeon you completed during the previous week;
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div class="c-list-sign _primary">3</div>
+              <div class="c-list-text">
+                Chance to get up to 288 ilvl items from the chest at the end of the dungeon (depends on chosen key);
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div class="c-list-sign _primary">4</div>
+              <div class="c-list-text">
+                135 Valor from each Mythic + dungeon which are required to upgrade the ilvl of epic items, including those from Mythic+ dungeons;
+              </div>
+            </div>
+          </div>
+
+          <h2 class="c-h2 h3">Requirements</h2>
+          <div class="c-list">
+            <div class="c-list-item">
+              <div class="c-list-sign _green">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.41776 9.3307C4.11909 9.3307 3.82043 9.21737 3.59243 8.98937L0.428426 5.82537C-0.0275742 5.36937 -0.0275742 4.6307 0.428426 4.17603C0.884426 3.72003 1.62176 3.7187 2.07776 4.1747L4.41776 6.5147L9.92176 1.0107C10.3778 0.554701 11.1151 0.554701 11.5711 1.0107C12.0271 1.4667 12.0271 2.20537 11.5711 2.66137L5.24309 8.98937C5.01509 9.21737 4.71643 9.3307 4.41776 9.3307Z" fill="#00B654"/>
+                </svg>
+              </div>
+              <div class="c-list-text">
+                Level 60 Character;              
+                </div>
+            </div>
+            <div class="c-list-item">
+              <div class="c-list-sign _green">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.41776 9.3307C4.11909 9.3307 3.82043 9.21737 3.59243 8.98937L0.428426 5.82537C-0.0275742 5.36937 -0.0275742 4.6307 0.428426 4.17603C0.884426 3.72003 1.62176 3.7187 2.07776 4.1747L4.41776 6.5147L9.92176 1.0107C10.3778 0.554701 11.1151 0.554701 11.5711 1.0107C12.0271 1.4667 12.0271 2.20537 11.5711 2.66137L5.24309 8.98937C5.01509 9.21737 4.71643 9.3307 4.41776 9.3307Z" fill="#00B654"/>
+                </svg>
+              </div>
+              <div class="c-list-text">
+                Sharing your login information (if you need an account share option).
+              </div>
+            </div>
+            <div class="c-list-item">
+              <div class="c-list-sign _danger">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.02085 7.36042L6.64885 4.98976L9.01952 2.61909C9.47552 2.16442 9.47552 1.42442 9.01952 0.969757C8.56352 0.51109 7.82619 0.512423 7.37019 0.968423L4.99819 3.33909L2.62619 0.965757C2.17019 0.509757 1.43152 0.512423 0.975522 0.965757C0.520855 1.42176 0.520855 2.16176 0.975522 2.61642L3.34885 4.98976L0.980855 7.35642C0.524855 7.81242 0.524855 8.55242 0.980855 9.00576C1.20885 9.23509 1.50619 9.34842 1.80485 9.34842C2.10485 9.34842 2.40219 9.23509 2.63019 9.00709L4.99819 6.63909L7.37152 9.01109C7.59952 9.23909 7.89686 9.35242 8.19552 9.35242C8.49419 9.35242 8.79286 9.23776 9.02085 9.01109C9.47686 8.55509 9.47686 7.81642 9.02085 7.36042Z" fill="#D53D33"/>
+                </svg>
+              </div>
+              <div class="c-list-text">
+                Sharing your login information (if you need an account share option).
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-h2 h2">Popular products</div>
+        <div class="pc">
+          <div class="pc-card">
+            <div class="pc-card-preview">
+              <img src="./assets/static/product-card-preview.png" alt="preview">
+            </div>
+            <div class="pc-card-subtitle">Mounts</div>
+            <h3 class="pc-card-title">Castle Narthia Fated</h3>
+            <div class="pc-card-f">
+              <div class="pc-card-price">
+                <div class="pc-card-price__value">$120.30</div>
+              </div>
+              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+            </div>
+          </div><!-- /.pc-card -->
+          <div class="pc-card">
+            <div class="pc-card-preview">
+              <img src="./assets/static/product-card-preview.png" alt="preview">
+            </div>
+            <div class="pc-card-subtitle">Mounts</div>
+            <h3 class="pc-card-title">Castle Narthia Fated</h3>
+            <div class="pc-card-f">
+              <div class="pc-card-price">
+                <div class="pc-card-price__through">$160.30</div>
+                <div class="pc-card-price__value">$120.30</div>
+              </div>
+              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+            </div>
+          </div><!-- /.pc-card -->
+          <div class="pc-card">
+            <div class="pc-card-preview">
+              <div class="pc-card__plate _orange">hot offer</div>
+              <img src="./assets/static/product-card-preview.png" alt="preview">
+            </div>
+            <div class="pc-card-subtitle">Mounts</div>
+            <h3 class="pc-card-title">Castle Narthia Fated</h3>
+            <div class="pc-card-f">
+              <div class="pc-card-price">
+                <div class="pc-card-price__through">$160.30</div>
+                <div class="pc-card-price__value">$120.30</div>
+              </div>
+              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+            </div>
+          </div><!-- /.pc-card -->
+          <div class="pc-card">
+            <div class="pc-card-preview">
+              <img src="./assets/static/product-card-preview.png" alt="preview">
+            </div>
+            <div class="pc-card-subtitle">Mounts</div>
+            <h3 class="pc-card-title">Castle Narthia Fated</h3>
+            <div class="pc-card-f">
+              <div class="pc-card-price">
+                <div class="pc-card-price__through">$160.30</div>
+                <div class="pc-card-price__value">$120.30</div>
+              </div>
+              <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+            </div>
+          </div><!-- /.pc-card -->
+        </div><!-- /.pc (product cards) -->
+      </div>
+    </main><!-- /.main (card) -->
+    <footer class="f">
+      <div class="f__inner container">
+        <div class="f-copy">Getboost.gg © All rights reserved </div>
+        <div class="f-links">
+          <a href="#" class="f-link">Privacy Policy</a>
+          <div class="f-links__sep"></div>
+          <a href="#" class="f-link">Terms&Conditions</a>
+        </div>
+        <div class="f-bar">
+          <div class="f-dd f-dd__language dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-language.svg" alt="language">
+            </div>
+            <div class="f-dd-label">English (ENG)</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">English (ENG)</a>
+              <a href="#" class="f-dd-item active">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+            </div>
+          </div>
+          <div class="f-dd dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-currency.svg" alt="currency">
+            </div>
+            <div class="f-dd-label">USD</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">EUR</a>
+              <a href="#" class="f-dd-item active">USD</a>
+              <a href="#" class="f-dd-item">FRF</a>
+            </div>
+          </div>
+          <div class="f-bar__sep"></div>
+          <button class="btn f-btn _light _sign btn-open-modal" data-modal="signin">Log in</button>
+          <button class="btn f-btn _primary _sign btn-open-modal" data-modal="signup">Sign up</button>
+          <button class="btn f-btn _primary _mobile btn-open-modal" data-modal="signin">Authorization</button>
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+  </div>
+
+  <div class="m__wrapper active" data-modal="order_error">
+    <form action="#" class="m m-msg _wide">
+      <div class="m__inner">
+        <div class="m-h">
+          <div class="m-btn-close m-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="m-b">
+          <div class="m-msg-emoji">
+            <img src="./assets/static/emoji-2.png" alt="emoji">
+          </div>
+          <div class="m-title _mb">Seems something went wrong, let’s try again?</div>
+        </div>
+        <div class="m-f m-f-row">
+          <button type="button" class="btn btn-primary m-btn">Move to Checkout</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

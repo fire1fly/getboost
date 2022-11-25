@@ -1,0 +1,84 @@
+.bnr3
+  border-radius: 16px
+  height: 280px
+  padding: 0 30px 0 60px
+  display: grid
+  align-items: center
+  grid-template-columns: 1.5fr 1.5fr 1fr
+  background: transparent url(../assets/static/bnr3-bg.png) no-repeat
+  background-size: cover
+  background-position: center center
+  &-title
+    z-index: 2
+    margin: 0
+    text-transform: uppercase
+    +stolzl-reg
+    font-size: 34px
+    color: $grey0
+  &-pic
+    z-index: 1
+    margin-left: -40px
+    margin-top: -36px
+    line-height: 0
+    align-self: end
+  &-info
+    z-index: 2
+    &-text
+      margin-bottom: 20px
+      +stolzl-reg
+      font-size: 24px
+      color: $grey0
+  &-btn
+    border-radius: 30px
+    height: 60px
+    padding: 0 32px
+    display: inline-flex
+    +inter-bold
+    text-transform: uppercase
+    font-size: 20px
+    color: $grey0
+
+@media ( max-width: 1024px )
+  .bnr3
+    &-title
+      font-size: 36px
+    &-info
+      &-text
+        font-size: 20px
+
+@media ( max-width: 991px )
+  .bnr3
+    padding: 0 30px
+    &-title
+      font-size: 30px
+    &-pic
+      margin-top: auto
+      img
+        width: 350px
+
+@media ( max-width: 768px )
+  .bnr3
+    padding: 0
+    padding-top: 24px
+    height: auto
+    grid-template-columns: 1fr
+    &-title
+      margin-bottom: 9px
+      padding: 0 24px
+      font-size: 26px
+    &-info
+      padding: 0 24px
+      &-text
+        margin-bottom: 16px
+        +inter-reg
+        font-size: 15px
+    &-btn
+      height: 50px
+      font-size: 16px
+    &-pic
+      justify-self: end
+      margin-top: 0
+      margin-left: 0
+      order: 1
+      img
+        max-width: 100%

@@ -1,0 +1,38 @@
+.breads
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  &._dark
+    .breads
+      &-item
+        color: $grey40
+        &-icon
+          stroke: $grey40
+      &__sep
+        svg
+          stroke: $grey40
+  &-item
+    margin-bottom: 12px
+    display: flex
+    align-items: center
+    +inter-reg
+    font-size: 16px
+    color: $grey70
+    &-icon
+      margin-right: 4px
+      flex: 0 0 auto
+      width: 18px
+      height: 18px
+      stroke: $grey70
+  &__sep
+    margin: 0 12px 12px
+    flex: 0 0 auto
+    width: 18px
+    height: 18px
+    svg
+      stroke: $grey70
+
+@media ( max-width: 991px )
+  .breads
+    &-item
+      font-size: 14px

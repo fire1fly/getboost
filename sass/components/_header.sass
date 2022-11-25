@@ -1,0 +1,315 @@
+.h
+  width: 100%
+  height: 64px
+  background-color: #FFFFFF
+  &__inner
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-logo
+    flex: 0 0 auto
+    line-height: 0
+    width: 176px
+    svg, img
+      width: 100%
+  &__logo
+    margin-right: 35px
+  &-dd
+    border-radius: 20px
+    border: 1px solid $grey10
+    height: 39px
+    padding: 0 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+    user-select: none
+    box-shadow: 0px 4px 9px rgba(164, 171, 187, 0.1)
+    &:hover
+      border-color: $grey30
+    &.active
+      border-color: $hover
+      .h-dd
+        &-arrow
+          path
+            stroke: $hover
+    &__game
+      flex: 0 0 auto
+      width: 170px
+      .h-dd-list
+        left: 50%
+        top: calc(100% + 8px)
+        width: 340px
+    &-label
+      margin-right: 8px
+      +inter-semibold
+      font-size: 16px
+      flex: 0 0 110px
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      color: $grey70
+    &-arrow
+      line-height: 0
+      path
+        stroke: $grey70
+    &-list
+      border-radius: 8px
+      border: 1px solid $grey10
+      padding: 20px 0
+      background-color: #FFFFFF
+      box-shadow: 0px 9px 28px rgba(0, 0, 0, 0.2)
+    &-item
+      height: 64px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 0 20px
+      &:hover
+        background-color: rgba(227, 237, 255, 0.5)
+        .h-dd-item
+          &-title
+            color: $primary
+          &-arrow
+            background-color: $primary
+            path
+              stroke: $grey0
+      &:not(:last-child)
+        margin-bottom: 12px
+      &-preview
+        margin-right: 12px
+        flex: 0 0 auto
+      &-info
+        margin-right: auto
+      &-title
+        margin-bottom: 4px
+        +inter-semibold
+        font-size: 16px
+        color: $button1
+      &-sub
+        +inter-reg
+        font-size: 14px
+      &-arrow
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 32px
+        height: 32px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: rgba(73, 77, 83, 0.1)
+  &-nav
+    margin-right: auto
+    margin-left: 24px
+    display: flex
+    align-items: center
+    &-link
+      margin: 0 12px
+      +inter-semibold
+      font-size: 16px
+      color: $grey70
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+  &-wilink
+    display: flex
+    align-items: center
+    &-icon
+      margin-right: 8px
+      border-radius: 50%
+      flex: 0 0 auto
+      width: 30px
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $primary
+    &-label
+      +inter-semibold
+      font-size: 16px
+      color: $button1
+  &__wilink
+    margin-right: 24px
+  &-bar
+    display: flex
+    align-items: center
+    .h-btn
+      margin-left: 7px
+    .h-nav
+      margin-left: 0
+      margin-right: 15px
+  &-btn
+    border-radius: 25px
+    height: 50px
+    padding: 0 24px
+    +inter-semibold
+    font-size: 16px
+    gap: 8px
+    &-icon
+      flex: 0 0 auto
+      line-height: 0
+    &-cart
+      position: relative
+      &-sign
+        position: absolute
+        top: 12px
+        left: 12px
+        border-radius: 50%
+        width: 15px
+        height: 15px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $orange
+        +inter-semibold
+        font-size: 12px
+        color: $grey0
+    &-logout
+      padding: 0
+      padding-left: 16px
+      background-color: transparent
+  &-menu
+    display: none
+    &-btn
+      display: none
+
+@media ( max-width: 1024px )
+  .h
+    height: 60px
+    &-logo
+      width: 134px
+    &__logo
+      margin-right: 25px
+    &-dd
+      &__game
+        width: 154px
+        .h-dd-list
+          left: 0
+      &-label
+        font-size: 14px
+        flex: 0 0 100px
+    &-nav
+      &-link
+        font-size: 14px
+    &-wilink
+      &-label
+        font-size: 14px
+    &-btn
+      height: 44px
+      font-size: 14px
+
+@media ( max-width: 991px )
+  .h
+    position: relative
+    height: 56px
+    &-nav, &-wilink, &-bar
+      display: none
+    &-dd
+      &__game
+        margin-right: auto
+    &-menu
+      position: absolute
+      z-index: 10
+      top: calc(100% + 6px)
+      left: 8px
+      border-radius: 8px
+      width: calc(100vw - 16px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 18px 0 32px
+      background-color: $grey0
+      box-shadow: 0px 9px 28px rgba(0, 0, 0, 0.2)
+      visibility: hidden
+      opacity: 0
+      transition: 0.2s linear
+      &.active
+        visibility: visible
+        opacity: 1
+      &-btn
+        margin-left: 10px
+        width: 17px
+        height: 14px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        &.active
+          span
+            &:nth-child(1)
+              transform: rotate(45deg) translate(4px, 5px)
+            &:nth-child(2)
+              transform: rotate(-45deg)
+            &:nth-child(3)
+              transform: scale(0)
+        span
+          border-radius: 4px
+          width: 17px
+          height: 2px
+          background-color: $grey50
+          transition: 0.2s ease-in-out
+          &:nth-child(3)
+            align-self: flex-end
+            width: 70%
+      &__list
+        border: none
+        margin-bottom: 16px
+        max-width: 100%
+        width: 100%
+        padding: 0
+        box-shadow: none
+        .h-dd-item
+          background-color: $five
+          &:hover
+            background-color: rgba(227, 237, 255, 0.5)
+          &:not(:last-child)
+            margin-bottom: 4px
+      .h
+        &-nav
+          margin: 0
+          margin-bottom: 14px
+          display: flex
+          flex-direction: column
+          &-link
+            margin: 0
+            height: 48px
+            line-height: 48px
+        &-wilink
+          display: flex
+        &__wilink
+          margin-right: 0
+          margin-bottom: 16px
+        &-bar
+          padding: 0 24px
+          width: 100%
+          display: flex
+          flex-direction: column
+          .h-btn
+            max-width: 310px
+            width: 100%
+            &:not(:last-child)
+              margin-right: 0
+              margin-bottom: 4px
+
+@media ( max-width: 520px )
+  .h
+    &-logo
+      flex: 0 1 auto
+      width: 118px
+    &__logo
+      margin-right: 10px
+    &-dd
+      &__game
+        width: 167px
+        position: static
+        .h-dd-list
+          top: calc(100% + 6px)
+          left: 15px
+          width: calc(100% - 30px)
+          min-width: auto
+      &-label
+        flex: 0 0 110px
+        font-size: 16px

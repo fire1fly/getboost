@@ -1,0 +1,135 @@
+.rv
+  &-h
+    margin-bottom: 32px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &-link
+      display: flex
+      align-items: center
+      +inter-semibold
+      font-size: 18px
+      color: $button1
+      &__wrap
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+      &-label
+        margin-right: 7px
+        +inter-semibold
+        color: $grey70
+      &__icon
+        margin-right: 8px
+        width: 20px
+        height: 20px
+  &-title
+    margin: 0
+    margin-bottom: 4px
+    text-transform: uppercase
+    +stolzl-reg
+    color: $grey100
+  &-sum
+    flex: 0 0 auto
+    display: flex
+    align-items: center
+    &-value
+      margin-left: 12px
+      +inter-semibold
+      font-size: 18px
+      color: $button1
+    &-sub
+      margin-left: 12px
+      +inter-semibold
+      font-size: 18px
+      color: $grey70
+  &__inner
+    max-width: 100%
+    padding-bottom: 15px
+    overflow-x: auto
+    display: flex
+    // align-items: center
+    gap: 20px
+  &-item
+    border-radius: 8px
+    flex: 0 0 300px
+    min-height: 296px
+    padding: 20px
+    display: flex
+    flex-direction: column
+    background-color: $grey0
+    box-shadow: 0px 4px 23px #eff2f8
+    &-h
+      margin-bottom: 24px
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-username
+      +inter-semibold
+      font-size: 18px
+      color: $button1
+    &-rating
+      display: flex
+      align-items: center
+      +inter-semibold
+      font-size: 14px
+      color: $button1
+      &__icon
+        margin-right: 9px
+    &-plate
+      margin-bottom: 8px
+      display: flex
+      align-items: center
+      +inter-semibold
+      text-transform: uppercase
+      font-size: 14px
+      color: $button1
+      &__icon
+        margin-right: 8px
+    &-text
+      margin: 5px 0 15px
+      +inter-med
+      color: $grey80
+    &-f
+      margin-top: auto
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      &-item
+        +inter-semibold
+        text-transform: uppercase
+        font-size: 14px
+        color: $grey50
+      &__sep
+        margin: 0 10px
+        flex: 0 0 auto
+        width: 1px
+        height: 20px
+        background-color: $grey40
+
+@media ( max-width: 1024px )
+  .rv
+    &-sum
+      display: none
+    &-item
+      &-text
+        font-size: 18px
+
+@media ( max-width: 768px )
+  .rv
+    &-h
+      &-link
+        font-size: 14px
+        &-label
+          +inter-reg
+    &__inner
+      gap: 8px
+    &-item
+      flex: 0 0 260px
+      min-height: 240px
+      padding: 20px 20px 32px
+      &-h
+        margin-bottom: 18px
+      &-title
+        font-size: 16px
+      &-text
+        font-size: 15px

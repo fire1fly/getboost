@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('../assets/fonts/Inter-Regular.eot');
+  src: url('../assets/fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Inter-Regular.woff') format('woff'),
+  url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin inter-reg {
+  font-family: 'Inter Regular', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Inter Medium';
+  src: url('../assets/fonts/Inter-Medium.eot');
+  src: url('../assets/fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Inter-Medium.woff') format('woff'),
+  url('../assets/fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin inter-med {
+  font-family: 'Inter Medium', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Inter SemiBold';
+  src: url('../assets/fonts/Inter-SemiBold.eot');
+  src: url('../assets/fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Inter-SemiBold.woff') format('woff'),
+  url('../assets/fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin inter-semibold {
+  font-family: 'Inter SemiBold', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Inter Bold';
+  src: url('../assets/fonts/Inter-Bold.eot');
+  src: url('../assets/fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Inter-Bold.woff') format('woff'),
+  url('../assets/fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin inter-bold {
+  font-family: 'Inter Bold', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Stolzl Regular';
+  src: url('../assets/fonts/Stolzl-Regular.eot');
+  src: url('../assets/fonts/Stolzl-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Stolzl-Regular.woff') format('woff'),
+  url('../assets/fonts/Stolzl-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin stolzl-reg {
+  font-family: 'Stolzl Regular', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Stolzl Medium';
+  src: url('../assets/fonts/Stolzl-Medium.eot');
+  src: url('../assets/fonts/Stolzl-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Stolzl-Medium.woff') format('woff'),
+  url('../assets/fonts/Stolzl-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin stolzl-med {
+  font-family: 'Stolzl Medium', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Stolzl Bold';
+  src: url('../assets/fonts/Stolzl-Bold.eot');
+  src: url('../assets/fonts/Stolzl-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Stolzl-Bold.woff') format('woff'),
+  url('../assets/fonts/Stolzl-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin stolzl-bold {
+  font-family: 'Stolzl Bold', sans-serif;
+}

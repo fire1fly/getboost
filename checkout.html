@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.min.css">
+
+  <script defer src="./js/dropdown.js"></script>
+  <script defer src="./js/mobileMenu.js"></script>
+
+  <title>Checkout - Getboost.gg</title>
+</head>
+
+<body>
+  <div class="root">
+    <header class="h">
+      <div class="h__inner container">
+        <a href="./index.html" class="h-logo h__logo">
+          <img src="./assets/static/logo.svg" alt="getboost.gg">
+        </a>
+        <div class="h-dd h-dd__game dd fadeDown">
+          <div class="h-dd-label">Select a game</div>
+          <div class="h-dd-arrow">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1.25L6 5.75L10.5 1.25" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="h-dd-list dd-list">
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-1.png" alt="WoW WOTLK">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW WOTLK</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW Shadowlands</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">Destiny 2</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div><!-- /.h-dd__game -->
+        <nav class="h-nav">
+          <a href="#" class="h-nav-link">Loalty</a>
+          <a href="#" class="h-nav-link">Reviews</a>
+        </nav>
+        <a href="#" class="h-wilink h__wilink">
+          <div class="h-wilink-icon">
+            <img src="./assets/static/icon-headphones.svg" alt="headphones">
+          </div>
+          <div class="h-wilink-label">24/7 Support</div>
+        </a><!-- /.h-wilink (link with icon) -->
+        <div class="h-bar">
+          <button type="button" class="btn btn-dark h-btn">
+            <div class="h-btn-icon h-btn-cart">
+              <img src="./assets/static/icon-cart.svg" alt="cart">
+              <div class="h-btn-cart-sign">1</div>
+            </div>
+            <div class="h-btn-label">Cart</div>
+          </button>
+          <button type="button" class="btn btn-primary h-btn btn-open-modal" data-modal="signin">Authorization</button>
+        </div>
+        <div class="h-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="h-menu">
+          <nav class="h-nav">
+            <a href="#" class="h-nav-link">Loalty</a>
+            <a href="#" class="h-nav-link">Reviews</a>
+          </nav>
+          <div class="h-dd-list h-menu__list">
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-1.png" alt="WoW WOTLK">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW WOTLK</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW Shadowlands</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">Destiny 2</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="h-wilink h__wilink">
+            <div class="h-wilink-icon">
+              <img src="./assets/static/icon-headphones.svg" alt="headphones">
+            </div>
+            <div class="h-wilink-label">24/7 Support</div>
+          </a><!-- /.h-wilink (link with icon) -->
+          <div class="h-bar">
+            <button type="button" class="btn btn-dark h-btn">
+              <div class="h-btn-icon h-btn-cart">
+                <img src="./assets/static/icon-cart.svg" alt="cart">
+                <div class="h-btn-cart-sign">1</div>
+              </div>
+              <div class="h-btn-label">Cart</div>
+            </button>
+            <button type="button" class="btn btn-primary h-btn btn-open-modal" data-modal="signin">Authorization</button>
+          </div>
+        </div>
+      </div>
+    </header><!-- /.header -->
+    <main class="main ch">
+      <div class="container">
+        <div class="breads">
+          <a href="./index.html" class="breads-item">
+            <svg class="breads-item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.75 15.75V10.2C6.75 9.78001 6.75 9.56999 6.83175 9.40956C6.90365 9.26843 7.01839 9.1537 7.15951 9.08179C7.31994 9.00005 7.52996 9.00005 7.95 9.00005H10.05C10.47 9.00005 10.6801 9.00005 10.8405 9.08179C10.9816 9.1537 11.0963 9.26843 11.1683 9.40956C11.25 9.56999 11.25 9.78001 11.25 10.2V15.75M8.26327 2.07306L3.17654 6.0294C2.83652 6.29387 2.6665 6.4261 2.54402 6.5917C2.43552 6.73839 2.3547 6.90365 2.30552 7.07935C2.25 7.2777 2.25 7.49308 2.25 7.92385V13.35C2.25 14.1901 2.25 14.6102 2.41349 14.931C2.5573 15.2133 2.78677 15.4427 3.06901 15.5866C3.38988 15.75 3.80992 15.75 4.65 15.75H13.35C14.1901 15.75 14.6101 15.75 14.931 15.5866C15.2132 15.4427 15.4427 15.2133 15.5865 14.931C15.75 14.6102 15.75 14.1901 15.75 13.35V7.92385C15.75 7.49308 15.75 7.2777 15.6945 7.07935C15.6453 6.90365 15.5645 6.73839 15.456 6.5917C15.3335 6.4261 15.1635 6.29387 14.8235 6.02941L9.73673 2.07306C9.47324 1.86812 9.34149 1.76565 9.19601 1.72626C9.06765 1.69151 8.93235 1.69151 8.80399 1.72626C8.65851 1.76565 8.52677 1.86812 8.26327 2.07306Z"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Main page
+          </a>
+          <div class="breads__sep">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke-width="1.92857" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <a href="#" class="breads-item">Checkout</a>
+        </div>
+
+        <form class="ch-form">
+          <h1 class="ch-title h2">Your order</h1>
+          <div class="ch-step-grid">
+            <div class="ch-step _completed">
+              <div class="ch-step__inner">
+                <div class="ch-step-check">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6663 3.5L5.24967 9.91667L2.33301 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ch-step-info">
+                  <div class="ch-step-num">step 1</div>
+                  <div class="ch-step-label">Order details</div>
+                </div>
+              </div>
+              <div class="ch-step-progress"></div>
+            </div>
+
+            <div class="ch-step _active">
+              <div class="ch-step__inner">
+                <div class="ch-step-check">
+                  <div class="ch-step-check-point"></div>
+                </div>
+                <div class="ch-step-info">
+                  <div class="ch-step-num">step 2</div>
+                  <div class="ch-step-label">Contact information</div>
+                </div>
+              </div>
+              <div class="ch-step-progress"></div>
+            </div>
+
+            <div class="ch-step">
+              <div class="ch-step__inner">
+                <div class="ch-step-check">
+                  <div class="ch-step-check-point"></div>
+                </div>
+                <div class="ch-step-info">
+                  <div class="ch-step-num">step 3</div>
+                  <div class="ch-step-label">Payment</div>
+                </div>
+              </div>
+              <div class="ch-step-progress"></div>
+            </div>
+
+            <div class="ch-step">
+              <div class="ch-step__inner">
+                <div class="ch-step-check">
+                  <div class="ch-step-check-point"></div>
+                </div>
+                <div class="ch-step-info">
+                  <div class="ch-step-num">step 4</div>
+                  <div class="ch-step-label">Thank you</div>
+                </div>
+              </div>
+              <div class="ch-step-progress"></div>
+            </div>
+          </div>
+          <div class="ch-grid">
+            <div class="ch-grid__inner">
+              <div class="ch-form-inner">
+                <div class="form-block">
+                  <h2 class="ch-subtitle">Character information</h2>
+                  <div class="form-part-grid">
+                    <div class="form-part">
+                      <label for="character_name" class="form-label">Character name</label>
+                      <input type="text" id="character_name" name="character_name" class="form-input" placeholder="Character name" disabled>
+                      <div class="form-part-msg"></div>
+                    </div>
+  
+                    <div class="form-part">
+                      <div class="form-label">Server name</div>
+  
+                      <div class="form-select dd select fadeDown">
+                        <input type="hidden" class="dd-input" value="null">
+                        <div class="form-select-item selected placeholder">
+                          Your server name
+                        </div>
+                        <div class="form-select-arrow">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                        <ul class="form-select-list dd-list">
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="1">Server 1</div>
+                          </li>
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="2">Server 2</div>
+                          </li>
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="3">Server 3</div>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+  
+                  <div class="form-part-grid">
+                    <div class="form-part _error">
+                      <label for="character_name" class="form-label">Character name</label>
+                      <input type="text" id="character_name" name="character_name" class="form-input" placeholder="Character name">
+                      <div class="form-part-msg">Empty field. Error</div>
+                    </div>
+  
+                    <div class="form-part">
+                      <div class="form-label">Server name</div>
+  
+                      <div class="form-select dd select fadeDown">
+                        <input type="hidden" class="dd-input" value="2">
+                        <div class="form-select-item selected placeholder">
+                          Alliance
+                        </div>
+                        <div class="form-select-arrow">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                        <ul class="form-select-list dd-list">
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="1">Server 1</div>
+                          </li>
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="2">Alliance</div>
+                          </li>
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="3">Server 3</div>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div class="form-block">
+                  <h2 class="ch-subtitle">Contact information</h2>
+  
+                  <div class="form-part-grid">
+  
+                    <div class="form-part">
+                      <div class="form-label">Skype login or discord</div>
+  
+                      <div class="form-select dd select fadeDown">
+                        <input type="hidden" class="dd-input" value="2">
+                        <div class="form-select-item selected placeholder">
+                          <img src="./assets/static/icon-skype.svg" alt="skype" class="form-select-item-icon">
+                          Skype
+                        </div>
+                        <div class="form-select-arrow">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                        <ul class="form-select-list dd-list">
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="1">
+                              <img src="./assets/static/icon-discord.svg" alt="skype" class="form-select-item-icon">
+                              Discord
+                            </div>
+                          </li>
+                          <li>
+                            <div href="#" class="form-select-item dd-item" data-value="2">
+                              <img src="./assets/static/icon-skype.svg" alt="skype" class="form-select-item-icon">
+                              Skype
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+  
+                    <div class="form-part">
+                      <label for="login" class="form-label">Login</label>
+                      <input type="text" id="login" name="login" class="form-input" placeholder="Your login">
+                    </div>
+                  </div>
+  
+                  <div class="form-part-grid">
+  
+                    <div class="form-part">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input type="email" id="email" name="email" class="form-input" placeholder="emailexample@gmail.com">
+                    </div>
+                    <div class="empty-block"></div>
+                  </div>
+  
+                  <label class="form-checkbox">
+                    <div class="checkbox2">
+                      <input type="checkbox">
+                      <div class="checkbox2-plate">
+                        <svg class="checkbox2-trigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                      </div>                  
+                    </div>
+                    <div class="form-checkbox-label">Keep me updated on Getboost.gg services, hot offers and sales. If you don’t love it, just unsubscribe. We make it easy</div>
+                  </label>
+                </div>
+
+                <div class="form-block">
+                  <h2 class="ch-subtitle">Contact information</h2>
+  
+                  <p class="form-text">Preferable day and time, your main spec, preferable contact method, other info</p>
+
+                  <div class="form-part">
+                    <input type="email" id="email" name="email" class="form-input" placeholder="emailexample@gmail.com">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="ch-grid__summary">
+              <div class="ch-sum">
+                <div class="ch-sum-h">
+                  <h2 class="ch-subtitle">Your order</h2>
+                  <div class="ch-sum-row">
+                    <div class="ch-sum-label">Cart Subtotal</div>
+                    <div class="ch-sum-value">39,09$</div>
+                  </div>
+                  <div class="ch-sum-row _light">
+                    <div class="ch-sum-label">Amount to pay</div>
+                    <div class="ch-sum-value">39,09$</div>
+                  </div>
+                </div>
+                <div class="ch-sum-f">
+                  <h2 class="ch-subtitle">Choose the payment method</h2>
+                  <div class="ch-pay-grid">
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/visa-mastercard-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/american-express-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/google-apple-pay-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/skrill-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/klarna-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/paypal-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/paysafecard-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/giropay-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                    <label class="ch-pay form-radio">
+                      <input type="radio" name="pay-item-1">
+                      <div class="ch-pay__inner form-radio__inner">
+                        <div class="form-radio-plate"></div>
+                        <div class="ch-pay-preview">
+                          <img src="./assets/static/bank-transfer-color.svg" alt="payment method">
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary ch-form-btn">Place an order</button>
+                  <div class="ch-subtext">Please, fill all fields to place an order</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </main><!-- /.main (checkout) -->
+    <footer class="f">
+      <div class="f__inner container">
+        <div class="f-copy">Getboost.gg © All rights reserved </div>
+        <div class="f-links">
+          <a href="#" class="f-link">Privacy Policy</a>
+          <div class="f-links__sep"></div>
+          <a href="#" class="f-link">Terms&Conditions</a>
+        </div>
+        <div class="f-bar">
+          <div class="f-dd f-dd__language dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-language.svg" alt="language">
+            </div>
+            <div class="f-dd-label">English (ENG)</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">English (ENG)</a>
+              <a href="#" class="f-dd-item active">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+            </div>
+          </div>
+          <div class="f-dd dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-currency.svg" alt="currency">
+            </div>
+            <div class="f-dd-label">USD</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">EUR</a>
+              <a href="#" class="f-dd-item active">USD</a>
+              <a href="#" class="f-dd-item">FRF</a>
+            </div>
+          </div>
+          <div class="f-bar__sep"></div>
+          <button class="btn f-btn _light _sign btn-open-modal" data-modal="signin">Log in</button>
+          <button class="btn f-btn _primary _sign btn-open-modal" data-modal="signup">Sign up</button>
+          <button class="btn f-btn _primary _mobile btn-open-modal" data-modal="signin">Authorization</button>
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+  </div>
+</body>
+
+</html>

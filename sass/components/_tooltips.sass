@@ -1,0 +1,50 @@
+.tooltip
+  &__wrap
+    display: flex
+    align-items: center
+    gap: 4px
+  &-label
+    +inter-semibold
+    font-size: 12px
+    color: $grey50
+  &-trigger
+    position: relative
+    flex: 0 0 auto
+    width: 16px
+    height: 16px
+    &-icon
+      object-fit: cover
+      width: 100%
+      height: 100%
+  &__inner
+
+  &-title
+    margin-bottom: 5px
+    +stolzl-med
+    font-size: 16px
+    color: $button1
+  &-text
+    +inter-reg
+    font-size: 14px
+    color: $grey80
+
+.tippy
+  &-box
+    border-radius: 8px
+    border: 1px solid $grey20
+    max-width: 260px !important
+    background-color: $grey0
+    box-shadow: 0px 8px 26px rgba(34, 37, 43, 0.14)
+    &[data-placement^=top]
+      & > .tippy-arrow
+        &:before
+          bottom: -8px
+    &[data-placement^=bottom]
+      & > .tippy-arrow
+        &:before
+          top: -8px
+  &-content
+    padding: 12px 14px
+  &-arrow
+    transform: scale(1.5, 0)
+    color: $grey20

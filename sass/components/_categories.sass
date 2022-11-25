@@ -1,0 +1,196 @@
+.ct
+  padding-top: 40px
+  padding-bottom: 56px
+  &__pc
+    margin-bottom: 96px
+  &__rv
+    margin-bottom: 30px
+  &__steps
+    margin-bottom: 100px
+  &__bnr1
+    margin-bottom: 80px
+  &__faq
+    margin-bottom: 60px
+  &-h
+    margin-bottom: 24px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-btn
+      border-radius: 30px
+      height: 60px
+      padding: 0 32px
+      +inter-semibold
+      font-size: 16px
+  &-title
+    margin: 0
+    +stolzl-reg
+    color: $grey100
+  &-select
+    &__cats
+      margin-bottom: 24px
+    &-label
+      display: none
+    &-item
+      margin-right: 6px
+      margin-bottom: 8px
+      border-radius: 23px
+      border: 1px solid $grey20
+      height: 46px
+      padding: 0 35px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $grey0
+      +inter-semibold
+      font-size: 16px
+      color: $grey70
+      cursor: pointer
+      &.active
+        border-color: $primary
+        background-color: $primary
+        color: $five
+      &.selected
+        display: none
+    &-arrow
+      display: none
+    &-list
+      position: static
+      display: flex
+      opacity: 1
+      transform: none
+      visibility: visible
+      flex-wrap: wrap
+  &-steps
+    padding: 50px 0
+    background-color: $grey0
+    &-title
+      margin: 0
+      margin-bottom: 24px
+      +stolzl-reg
+      text-transform: uppercase
+      color: $grey100
+
+@media ( max-width: 1024px )
+  .ct
+    padding-top: 45px
+    padding-bottom: 32px
+    &__pc
+      margin-bottom: 73px
+    &__steps
+      margin-bottom: 35px
+    &__bnr1
+      margin-bottom: 35px
+    &__faq
+      margin-bottom: 36px
+    &-h
+      margin-bottom: 35px
+    &-select
+      &__cats
+        margin-bottom: 32px
+    &-steps
+      padding: 40px 0
+      margin-bottom: 26px
+
+@media ( max-width: 991px )
+  .ct
+    padding-top: 15px
+    &-h
+      &-btn
+        display: none
+
+@media ( max-width: 768px )
+  .ct
+    &__pc
+      margin-bottom: 32px
+    &__rv
+      margin-bottom: 24px
+    &__steps
+      margin-bottom: 22px
+    &__bnr1
+      margin-bottom: 20px
+    &__faq
+      margin-bottom: 40px
+    &-h
+      margin-bottom: 18px
+    &-select
+      display: block
+      border-radius: 8px
+      border: 1px solid $grey10
+      height: 50px
+      padding: 0 18px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background-color: $grey0
+      cursor: pointer
+      user-select: none
+      &.active
+        border-color: $grey20
+        .ct-select
+          &-arrow
+            transform: scale(1, -1)
+            svg
+              stroke: $primary
+          &-list
+            opacity: 1
+            transform: translateY(0)
+      &__cats
+        margin-bottom: 12px
+      &-label
+        display: block
+        margin-right: 8px
+        +inter-reg
+        font-size: 14px
+        color: $grey70
+      &-item
+        margin: 0
+        border: none
+        border-radius: 0
+        display: block
+        +inter-semibold
+        font-size: 16px
+        color: $grey70
+        &.selected
+          margin-right: auto
+          display: block
+          padding: 0
+          height: auto
+      &-arrow
+        display: block
+        line-height: 0
+        transition: 0.2s ease-in-out
+        svg
+          stroke: $grey70
+      &-list
+        opacity: 0
+        transform: translateY(-5px)
+        position: absolute
+        transition: 0.2s ease-in-out
+        visibility: hidden
+        display: block
+        top: calc(100% + 5px)
+        border-radius: 8px
+        border: 1px solid $grey20
+        padding: 12px 0
+        background-color: $grey0
+        box-shadow: 0px 22px 35px rgba(26, 31, 36, 0.25)
+        .ct-select-item
+          height: 48px
+          line-height: 48px
+          padding: 0 18px
+          &:hover
+            background-color: $light
+          &.active
+            color: $grey100
+            background-color: $light
+            &::before
+              content: "•"
+              margin-right: 13px
+              color: $primary
+    &-steps
+      padding: 30px 0
+      &-title
+        margin-bottom: 20px
+        .gradient-primary
+          display: inline-block

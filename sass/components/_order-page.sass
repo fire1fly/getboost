@@ -1,0 +1,382 @@
+.ord
+  &-grid
+    margin-top: 30px
+    border: 1px solid $grey10
+    border-radius: 12px
+    display: grid
+    grid-template-columns: 43% 57%
+    grid-template-rows: repeat(2, auto)
+    background-color: $grey0
+    box-shadow: 0px 4px 23px #EFF2F8
+    .chat
+      height: 55vh
+      &-frame
+        border: none
+        box-shadow: none
+      &-h
+        border-bottom: 1px solid $grey10
+        padding: 16px 24px 16px 20px
+    &__b
+      position: relative
+    &__f
+      border-right: 1px solid $grey10
+      grid-column: 1/2
+      grid-row: 2/3
+    &__chat
+      grid-column: 2/3
+      grid-row: 1/3
+      min-width: 0
+  &-b
+    border-right: 1px solid $grey10
+    &-row
+      display: flex
+      align-items: center
+      gap: 16px
+  &__date
+    margin-bottom: 10px
+    padding: 28px 40px 0
+  &__title
+    padding: 0 40px
+    margin-bottom: 14px
+  &__status
+    padding: 0 12px
+    margin-bottom: 15px
+  &__subinfo
+    margin-bottom: 20px
+    padding: 0 40px
+  &__tags
+    margin-bottom: 16px
+    padding: 0 40px
+  &-backlink
+    display: flex
+    align-items: center
+    gap: 6px
+    +inter-semibold
+    font-size: 16px
+    color: $grey70
+    svg
+      flex: 0 0 auto
+  &-plate
+    flex: 0 0 auto
+    border-radius: 4px
+    padding: 4px 8px
+    +inter-semibold
+    font-size: 16px
+    color: $grey70
+    background-color: $grey10
+  &-title
+    +stolzl-med
+    font-size: 24px
+    color: $button1
+  &-status
+    border-radius: 4px
+    text-align: center
+    width: 100%
+    padding: 12px
+    +inter-semibold
+    font-size: 18px
+  &-text
+    +inter-semibold
+    font-size: 16px
+    color: $button1
+  &-tags
+    &-label
+      margin-bottom: 13px
+      +inter-semibold
+      text-transform: uppercase
+      font-size: 16px
+      color: $grey70
+    &-grid
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 8px
+    &-item
+      border-radius: 4px
+      padding: 4px 8px
+      background-color: $light
+      +inter-semibold
+      font-size: 14px
+      color: $primary
+  &-tbl
+    border-top: 1px solid $grey10
+    border-bottom: 1px solid $grey10
+    padding: 20px 40px
+    display: flex
+    flex-wrap: wrap
+    gap: 24px
+    &-label
+      margin-bottom: 5px
+      +inter-semibold
+      font-size: 14px
+      color: $grey70
+    &-value
+      +inter-bold
+      font-size: 20px
+      color: $button1
+  &-bigplate
+    flex: 1 1 auto
+    border-radius: 12px
+    padding: 25px 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $five
+    &-grid
+      display: flex
+      flex-wrap: wrap
+      gap: 8px
+      padding: 12px
+  &-trigger
+    &__wrap
+      display: none
+  &-id
+    display: none
+  &-f
+    padding: 32px 40px
+    &-title
+      margin-bottom: 10px
+      +stolzl-med
+      font-size: 20px
+      color: $button1
+    &-p
+      margin: 10px 0
+      +inter-med
+      font-size: 18px
+      line-height: 1.5
+      color: $grey70
+  &-btn
+    margin: 12px 0
+    border-radius: 30px
+    height: 55px
+    width: 100%
+    +inter-semibold
+    font-size: 16px
+
+@media ( max-width: 1024px )
+  .ord
+    &-grid
+      margin-top: 20px
+      border: none
+      grid-template-columns: 1fr
+      background-color: transparent
+      box-shadow: none
+      &__b
+
+      &__f
+        border-bottom-left-radius: 12px
+        border-bottom-right-radius: 12px
+        border-left: 1px solid $grey10
+        border-bottom: 1px solid $grey10
+        grid-row: auto
+        grid-column: auto
+        background-color: $grey0
+      &__chat
+        margin-top: 16px
+        grid-row: auto
+        grid-column: auto
+        order: 1
+      .chat
+        &-frame
+          border: 1px solid $grey10
+    &-b
+      border-top-left-radius: 12px
+      border-top-right-radius: 12px
+      border-top: 1px solid $grey10
+      border-left: 1px solid $grey10
+      display: grid
+      grid-template-columns: 1.5fr 0.8fr
+      padding-top: 20px
+      background-color: $grey0
+      // grid-template-rows: repeat(5, min-content)
+    &__date
+      align-self: start
+      margin-bottom: 13px
+      padding: 0 20px
+      grid-column: 1/2
+    &__title
+      margin-bottom: 12px
+      padding: 0 20px
+      grid-column: 1/2
+      grid-row: 2/3
+    &__subinfo
+      align-self: start
+      // display: none
+      margin-bottom: 20px
+      padding: 0 20px
+      grid-column: 1/2
+      grid-row: 3/4
+    &__bigplates
+      margin-bottom: 12px
+      padding: 0
+      padding-right: 20px
+      grid-column: 2/3
+      grid-row: 1/3
+    &__tags
+      // display: none
+      margin-bottom: 30px
+      justify-self: end
+      padding: 0 20px
+      grid-column: 2/3
+      grid-row: 3/4
+    &__tbl
+      // display: none
+      margin-bottom: 20px
+      grid-column: 1/3
+      grid-row: 4/5
+    &__status
+      grid-column: 1/3
+      grid-row: 5/6
+    &-tags
+      &-label
+        text-align: right
+      &-grid
+        justify-content: flex-end
+    &-trigger
+      display: flex
+      align-items: center
+      gap: 7px
+      +inter-semibold
+      font-size: 16px
+      color: $grey60
+      svg
+        stroke: $grey60
+      &__wrap
+        grid-column: 1/3
+        grid-row: 6/7
+        border-top: 1px solid $grey10
+        border-bottom: 1px solid $grey10
+        padding: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        &.active
+          svg
+            transform: scale(1, -1)
+    &-f
+      padding: 20px 40px 30px
+      .ord-btn
+        margin: 4px 0
+        display: inline-flex
+        width: auto
+        padding: 0 32px
+
+@media ( max-width: 768px )
+  .ord
+    &-grid
+      &__chat
+        margin-top: 6px
+        grid-row: 2/3
+      &__b
+        min-height: 170px
+      &__f
+        grid-row: 3/4
+      .chat
+        &-frame
+          border-radius: 0
+          border: none
+        &-bar
+          border-bottom-left-radius: 0
+          border-bottom-right-radius: 0
+    &-b
+      top: 0
+      left: 0
+      border-radius: 12px
+      border-bottom: 1px solid $grey10
+      width: 100%
+      padding-top: 0
+      grid-template-columns: 1fr
+      &.opened
+        position: absolute
+        box-shadow: 0px 7px 24px rgba(144, 159, 188, 0.25)
+        .ord
+          &__status
+            border-bottom: none
+            grid-row: 8/9
+    &-trigger
+      flex-direction: row-reverse
+      text-align: right
+      color: $primary
+      svg
+        stroke: $primary
+      &__wrap
+        margin-bottom: 6px
+        border-top: none
+        padding: 18px
+        grid-row: 1/2
+        justify-content: space-between
+    &__status
+      border-bottom: 1px solid $grey10
+      padding: 0 6px 6px
+      grid-column: auto
+      grid-row: 2/3
+    &__date
+      margin-bottom: 8px
+      grid-column: auto
+      grid-row: 2/3
+      grid-column: auto
+      .ord-backlink
+        display: none
+    &__title
+      grid-column: auto
+      grid-row: 3/4
+    &__subinfo
+      grid-column: auto
+      grid-column: 1/3
+      grid-row: 4/5
+    &__tags
+      justify-self: start
+      margin: 0
+      width: 100%
+      padding: 10px 16px
+      grid-column: auto
+      grid-row: 5/6
+    &__tbl
+      margin-bottom: 0
+      padding: 14px 16px
+      grid-column: auto
+      grid-row: 6/7
+    &__bigplates
+      margin-bottom: 0
+      padding: 12px 16px
+      grid-column: auto
+      grid-row: 7/8
+    &-id
+      display: block
+      +stolzl-med
+      font-size: 18px
+      color: $button1
+    &-plate
+      font-size: 12px
+    &-title
+      font-size: 16px
+    &-text
+      font-size: 14px
+    &-tags
+      border-top: 1px solid $grey10
+      &-label
+        text-align: left
+        font-size: 14px
+      &-grid
+        justify-content: flex-start
+    &-tbl
+      &-label
+        font-size: 12px
+      &-value
+        font-size: 16px
+    &-bigplate
+      padding: 12px
+    &-status
+      padding: 7px
+      font-size: 14px
+    &-f
+      padding: 20px 16px
+      &-title
+        font-size: 18px
+      &-p
+        font-size: 15px
+      .ord-btn
+        width: 100%
+        display: flex

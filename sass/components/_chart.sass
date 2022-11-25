@@ -1,0 +1,104 @@
+.chart
+  height: 100%
+  display: flex
+  gap: 10px
+  &__wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-info
+    flex: 0 1 440px
+    &-h
+      margin-bottom: 28px
+    &-text
+      +inter-semibold
+      font-size: 18px
+      color: $grey100
+      .gradient-primary
+        display: inline-block
+        +inter-bold
+        text-transform: uppercase
+  &-title
+    margin: 0
+    margin-bottom: 8px
+    +stolzl-reg
+    text-transform: uppercase
+    color: $grey100
+  &-subtitle
+    margin-bottom: 12px
+    +stolzl-med
+    font-size: 20px
+    color: $grey100
+  &-btn
+    border-radius: 30px
+    display: inline-flex
+    height: 60px
+    padding: 0 32px
+    +inter-semibold
+    font-size: 16px
+    color: $grey0
+  &-part
+    display: flex
+    gap: 8px
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    &:last-child
+      .chart-fig
+        flex: 0 1 330px
+  &-label
+    +stolzl-reg
+    font-size: 20px
+    color: $grey40
+  &-fig
+    border-radius: 16px
+    padding: 0 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(179.79deg, #B8D0FF 0.18%, #D8E6FF 99.82%)
+  &-value
+    +stolzl-med
+    font-size: 24px
+    color: $primary
+
+@media ( max-width: 1024px )
+  .chart
+    &-value
+      font-size: 20px
+
+@media ( max-width: 991px )
+  .chart
+    width: 100%
+    flex-direction: column
+    gap: 4px
+    &__wrap
+      flex-direction: column
+      gap: 30px
+      align-items: flex-start
+    &-info
+      flex: auto
+    &-part
+      flex-direction: row-reverse
+      &:last-child
+        .chart-fig
+          flex: 1 1 auto
+    &-label
+      flex: 0 1 55px
+      font-size: 14px
+    &-fig
+      justify-content: flex-start
+      border-radius: 8px
+      padding: 10px
+    &-value
+      font-size: 16px
+
+@media ( max-width: 768px )
+  .chart
+    &-info
+      &-text
+        font-size: 15px
+    &-subtitle
+      font-size: 16px
+    &-btn
+      height: 50px

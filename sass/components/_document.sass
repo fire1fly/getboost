@@ -1,0 +1,55 @@
+.doc
+  padding: 40px 0
+  +inter-med
+  color: $grey90
+  ._grey-light
+    color: $grey70
+  ._primary
+    color: $primary
+  ._w500
+    +stolzl-med
+  ._w600
+    +inter-semibold
+  a
+    text-decoration: underline
+    color: $primary
+  &-frame
+    border-radius: 12px
+    border: 1px solid $grey10
+    padding: 40px
+    background-color: $grey0
+    & > *:last-child
+      margin-bottom: 0
+  .heading
+    +stolzl-med
+    color: $grey100
+  &-h1
+    margin: 0
+    margin-bottom: 18px
+  &-h2
+    margin: 0
+    margin-bottom: 16px
+  &-sub
+    margin-bottom: 11px
+    font-size: 16px
+  p
+    margin: 0
+    margin-bottom: 24px
+  ul, ol
+    margin: 0
+    margin-bottom: 24px
+    padding-left: 20px
+
+@media ( max-width: 1024px )
+  .doc
+    padding-top: 12px
+    padding-bottom: 32px
+    .heading
+      margin-bottom: 16px
+
+@media ( max-width: 768px )
+  .doc
+    padding-top: 16px
+    padding-bottom: 25px
+    &-frame
+      padding: 15px

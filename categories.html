@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.min.css">
+
+  <script defer src="./js/dropdown.js"></script>
+  <script defer src="./js/mobileMenu.js"></script>
+  <script defer src="./js/dropblock.js"></script>
+
+  <title>Categories - Getboost.gg</title>
+</head>
+
+<body>
+  <div class="root">
+    <header class="h">
+      <div class="h__inner container">
+        <a href="./index.html" class="h-logo h__logo">
+          <img src="./assets/static/logo.svg" alt="getboost.gg">
+        </a>
+        <div class="h-dd h-dd__game dd fadeDown">
+          <div class="h-dd-label">Select a game</div>
+          <div class="h-dd-arrow">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1.25L6 5.75L10.5 1.25" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="h-dd-list dd-list">
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-1.png" alt="WoW WOTLK">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW WOTLK</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW Shadowlands</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">Destiny 2</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div><!-- /.h-dd__game -->
+        <nav class="h-nav">
+          <a href="#" class="h-nav-link">Loalty</a>
+          <a href="#" class="h-nav-link">Reviews</a>
+        </nav>
+        <a href="#" class="h-wilink h__wilink">
+          <div class="h-wilink-icon">
+            <img src="./assets/static/icon-headphones.svg" alt="headphones">
+          </div>
+          <div class="h-wilink-label">24/7 Support</div>
+        </a><!-- /.h-wilink (link with icon) -->
+        <div class="h-bar">
+          <button type="button" class="btn btn-dark h-btn">
+            <div class="h-btn-icon h-btn-cart">
+              <img src="./assets/static/icon-cart.svg" alt="cart">
+              <div class="h-btn-cart-sign">1</div>
+            </div>
+            <div class="h-btn-label">Cart</div>
+          </button>
+          <button type="button" class="btn btn-primary h-btn btn-open-modal" data-modal="signin">Authorization</button>
+        </div>
+        <div class="h-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="h-menu">
+          <nav class="h-nav">
+            <a href="#" class="h-nav-link">Loalty</a>
+            <a href="#" class="h-nav-link">Reviews</a>
+          </nav>
+          <div class="h-dd-list h-menu__list">
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-1.png" alt="WoW WOTLK">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW WOTLK</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-2.png" alt="WoW Shadowlands">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">WoW Shadowlands</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            <a href="./card.html" class="h-dd-item">
+              <div class="h-dd-item-preview">
+                <img src="./assets/static/h-dd-item-3.png" alt="Destiny 2">
+              </div>
+              <div class="h-dd-item-info">
+                <div class="h-dd-item-title">Destiny 2</div>
+                <div class="h-dd-item-sub">10 932 boosts</div>
+              </div>
+              <div class="h-dd-item-arrow">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#494D53" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="h-wilink h__wilink">
+            <div class="h-wilink-icon">
+              <img src="./assets/static/icon-headphones.svg" alt="headphones">
+            </div>
+            <div class="h-wilink-label">24/7 Support</div>
+          </a><!-- /.h-wilink (link with icon) -->
+          <div class="h-bar">
+            <button type="button" class="btn btn-dark h-btn">
+              <div class="h-btn-icon h-btn-cart">
+                <img src="./assets/static/icon-cart.svg" alt="cart">
+                <div class="h-btn-cart-sign">1</div>
+              </div>
+              <div class="h-btn-label">Cart</div>
+            </button>
+            <button type="button" class="btn btn-primary h-btn btn-open-modal" data-modal="signin">Authorization</button>
+          </div>
+        </div>
+      </div>
+    </header><!-- /.header -->
+    <main class="main ct">
+      <div class="container">
+        <div class="ct-h">
+          <div class="ct-h__inner">
+            <div class="breads">
+              <a href="./index.html" class="breads-item">
+                <svg class="breads-item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.75 15.75V10.2C6.75 9.78001 6.75 9.56999 6.83175 9.40956C6.90365 9.26843 7.01839 9.1537 7.15951 9.08179C7.31994 9.00005 7.52996 9.00005 7.95 9.00005H10.05C10.47 9.00005 10.6801 9.00005 10.8405 9.08179C10.9816 9.1537 11.0963 9.26843 11.1683 9.40956C11.25 9.56999 11.25 9.78001 11.25 10.2V15.75M8.26327 2.07306L3.17654 6.0294C2.83652 6.29387 2.6665 6.4261 2.54402 6.5917C2.43552 6.73839 2.3547 6.90365 2.30552 7.07935C2.25 7.2777 2.25 7.49308 2.25 7.92385V13.35C2.25 14.1901 2.25 14.6102 2.41349 14.931C2.5573 15.2133 2.78677 15.4427 3.06901 15.5866C3.38988 15.75 3.80992 15.75 4.65 15.75H13.35C14.1901 15.75 14.6101 15.75 14.931 15.5866C15.2132 15.4427 15.4427 15.2133 15.5865 14.931C15.75 14.6102 15.75 14.1901 15.75 13.35V7.92385C15.75 7.49308 15.75 7.2777 15.6945 7.07935C15.6453 6.90365 15.5645 6.73839 15.456 6.5917C15.3335 6.4261 15.1635 6.29387 14.8235 6.02941L9.73673 2.07306C9.47324 1.86812 9.34149 1.76565 9.19601 1.72626C9.06765 1.69151 8.93235 1.69151 8.80399 1.72626C8.65851 1.76565 8.52677 1.86812 8.26327 2.07306Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Main page
+              </a>
+              <div class="breads__sep">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke-width="1.92857" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <a href="#" class="breads-item">Categories</a>
+            </div>
+            <h1 class="ct-title h2">DON’T MISS HOT OFFERS</h1>
+          </div>
+          <a href="#" class="btn btn-dark ct-h-btn">Ask for a Specific Service</a>
+        </div>
+        <div class="ct-select ct-select__cats dd select">
+          <input type="hidden" class="dd-input" value="null">
+          <div class="ct-select-label">Categories</div>
+          <div class="ct-select-item selected">
+            Bundles
+          </div>
+          <div class="ct-select-arrow">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <ul class="ct-select-list dd-list">
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="1">All</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="2">Patch 9.7.2</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="3">Fated raids</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="4">Mythic+</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item active" data-value="5">Bundles</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="6">Torghast</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="7">Covernance</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="8">Gearing</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="9">PvP</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="10">Achievements</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="11">Resourses</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="12">Powerleveling</div>
+            </li>
+            <li>
+              <div href="#" class="ct-select-item dd-item" data-value="13">Mounts</div>
+            </li>
+          </ul>
+        </div>
+        <div class="pc__wrap ct__pc">
+          <div class="pc">
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__through">$160.30</div>
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <div class="pc-card__plate _orange">hot offer</div>
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__through">$160.30</div>
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__through">$160.30</div>
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__through">$160.30</div>
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <div class="pc-card__plate _orange">hot offer</div>
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+            <div class="pc-card">
+              <div class="pc-card-preview">
+                <img src="./assets/static/product-card-preview.png" alt="preview">
+              </div>
+              <div class="pc-card-subtitle">Mounts</div>
+              <h3 class="pc-card-title">Castle Narthia Fated</h3>
+              <div class="pc-card-f">
+                <div class="pc-card-price">
+                  <div class="pc-card-price__through">$160.30</div>
+                  <div class="pc-card-price__value">$120.30</div>
+                </div>
+                <a href="#" class="pc-card-btn btn btn-light-primary">Buy now</a>
+              </div>
+            </div><!-- /.pc-card -->
+          </div><!-- /.pc (product cards) -->
+          <button class="btn btn-light pc-btn">Load more</button>
+        </div>
+        <section class="rv ct__rv">
+          <div class="rv-h">
+            <div class="rv-h__inner">
+              <h2 class="rv-title h2">REVIEWS OF OUR CLIENTS</h2>
+              <div class="rv-h-link__wrap">
+                <div class="rv-h-link-label text">Rated more than 4.9 out of 5 on</div>
+                <a href="#" class="rv-h-link">
+                  <svg class="rv-h-link__icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_43_911)">
+                      <path
+                        d="M20.9978 7.64336H12.9802L10.5036 0L8.01947 7.64336L0.00183105 7.63574L6.49495 12.3643L4.01052 20L10.5036 15.2791L16.9889 20L14.5123 12.3643L20.9978 7.64336Z"
+                        fill="#00B67A" />
+                      <path d="M15.0698 14.093L14.5125 12.3643L10.5038 15.2791L15.0698 14.093Z" fill="#005128" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_43_911">
+                        <rect width="21" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  trustpilot.com
+                </a>
+              </div>
+            </div>
+
+            <div class="rv-sum">
+              <div class="rating">
+                <svg class="rating__fill" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                    fill="#00B654" />
+                </svg>
+                <svg class="rating__fill" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                    fill="#00B654" />
+                </svg>
+                <svg class="rating__fill" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                    fill="#00B654" />
+                </svg>
+                <svg class="rating__half" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                    fill="#D2D3D4" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17 1.86377C16.8154 1.96855 16.6601 2.13643 16.5693 2.36741L13.2692 10.7618C13.1268 11.124 12.7873 11.3707 12.3989 11.3941L3.39549 11.9387C2.48866 11.9936 2.11891 13.1316 2.82031 13.709L9.7841 19.4416C10.0845 19.6889 10.2142 20.088 10.1165 20.4647L7.85226 29.1957C7.6242 30.0751 8.59222 30.7784 9.35811 30.2897L16.9621 25.4383C16.9746 25.4303 16.9872 25.4226 17 25.4153V1.86377Z"
+                    fill="#00B654" />
+                </svg>
+                <svg class="rating__empty" width="35" height="35" viewBox="0 0 35 35" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5693 2.3673C16.9017 1.5218 18.0983 1.5218 18.4307 2.3673L21.7308 10.7617C21.8732 11.1239 22.2127 11.3705 22.6011 11.394L31.6045 11.9386C32.5113 11.9935 32.881 13.1315 32.1796 13.7089L25.2159 19.4415C24.9154 19.6888 24.7858 20.0879 24.8834 20.4646L27.1477 29.1956C27.3758 30.075 26.4077 30.7783 25.6419 30.2896L18.0379 25.4382C17.7098 25.2289 17.2902 25.2289 16.9621 25.4382L9.35815 30.2896C8.59226 30.7783 7.62424 30.075 7.8523 29.1956L10.1166 20.4646C10.2142 20.0879 10.0846 19.6888 9.78414 19.4415L2.82036 13.7089C2.11895 13.1315 2.4887 11.9935 3.39554 11.9386L12.3989 11.394C12.7873 11.3705 13.1268 11.1239 13.2692 10.7617L16.5693 2.3673Z"
+                    fill="#D2D3D4" />
+                </svg>
+              </div>
+              <div class="rv-sum-value">4.4</div>
+              <div class="rv-sum-sub">(34 043 reviews)</div>
+            </div>
+          </div>
+          <div class="rv__inner">
+            <div class="rv-item">
+              <div class="rv-item-h">
+                <div class="rv-item-username">Jaha K.</div>
+                <div class="rv-item-rating">
+                  <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  4.9
+                </div>
+              </div>
+              <div class="rv-item-plate">
+                <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    fill="#3474EE" />
+                  <path
+                    d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Verified customer
+              </div>
+              <p class="rv-item-text text">
+                “A nice platform… good customer services and good transparency too”
+              </p>
+              <div class="rv-item-f">
+                <div class="rv-item-f-item">20 May, 2022</div>
+                <div class="rv-item-f__sep"></div>
+                <div class="rv-item-f-item">Sweden</div>
+              </div>
+            </div>
+            <div class="rv-item">
+              <div class="rv-item-h">
+                <div class="rv-item-username">Jaha K.</div>
+                <div class="rv-item-rating">
+                  <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  4.9
+                </div>
+              </div>
+              <div class="rv-item-plate">
+                <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    fill="#3474EE" />
+                  <path
+                    d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Verified customer
+              </div>
+              <p class="rv-item-text text">
+                “A nice platform… good customer services and good transparency too”
+              </p>
+              <div class="rv-item-f">
+                <div class="rv-item-f-item">20 May, 2022</div>
+                <div class="rv-item-f__sep"></div>
+                <div class="rv-item-f-item">Sweden</div>
+              </div>
+            </div>
+            <div class="rv-item">
+              <div class="rv-item-h">
+                <div class="rv-item-username">Jaha K.</div>
+                <div class="rv-item-rating">
+                  <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  4.9
+                </div>
+              </div>
+              <div class="rv-item-plate">
+                <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    fill="#3474EE" />
+                  <path
+                    d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Verified customer
+              </div>
+              <p class="rv-item-text text">
+                “A nice platform… good customer services and good transparency too”
+              </p>
+              <div class="rv-item-f">
+                <div class="rv-item-f-item">20 May, 2022</div>
+                <div class="rv-item-f__sep"></div>
+                <div class="rv-item-f-item">Sweden</div>
+              </div>
+            </div>
+            <div class="rv-item">
+              <div class="rv-item-h">
+                <div class="rv-item-username">Jaha K.</div>
+                <div class="rv-item-rating">
+                  <svg class="rv-item-rating__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0693 2.3673C11.4017 1.5218 12.5983 1.5218 12.9307 2.3673L14.8278 7.19286C14.9701 7.555 15.3096 7.80167 15.698 7.82516L20.8737 8.13822C21.7805 8.19307 22.1502 9.33105 21.4488 9.90845L17.4457 13.2039C17.1453 13.4512 17.0156 13.8503 17.1133 14.2269L18.4149 19.246C18.6429 20.1254 17.6749 20.8287 16.909 20.34L12.5379 17.5512C12.2098 17.3419 11.7902 17.3419 11.4621 17.5512L7.09096 20.34C6.32508 20.8287 5.35706 20.1254 5.58512 19.246L6.88674 14.2269C6.98442 13.8503 6.85473 13.4512 6.55432 13.2039L2.55117 9.90845C1.84976 9.33105 2.21952 8.19307 3.12635 8.13822L8.30196 7.82516C8.69037 7.80167 9.02988 7.555 9.17225 7.19286L11.0693 2.3673Z"
+                      fill="#00B654" />
+                  </svg>
+                  4.9
+                </div>
+              </div>
+              <div class="rv-item-plate">
+                <svg class="rv-item-plate__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    fill="#3474EE" />
+                  <path
+                    d="M9 12L11 14L15.5 9.5M17.9012 4.99851C18.1071 5.49653 18.5024 5.8924 19.0001 6.09907L20.7452 6.82198C21.2433 7.02828 21.639 7.42399 21.8453 7.92206C22.0516 8.42012 22.0516 8.97974 21.8453 9.47781L21.1229 11.2218C20.9165 11.7201 20.9162 12.2803 21.1236 12.7783L21.8447 14.5218C21.9469 14.7685 21.9996 15.0329 21.9996 15.2999C21.9997 15.567 21.9471 15.8314 21.8449 16.0781C21.7427 16.3249 21.5929 16.549 21.4041 16.7378C21.2152 16.9266 20.991 17.0764 20.7443 17.1785L19.0004 17.9009C18.5023 18.1068 18.1065 18.5021 17.8998 18.9998L17.1769 20.745C16.9706 21.2431 16.575 21.6388 16.0769 21.8451C15.5789 22.0514 15.0193 22.0514 14.5212 21.8451L12.7773 21.1227C12.2792 20.9169 11.7198 20.9173 11.2221 21.1239L9.47689 21.8458C8.97912 22.0516 8.42001 22.0514 7.92237 21.8453C7.42473 21.6391 7.02925 21.2439 6.82281 20.7464L6.09972 19.0006C5.8938 18.5026 5.49854 18.1067 5.00085 17.9L3.25566 17.1771C2.75783 16.9709 2.36226 16.5754 2.15588 16.0777C1.94951 15.5799 1.94923 15.0205 2.1551 14.5225L2.87746 12.7786C3.08325 12.2805 3.08283 11.7211 2.8763 11.2233L2.15497 9.47678C2.0527 9.2301 2.00004 8.96568 2 8.69863C1.99996 8.43159 2.05253 8.16715 2.15472 7.92043C2.25691 7.67372 2.40671 7.44955 2.59557 7.26075C2.78442 7.07195 3.00862 6.92222 3.25537 6.8201L4.9993 6.09772C5.49687 5.89197 5.89248 5.4972 6.0993 5.00006L6.82218 3.25481C7.02848 2.75674 7.42418 2.36103 7.92222 2.15473C8.42027 1.94842 8.97987 1.94842 9.47792 2.15473L11.2218 2.87712C11.7199 3.08291 12.2793 3.08249 12.7771 2.87595L14.523 2.15585C15.021 1.94966 15.5804 1.9497 16.0784 2.15597C16.5763 2.36223 16.972 2.75783 17.1783 3.25576L17.9014 5.00153L17.9012 4.99851Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Verified customer
+              </div>
+              <p class="rv-item-text text">
+                “A nice platform… good customer services and good transparency too”
+              </p>
+              <div class="rv-item-f">
+                <div class="rv-item-f-item">20 May, 2022</div>
+                <div class="rv-item-f__sep"></div>
+                <div class="rv-item-f-item">Sweden</div>
+              </div>
+            </div>
+          </div>
+        </section><!-- /.rv (reviews) -->
+      </div>
+      <section class="ct-steps ct__steps">
+        <div class="container">
+          <h2 class="ct-steps-title h2">
+            GET YOUR ORDER STARTED
+            <div class="gradient-primary">IN 15 MINUTES</div>
+          </h2>
+          <div class="stc">
+            <div class="stc-row">
+              <div class="stc-card__wrap">
+                <div class="stc-card">
+                  <div class="stc-card-icon__wrap">
+                    <img src="./assets/static/icon-gamepad.svg" alt="gamepad" class="stc-card-icon">
+                  </div>
+                  <h3 class="stc-card-title">CHOOSE SERVICE</h3>
+                  <p class="stc-card-text">Each service except WoW Raid will be started in 15 Minutes</p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step-line"></div>
+                  <div class="stc-card-step">01</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+              <div class="stc-card__wrap">
+                <div class="stc-card">
+                  <div class="stc-card-icon__wrap">
+                    <img src="./assets/static/icon-shopcart.svg" alt="shopcart" class="stc-card-icon">
+                  </div>
+                  <h3 class="stc-card-title">MAKE AN ORDER</h3>
+                  <p class="stc-card-text">Fill up your character details and pay for it</p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step-line"></div>
+                  <div class="stc-card-step">02</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+              <div class="stc-card__wrap">
+                <div class="stc-card">
+                  <div class="stc-card-icon__wrap">
+                    <img src="./assets/static/icon-support.svg" alt="support" class="stc-card-icon">
+                  </div>
+                  <h3 class="stc-card-title">GET CONTACTED</h3>
+                  <p class="stc-card-text">Our support will contact you within 3 minutes</p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step-line"></div>
+                  <div class="stc-card-step">03</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+              <div class="stc-card__wrap">
+                <div class="stc-card">
+                  <div class="stc-card-icon__wrap">
+                    <img src="./assets/static/icon-rocket.svg" alt="rocket" class="stc-card-icon">
+                  </div>
+                  <h3 class="stc-card-title">GET STARTED</h3>
+                  <p class="stc-card-text gradient-primary">In 15 minutes get your order begun!</p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step-line"></div>
+                  <div class="stc-card-step">04</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="bnr1 ct__bnr1">
+          <div class="bnr1-b">
+            <div class="bnr1-b__inner">
+              <h2 class="bnr1-title">YOU ARE PROTECTED BY BUYER PROTECTION PROGRAMS</h2>
+              <div class="bnr1-sub text">There is no reason for you to be worried.</div>
+              <div class="bnr1-rowplate">
+                <div class="bnr1-plate">
+                  <svg class="bnr1-plate__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M22.3765 6.24813C22.6339 6.87067 23.1279 7.3655 23.7501 7.62384L25.9315 8.52747C26.5541 8.78535 27.0487 9.27999 27.3066 9.90257C27.5645 10.5252 27.5645 11.2247 27.3066 11.8473L26.4036 14.0273C26.1457 14.6501 26.1453 15.3503 26.4045 15.9729L27.3058 18.1522C27.4337 18.4606 27.4995 18.7911 27.4996 19.1249C27.4996 19.4587 27.4339 19.7893 27.3062 20.0977C27.1784 20.4061 26.9912 20.6863 26.7551 20.9223C26.519 21.1583 26.2388 21.3455 25.9304 21.4731L23.7504 22.3761C23.1279 22.6335 22.6331 23.1276 22.3748 23.7497L21.4712 25.9313C21.2133 26.5539 20.7187 27.0485 20.0961 27.3064C19.4736 27.5643 18.7741 27.5643 18.1515 27.3064L15.9716 26.4034C15.349 26.1462 14.6498 26.1467 14.0276 26.4049L11.8461 27.3072C11.2239 27.5645 10.525 27.5643 9.90296 27.3066C9.28091 27.0489 8.78657 26.5549 8.52852 25.9329L7.62465 23.7507C7.36725 23.1282 6.87318 22.6334 6.25106 22.375L4.06958 21.4714C3.44729 21.2136 2.95282 20.7193 2.69485 20.0971C2.43689 19.4749 2.43654 18.7757 2.69388 18.1532L3.59683 15.9732C3.85407 15.3506 3.85354 14.6513 3.59537 14.0291L2.69372 11.846C2.56588 11.5376 2.50005 11.2071 2.5 10.8733C2.49995 10.5395 2.56567 10.2089 2.6934 9.90054C2.82114 9.59214 3.00839 9.31194 3.24446 9.07594C3.48053 8.83994 3.76078 8.65277 4.06921 8.52513L6.24912 7.62215C6.87109 7.36496 7.36561 6.8715 7.62413 6.25007L8.52773 4.06851C8.7856 3.44593 9.28022 2.95129 9.90278 2.69341C10.5253 2.43553 11.2248 2.43553 11.8474 2.69341L14.0273 3.59639C14.6499 3.85364 15.3491 3.85312 15.9713 3.59493L18.1537 2.69481C18.7762 2.43707 19.4755 2.43713 20.098 2.69496C20.7204 2.95279 21.215 3.44729 21.4729 4.0697L22.3767 6.25191L22.3765 6.24813Z"
+                      fill="#3474EE" />
+                    <path
+                      d="M11.25 15L13.75 17.5L19.375 11.875M22.3765 6.24813C22.6339 6.87067 23.1279 7.3655 23.7501 7.62384L25.9315 8.52747C26.5541 8.78535 27.0487 9.27999 27.3066 9.90257C27.5645 10.5252 27.5645 11.2247 27.3066 11.8473L26.4036 14.0273C26.1457 14.6501 26.1453 15.3503 26.4045 15.9729L27.3058 18.1522C27.4337 18.4606 27.4995 18.7911 27.4996 19.1249C27.4996 19.4587 27.4339 19.7893 27.3062 20.0977C27.1784 20.4061 26.9912 20.6863 26.7551 20.9223C26.519 21.1583 26.2388 21.3455 25.9304 21.4731L23.7504 22.3761C23.1279 22.6335 22.6331 23.1276 22.3748 23.7497L21.4712 25.9313C21.2133 26.5539 20.7187 27.0485 20.0961 27.3064C19.4736 27.5643 18.7741 27.5643 18.1515 27.3064L15.9716 26.4034C15.349 26.1462 14.6498 26.1467 14.0276 26.4049L11.8461 27.3072C11.2239 27.5645 10.525 27.5643 9.90296 27.3066C9.28091 27.0489 8.78657 26.5549 8.52852 25.9329L7.62465 23.7507C7.36725 23.1282 6.87318 22.6334 6.25106 22.375L4.06958 21.4714C3.44729 21.2136 2.95282 20.7193 2.69485 20.0971C2.43689 19.4749 2.43654 18.7757 2.69388 18.1532L3.59683 15.9732C3.85407 15.3506 3.85354 14.6513 3.59537 14.0291L2.69372 11.846C2.56588 11.5376 2.50005 11.2071 2.5 10.8733C2.49995 10.5395 2.56567 10.2089 2.6934 9.90054C2.82114 9.59214 3.00839 9.31194 3.24446 9.07594C3.48053 8.83994 3.76078 8.65277 4.06921 8.52513L6.24912 7.62215C6.87109 7.36496 7.36561 6.8715 7.62413 6.25007L8.52773 4.06851C8.7856 3.44593 9.28022 2.95129 9.90278 2.69341C10.5253 2.43553 11.2248 2.43553 11.8474 2.69341L14.0273 3.59639C14.6499 3.85364 15.3491 3.85312 15.9713 3.59493L18.1537 2.69481C18.7762 2.43707 19.4755 2.43713 20.098 2.69496C20.7204 2.95279 21.215 3.44729 21.4729 4.0697L22.3767 6.25191L22.3765 6.24813Z"
+                      stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Official payment systems
+                </div>
+                <div class="bnr1-plate">
+                  <svg class="bnr1-plate__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26.25 12.5C26.25 12.5 23.7438 9.08527 21.7077 7.0478C19.6716 5.01034 16.858 3.75 13.75 3.75C7.5368 3.75 2.5 8.7868 2.5 15C2.5 21.2132 7.5368 26.25 13.75 26.25C18.8789 26.25 23.2061 22.8179 24.5603 18.125M26.25 12.5V5M26.25 12.5H18.75"
+                      stroke="#3474EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Refund guarantee
+                </div>
+              </div>
+            </div>
+            <div class="bnr1-pic">
+              <img src="./assets/static/banner1-item-1.png" alt="picture">
+            </div>
+          </div>
+          <div class="bnr1-f">
+            <div class="bnr1-f-item">
+              <img src="./assets/static/visa.png" alt="visa">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/mastercard.png" alt="mastercard">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/american-express.png" alt="american express">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/googlepay.png" alt="googlepay">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/applepay.png" alt="applepay">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/skrill.png" alt="skrill">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/klarna.png" alt="klarna">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/paypal.png" alt="paypal">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/paysafecard.png" alt="paysafecard">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/giropay.png" alt="giropay">
+            </div>
+            <div class="bnr1-f-item">
+              <img src="./assets/static/bank-transfer.png" alt="bank transfer">
+            </div>
+          </div>
+        </section><!-- /.bnr1 (banner type 1) -->
+
+        <section class="faq-grid ct__faq">
+          <div class="faq-grid__h">
+            <div class="faq-subtitle subtitle">FAQ</div>
+            <h2 class="faq-title h2">Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-grid__inner">
+            <div class="faq">
+              <div class="faq-item drop">
+                <div class="faq-item-h drop-trigger">
+                  <div class="faq-item-label">Who are you?</div>
+                  <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="faq-item-b text drop-block">
+                  <p>
+                    We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                    covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                    impossible for us to get your moneywithout actually completing the service.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item drop">
+                <div class="faq-item-h drop-trigger">
+                  <div class="faq-item-label">Why prices are so low?</div>
+                  <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="faq-item-b text drop-block">
+                  <p>
+                    We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                    covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                    impossible for us to get your moneywithout actually completing the service.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item drop">
+                <div class="faq-item-h drop-trigger">
+                  <div class="faq-item-label">Why should I trust you? </div>
+                  <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="faq-item-b text drop-block">
+                  <p>
+                    We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                    covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                    impossible for us to get your moneywithout actually completing the service.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item drop">
+                <div class="faq-item-h drop-trigger">
+                  <div class="faq-item-label">How can I be sure in quality? </div>
+                  <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="faq-item-b text drop-block">
+                  <p>
+                    We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                    covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                    impossible for us to get your moneywithout actually completing the service.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item drop">
+                <div class="faq-item-h drop-trigger">
+                  <div class="faq-item-label">Who are you?</div>
+                  <svg class="faq-item-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.49976 8.25L10.9998 13.75L16.4998 8.25" stroke="#A4A6A9" stroke-width="2.35714"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="faq-item-b text drop-block">
+                  <p>
+                    We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard) so that you
+                    covered by PayPal buyer protection program and card networks buyer protection programs. Simply, it’s
+                    impossible for us to get your moneywithout actually completing the service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-grid__info">
+            <div class="faq-inf">
+              <div class="faq-inf-h">
+                <svg class="faq-inf-h__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.09 9.5C9.3251 8.83167 9.78915 8.26811 10.4 7.90913C11.0108 7.55016 11.7289 7.41894 12.4272 7.53871C13.1255 7.65849 13.7588 8.02152 14.2151 8.56353C14.6713 9.10553 14.9211 9.79152 14.92 10.5C14.92 12.5 11.92 13.5 11.92 13.5M12 17.5H12.01M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                    stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4 class="faq-inf-title h4">Any more questions?</h4>
+              </div>
+              <p class="faq-inf-text">
+                We accept money with PayPal and Stripe (ApplePay / GooglePay and Visa/Mastercard)
+              </p>
+              <a href="#" class="btn btn-dark faq-inf-btn">Ask it</a>
+            </div>
+          </div>
+        </section><!-- /.faq -->
+
+        <section class="bnr2">
+          <div class="bnr2__inner">
+            <h2 class="bnr2-title h2">WOULD YOU LIKE TO GIVE US A TRY?</h2>
+            <div class="bnr2-f">
+              <a href="#" class="btn btn-dark bnr2-btn">Yes, let’s try</a>
+              <a href="#" class="btn btn-primary bnr2-btn">No, thanks</a>
+            </div>
+          </div>
+          <img src="./assets/static/bnr2-pic-1.png" alt="picture" class="bnr2-pic-1">
+          <div class="bnr2-pic-2">
+            <picture>
+              <source srcset="./assets/static/bnr2-pic-2-lg.png" media="(min-width: 768px)">
+              <source srcset="./assets/static/bnr2-pic-2-sm.png" media="(min-width: 0px)">
+              <img src="./assets/static/bnr2-pic-2-lg.png" alt="picture">
+            </picture>
+          </div>
+        </section>
+      </div>
+    </main><!-- /.main (categories) -->
+    <footer class="f">
+      <div class="f__inner container">
+        <div class="f-copy">Getboost.gg © All rights reserved </div>
+        <div class="f-links">
+          <a href="#" class="f-link">Privacy Policy</a>
+          <div class="f-links__sep"></div>
+          <a href="#" class="f-link">Terms&Conditions</a>
+        </div>
+        <div class="f-bar">
+          <div class="f-dd f-dd__language dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-language.svg" alt="language">
+            </div>
+            <div class="f-dd-label">English (ENG)</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">English (ENG)</a>
+              <a href="#" class="f-dd-item active">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+            </div>
+          </div>
+          <div class="f-dd dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-currency.svg" alt="currency">
+            </div>
+            <div class="f-dd-label">USD</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">EUR</a>
+              <a href="#" class="f-dd-item active">USD</a>
+              <a href="#" class="f-dd-item">FRF</a>
+            </div>
+          </div>
+          <div class="f-bar__sep"></div>
+          <button class="btn f-btn _light _sign btn-open-modal" data-modal="signin">Log in</button>
+          <button class="btn f-btn _primary _sign btn-open-modal" data-modal="signup">Sign up</button>
+          <button class="btn f-btn _primary _mobile btn-open-modal" data-modal="signin">Authorization</button>
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+  </div>
+</body>
+
+</html>

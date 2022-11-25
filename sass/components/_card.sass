@@ -1,0 +1,521 @@
+.c
+  padding-bottom: 40px
+  &-ms
+    position: relative
+    height: 624px
+    &-frame
+      position: relative
+    &-bg
+      border-radius: 30px
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      object-fit: cover
+      width: 100%
+      height: 100%
+    &__inner
+      position: relative
+      z-index: 2
+      padding-top: 40px
+    &__info
+      width: 45%
+    &__form
+      position: absolute
+      z-index: 3
+      top: 40px
+      right: 30px
+      width: 50%
+    &-h
+      margin-bottom: 12px
+      display: flex
+      align-items: center
+      gap: 14px
+      &-icon
+        flex: 0 0 auto
+    &-tag
+      display: inline-flex
+      align-items: center
+      gap: 8px
+      &-grid
+        margin-bottom: 32px
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 12px 32px
+      &-icon
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 28px
+        height: 28px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $primary
+        img, svg
+          max-width: 100%
+      &-label
+        +inter-semibold
+        font-size: 16px
+        color: $grey0
+    &-plate
+      padding: 16px 24px
+      border-top-left-radius: 30px
+      border-bottom-right-radius: 30px
+      background: linear-gradient(90deg, #3474EE 0%, rgba(0, 88, 255, 0) 116.18%)
+      +inter-bold
+      font-size: 20px
+      color: $grey10
+      &-grid
+        max-width: 240px
+        display: flex
+        flex-direction: column
+        gap: 12px
+  &-title
+    margin: 0
+    +stolzl-reg
+    color: $grey0
+  &-form
+    border-radius: 24px
+    border: 1px solid $grey10
+    display: flex
+    background-color: $grey0
+    box-shadow: 0px 13px 67px rgba(83, 108, 131, 0.12)
+    ._mt
+      margin-top: 12px
+    &__bar
+      border-right: 1px solid $grey10
+      flex: 0 1 50%
+    &__sum
+      flex: 0 1 50%
+    &-block
+      padding: 24px 22px 24px 32px
+      &:not(:last-child)
+        border-bottom: 1px solid $grey10
+      &-grid
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        gap: 16px
+      &-grid2
+        display: grid
+        grid-template-columns: 1fr
+        gap: 12px
+    &-title
+      margin-bottom: 16px
+      +inter-semibold
+      text-transform: uppercase
+      font-size: 16px
+      color: $grey70
+    &-checkbox
+      display: flex
+      align-items: center
+      gap: 12px
+      cursor: pointer
+      &-grid
+        gap: 10px
+      &-grid2
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 15px 20px
+      &-label
+        +inter-semibold
+        font-size: 14px
+        color: $grey90
+      &-grid
+        .c-form-checkbox
+          &:not(:last-child)
+            margin-bottom: 10px
+    &-plate
+      border-radius: 4px
+      padding: 4px 8px
+      display: flex
+      align-items: center
+      justify-content: center
+      +inter-semibold
+      font-size: 14px
+      &._primary
+        background-color: $light
+        color: $primary
+    &-dr
+      margin-bottom: 52px
+      &-row
+        margin-bottom: 22px
+        display: flex
+        &__sep
+          align-self: end
+          margin: 0 13px 25px
+          flex: 0 0 auto
+          border-radius: 4px
+          width: 14px
+          height: 2px
+          background-color: $grey30
+      &-field
+        flex: 1 1 auto
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+      &-label
+        margin-bottom: 4px
+        +inter-semibold
+        font-size: 14px
+        color: $grey70
+      &-input
+        flex: 0 1 auto
+        width: 100%
+        border-radius: 8px
+        border: 1px solid $grey10
+        height: 50px
+        +inter-reg
+        padding: 0 20px
+        color: $grey100
+        &::placeholder
+          color: $grey30
+    &-sum
+      padding: 32px 24px
+      &-b
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+      &-value
+        margin-bottom: 10px
+        +stolzl-med
+        font-size: 24px
+        color: $grey100
+      &-h
+        margin-bottom: 8px
+        &-sub
+          display: flex
+          align-items: center
+          gap: 8px
+          &-text
+            +inter-semibold
+            text-transform: uppercase
+            font-size: 14px
+            color: $grey50
+      &-amount
+        display: flex
+        flex-direction: column
+        gap: 20px
+        &-value
+          +inter-semibold
+          font-size: 14px
+          color: $grey70
+          .range-value
+            color: $grey100
+      &-pays
+        border-bottom: 1px solid $grey10
+        padding-bottom: 17px
+        img, svg
+          width: 100%
+          max-width: 100%
+      &-f
+        padding-top: 16px
+        &-row
+          margin-bottom: 20px
+          display: flex
+          align-items: center
+          justify-content: space-between
+        &-subtitle
+          +inter-reg
+          font-size: 14px
+          color: $grey20
+        &-title
+          +stolzl-med
+          color: $grey90
+      &-btn
+        border-radius: 30px
+        height: 40px
+        padding: 0 20px
+        gap: 8px
+        +inter-semibold
+        font-size: 14px
+    &-bnr
+      position: relative
+      border-radius: 13px
+      display: flex
+      background: linear-gradient(90deg, #5096FF 5.26%, #5227FF 47.06%)
+      &._type1
+        height: 205px
+        overflow: hidden
+        .coin
+          &-1
+            position: absolute
+            top: 6px
+            right: 4px
+            z-index: 1
+          &-2
+            position: absolute
+            bottom: 0
+            right: 0
+            z-index: 1
+        .c-form-bnr
+          &-subtitle
+            color: $grey20
+          &-title
+            color: $grey0
+      &__inner
+        position: relative
+        z-index: 2
+        width: 70%
+        padding: 18px 0 18px 20px
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        justify-content: space-between
+      &-subtitle
+        margin-bottom: 4px
+        +inter-semibold
+        font-size: 12px
+      &-title
+        margin-bottom: auto
+        +stolzl-med
+        font-size: 20px
+      &-btn
+        display: inline-flex
+        justify-self: end
+        border-radius: 20px
+        height: 40px
+        padding: 0 20px
+        +inter-semibold
+        font-size: 14px
+    &-btn
+      &-submit
+        border-radius: 30px
+        width: 100%
+        height: 54px
+        +inter-semibold
+        font-size: 16px
+  &-info
+    margin-top: 40px
+    width: 45%
+  &-h2
+    margin: 0
+    margin-bottom: 24px
+    +stolzl-reg
+    color: $grey100
+    &.h2
+      +stolzl-med
+  &-list
+    margin-bottom: 40px
+    &-item
+      margin-bottom: 24px
+      display: flex
+      align-items: flex-start
+      gap: 12px
+      &:last-child
+        margin-bottom: 0
+    &-sign
+      flex: 0 0 auto
+      border-radius: 8px
+      width: 26px
+      height: 26px
+      display: flex
+      align-items: center
+      justify-content: center
+      +inter-semibold
+      font-size: 16px
+      &._primary
+        background-color: rgba($primary, 0.2)
+        color: $primary
+      &._green
+        background-color: rgba($green, 0.4)
+        svg
+          max-width: 12px
+          fill: $green
+      &._danger
+        background-color: rgba($danger, 0.4)
+        svg
+          max-width: 12px
+          fill: $danger
+    &-text
+      +inter-med
+      font-size: 18px
+      line-height: 28px
+      color: $grey90
+      a
+        +inter-bold
+        color: $primary
+
+@media ( max-width: 1200px )
+  .c
+    &-form
+      display: block
+      &__bar
+        border-right: none
+      &-block
+        padding: 24px
+        &-grid
+          flex-direction: row
+          align-items: center
+        &-grid2
+          display: grid
+          grid-template-columns: auto min-content
+          grid-template-rows: auto
+          align-items: center
+          gap: 10px
+          .c-form-title
+            margin: 0
+          ._days
+            grid-column: 2/3
+            grid-row: 1/2
+          ._time
+            grid-column: 1/3
+            width: auto
+      &-sum
+        border-top: 1px solid $grey10
+        padding: 0
+        padding-top: 16px
+        &-b
+          grid-template-columns: 1.25fr 0.75fr
+          grid-template-rows: auto
+          gap: 14px
+          .c-form-btn-submit
+            margin-left: -24px
+            grid-column: 2/3
+            grid-row: 1/2
+        &-h
+          margin-bottom: 0
+          padding-left: 24px
+        &-amount
+          grid-column: 1/3
+          border-top: 1px solid $grey10
+          border-bottom: 1px solid $grey10
+          padding: 24px 16px
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          &-range
+            flex: 0 1 50%
+        &-pays
+          grid-column: 1/3
+          margin: 0 24px
+          padding-bottom: 20px
+        &-f
+          padding: 16px 24px 0
+
+@media ( max-width: 1024px )
+  .c
+    padding-bottom: 50px
+    &-ms
+      &__inner
+        position: relative
+        padding: 50px 30px
+        height: 100%
+      &__info
+        width: 100%
+        display: flex
+        flex-direction: column
+        height: 100%
+      &__form
+        top: 140px
+      &-tag
+        &-grid
+          flex-direction: column
+          align-items: flex-start
+      &-plate
+        &-grid
+          margin-top: auto
+    &-form
+      &-bnr
+        &-title
+          font-size: 24px
+    &-h2
+      margin-bottom: 20px
+
+@media ( max-width: 991px )
+  .c
+    &-list
+      margin-bottom: 32px
+      &-text
+        font-size: 15px
+
+@media ( max-width: 768px )
+  .c
+    padding-bottom: 32px
+    &-ms
+      height: auto
+      &-frame
+        margin-bottom: 22px
+      &-bg
+        border-top-left-radius: 0px
+        border-top-right-radius: 0px
+        height: 630px
+      &__inner
+        padding: 15px 0
+        display: block
+      &__info
+        height: auto
+      &__form
+        position: relative
+        top: auto
+        left: auto
+        right: auto
+        width: 100%
+      &-h
+        margin-bottom: 16px
+        &-icon
+          display: none
+      &-tag
+        &-grid
+          margin-bottom: 40px
+        &-icon
+          width: 23px
+          height: 23px
+          img, svg
+            max-width: 60%
+        &-label
+          font-size: 14px
+      &-plate
+        &-grid
+          display: none
+    &-form
+      &-title
+        font-size: 14px
+      &-block
+        padding: 16px
+        &-grid
+          flex-direction: column
+          align-items: flex-start
+        &-grid2
+          grid-template-columns: 1fr
+          gap: 12px
+          ._days
+            grid-column: auto
+            grid-row: auto
+          ._time
+            grid-column: auto
+      &-checkbox
+        &-label
+          font-size: 14px
+      &-dr
+        &-label
+          font-size: 12px
+        &-input
+          height: 40px
+          font-size: 14px
+      &-sum
+        border-top: none
+        padding: 0 16px 0
+        &-b
+          display: block
+          .c-form-btn-submit
+            margin: 0
+        &-h
+          padding: 0
+        &-amount
+          margin: 16px 0
+          border: none
+          padding: 0
+          flex-direction: column
+        &-pays
+          margin: 0
+          padding: 12px 0 20px
+        &-f
+          padding: 13px 0
+      &-bnr
+        &-title
+          font-size: 20px
+    &-info
+      width: 100%

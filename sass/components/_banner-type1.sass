@@ -1,0 +1,102 @@
+.bnr1
+  border-radius: 24px
+  box-shadow: 0px 15px 50px rgba(128, 148, 166, 0.25)
+  &._wf
+    .bnr1-b
+      border-radius: 24px
+  &-b
+    border-top-left-radius: 24px
+    border-top-right-radius: 24px
+    border: 1px solid $grey10
+    border-bottom: none
+    display: flex
+    background-color: $grey0
+    &__inner
+      padding: 40px 10px 40px 30px
+  &-title
+    margin: 0
+    margin-bottom: 11px
+    +stolzl-reg
+    font-size: 34px
+    color: $grey100
+  &-sub
+    +inter-med
+    color: $grey80
+  &-rowplate
+    margin-top: 32px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 6px
+  &-plate
+    border-radius: 10px
+    padding: 12px 16px
+    display: flex
+    align-items: center
+    background-color: $five
+    +stolzl-reg
+    font-size: 20px
+    color: $grey100
+    &__icon
+      flex: 0 0 auto
+      margin-right: 8px
+      width: 30px
+      height: 30px
+  &-pic
+    position: relative
+    bottom: 0
+    align-self: end
+    flex: 0 0 auto
+    line-height: 0
+    margin-top: -80px
+    img
+      max-width: 100%
+  &-f
+    border-bottom-left-radius: 24px
+    border-bottom-right-radius: 24px
+    padding: 30px
+    display: flex
+    align-items: center
+    gap: 14px 30px
+    background-color: $primary
+    &-item
+      flex: 0 1 auto
+      img, svg
+        max-width: 100%
+
+@media ( max-width: 1024px )
+  .bnr1
+    &-plate
+      font-size: 16px
+      &__icon
+        width: 20px
+        height: 20px
+    &-pic
+      flex: 0 0 420px
+
+@media ( max-width: 991px )
+  .bnr1
+    &-pic
+      flex: 0 1 auto
+    &-f
+      padding: 14px 20px
+      flex-wrap: wrap
+      gap: 10px
+
+@media ( max-width: 768px )
+  .bnr1
+    &-b
+      flex-direction: column
+      &__inner
+        padding: 24px
+    &-title
+      font-size: 24px
+    &-plate
+      margin-right: 8px
+      margin-bottom: 8px
+    &-pic
+      margin-top: -40px
+      flex: auto
+      max-width: 250px
+      width: 100%
+    &-f

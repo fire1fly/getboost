@@ -1,0 +1,303 @@
+.chat
+  height: 45vh
+  display: flex
+  flex-direction: column
+  gap: 24px
+  flex: 1 0 auto
+  background-color: $grey0
+  overflow-y: auto
+  overscroll-behavior: none
+  &-frame
+    border-radius: 12px
+    border: 1px solid $grey10
+    display: flex
+    flex-direction: column
+    background-color: $grey0
+    box-shadow: 0px 4px 23px #EFF2F8
+    overflow: hidden
+  &-h
+    flex: 0 0 auto
+    padding: 24px 32px 18px 24px
+    display: flex
+    align-items: center
+    gap: 12px
+    background-color: $grey0
+    .chat-btn-more
+      margin-left: auto
+  &-avatar
+    flex: 0 0 auto
+    border-radius: 50%
+    width: 56px
+    height: 56px
+    overflow: hidden
+    img, svg
+      max-width: 100%
+  &-user
+    &name
+      display: flex
+      align-items: center
+      gap: 6px
+      +inter-semibold
+      font-size: 16px
+      color: $grey90
+    &status
+      margin-top: 6px
+      +inter-reg
+      font-size: 16px
+      color: $grey70
+  &-indicator
+    &-count
+      flex: 0 0 auto
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $orange
+      font-size: 12px
+      color: $grey0
+  &-btn
+    &-more
+      flex: 0 0 auto
+      border-radius: 50%
+      width: 44px
+      height: 44px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $grey10
+  &-pinned
+    flex: 0 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+    padding: 14px 28px
+    background-color: $five
+    &-text
+      +inter-semibold
+      font-size: 16px
+      color: $button1
+    &-link
+      flex: 0 0 auto
+      display: flex
+      align-items: center
+      gap: 12px
+      +inter-reg
+      font-size: 16px
+      color: $grey70
+  &-track
+    flex: 1 0 auto
+    padding-top: 20px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    &-date
+      margin-bottom: 15px
+      border-top: 1px solid $grey10
+      border-bottom: 1px solid $grey10
+      padding: 8px 0 5px
+      text-align: center
+      +inter-reg
+      font-size: 12px
+      font-style: italic
+      color: $grey40
+  &-bar
+    flex: 0 0 auto
+    padding: 0 20px 32px
+  &-enter
+    border-radius: 8px
+    border: 1px solid $grey10
+    height: 56px
+    padding: 0 16px
+    display: flex
+    align-items: center
+    background-color: $grey0
+    &-field
+      flex: 1 1 auto
+      border: none
+      width: 100%
+      height: 100%
+      padding: 6px 12px
+      background-color: transparent
+      +inter-reg
+      font-size: 14px
+      color: $grey100
+      resize: none
+      &::placeholder
+        color: $grey50
+  &-attach
+    flex: 0 0 auto
+    background-color: transparent
+    cursor: pointer
+  &-presets
+    margin-bottom: 15px
+    display: flex
+    padding: 6px 0 4px
+    width: 100%
+    max-width: 100%
+    align-items: center
+    overflow-x: auto
+    gap: 8px
+    &::-webkit-scrollbar
+      width: 2px
+      height: 2px
+    .chat-msg
+      display: block
+      white-space: nowrap
+      cursor: pointer
+  &-msg
+    border-radius: 26px
+    border: 1px solid $grey10
+    max-width: 70%
+    display: grid
+    grid-template-columns: auto min-content
+    grid-gap: 12px 47px
+    padding: 12px 20px
+    background-color: $five
+    &._attach
+      grid-template-rows: repeat(2, auto)
+      .chat-msg
+        &-text
+          grid-column: 1/3
+          grid-row: 1/2
+        &-attach
+          grid-column: 1/2
+          grid-row: 2/3
+          display: flex
+          align-items: center
+          gap: 8px
+          flex-wrap: wrap
+          .chat-msg-btn
+            width: 48%
+        &-time
+          align-self: end
+          grid-column: 2/3
+          grid-row: 2/3
+    &-group
+      margin-bottom: 18px
+      padding: 0 20px
+      display: flex
+      flex-direction: column
+      gap: 6px
+      align-items: flex-start
+      &._my
+        align-items: flex-end
+        .chat-msg
+          border-color: $primary
+          background-color: $primary
+          &-text
+            color: $grey0
+          &-time
+            color: $grey20
+            svg, path
+              fill: $grey20
+          &-btn
+            background-color: $five
+            color: $primary
+            svg, path
+              stroke: $primary
+    &-text
+      +inter-reg
+      font-size: 16px
+      color: $grey100
+    &-time
+      display: flex
+      align-items: center
+      white-space: nowrap
+      gap: 2px
+      +inter-med
+      font-style: italic
+      font-size: 12px
+      color: $grey70
+    &-btn
+      border-radius: 25px
+      height: 48px
+      padding: 0 10px
+      background-color: $primary
+      color: $grey0
+      svg, path
+        stroke: $grey0
+
+@media ( max-width: 1024px )
+  .chat
+    &-bar
+      padding: 0 12px 12px
+
+@media ( max-width: 768px )
+  .chat
+    border-right: 1px solid $grey10
+    border-left: 1px solid $grey10
+    &-frame
+      border: none
+      box-shadow: none
+      background-color: transparent
+    &-indicator
+      &-count
+        width: 16px
+        height: 16px
+    &-pinned
+      order: -1
+      margin-bottom: 6px
+      border-radius: 12px
+      border: 1px solid $grey10
+      padding: 16px
+      background-color: $grey0
+      &-text
+        font-size: 14px
+      &-link
+        display: none
+    &-h
+      border-top-left-radius: 12px
+      border-top-right-radius: 12px
+      border: 1px solid $grey10
+      padding: 16px
+      gap: 8px
+    &-avatar
+      width: 32px
+      height: 32px
+    &-user
+      &name
+        +stolzl-med
+      &status
+        margin-top: 0
+        font-size: 14px
+    &-btn
+      &-more
+        width: 32px
+        height: 32px
+    &-bar
+      border-bottom-left-radius: 12px
+      border-bottom-right-radius: 12px
+      border: 1px solid $grey10
+      border-top: none
+      background-color: $grey0
+    &-enter
+      height: 54px
+    &-msg
+      max-width: 90%
+      padding: 10px 16px
+      gap: 10px 32px
+      &._attach
+        .chat-msg-attach
+          .chat-msg-btn
+            max-width: 114px
+            width: 100%
+      &-text
+        font-size: 14px
+      &-btn
+        height: 33px
+    &-presets
+      margin-bottom: 12px
+      padding-bottom: 0
+      gap: 6px
+      &::-webkit-scrollbar
+        width: 0px
+        height: 0px
+      .chat-msg
+        padding: 10px 12px
+    &-track
+      &-date
+        border: none
+        padding: 0

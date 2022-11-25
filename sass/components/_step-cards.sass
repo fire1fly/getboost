@@ -1,0 +1,141 @@
+.stc
+  &-row
+    display: flex
+  &-card
+    flex: 1 1 auto
+    margin: 0 auto
+    max-width: 300px
+    border-radius: 8px
+    width: 95%
+    min-height: 290px
+    padding: 26px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background-color: $grey0
+    box-shadow: 0px 4px 23px #EFF2F8
+    &__wrap
+      flex: 1 1 auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:first-child
+        .stc-card-step__wrap
+          .stc-card-step-line
+            &:first-child
+              visibility: hidden
+      &:last-child
+        .stc-card-step__wrap
+          .stc-card-step-line
+            &:last-child
+              visibility: hidden
+    &-icon
+      max-width: 64px
+      max-height: 100%
+      &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100px
+    &-title
+      margin: 0
+      margin-bottom: 8px
+      +stolzl-reg
+      font-size: 20px
+      text-align: center
+      color: $grey100
+    &-text
+      margin: 0
+      +inter-reg
+      text-align: center
+      font-size: 16px
+      line-height: 1.5
+      color: $grey80
+      &.gradient-primary
+        +inter-bold
+    &-step
+      box-sizing: content-box
+      position: relative
+      margin: 0 24px
+      border-radius: 50%
+      border: 5px solid $grey0
+      flex: 0 0 42px
+      width: 42px
+      height: 42px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $primary
+      +inter-semibold
+      font-size: 16px
+      color: $grey0
+      &__wrap
+        margin-top: -12px
+        width: 100%
+        display: flex
+        align-items: center
+      &-line
+        flex: 1 1 auto
+        border-top: 1px dashed $grey30
+        height: 1px
+
+@media ( max-width: 1024px )
+  .stc
+    &-card
+      padding: 20px
+
+@media ( max-width: 991px )
+  .stc
+    &-card
+      min-height: auto
+      &-icon
+        max-width: 55px
+        &__wrap
+          margin-bottom: 20px
+          height: 60px
+      &-title
+        font-size: 18px
+      &-text
+        font-size: 15px
+
+@media ( max-width: 768px )
+  .stc
+    &-row
+      display: block
+    &-card
+      flex: 1 1 auto
+      max-width: none
+      width: 100%
+      align-items: flex-start
+      &__wrap
+        margin-bottom: 12px
+        flex-direction: row-reverse
+        align-items: inherit
+        &:last-child
+          .stc-card-step__wrap
+            &::after
+              display: none
+      &-title
+        text-align: left
+      &-text
+        text-align: left
+      &-step
+        flex: 0 0 32px
+        width: 32px
+        height: 32px
+        font-size: 14px
+        margin: 0
+        &__wrap
+          margin-top: 0
+          margin-right: 12px
+          width: auto
+          flex-direction: column
+          &::after
+            content: ''
+            top: 34px
+            left: 50%
+            width: 1px
+            height: 100%
+            border-right: 1px dashed $grey30
+        &-line
+          display: none

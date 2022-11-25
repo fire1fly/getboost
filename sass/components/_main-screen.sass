@@ -1,0 +1,138 @@
+.ms
+  position: relative
+  min-height: calc(100vh - 64px - 56px)
+  background: $five url(../assets/static/main-screen-bg-lg.svg) no-repeat
+  background-position: center center
+  background-size: cover
+  &-bg
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    object-fit: cover
+    width: 100%
+    height: 100%
+  &__inner
+    padding-top: 104px
+    padding-bottom: 70px
+  &-h
+    margin: 0 auto 109px
+    max-width: 730px
+    padding: 0 15px
+    text-align: center
+  &-subtitle
+    margin-bottom: 10px
+    text-transform: uppercase
+    +stolzl-med
+    color: $grey30
+  &-title
+    margin-bottom: 10px
+    +stolzl-med
+    color: $grey0
+  &-text
+    +inter-med
+    color: rgba($grey0, 0.8)
+  &-row
+    height: 346px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-item
+    position: relative
+    border-radius: 16px
+    overflow: hidden
+    align-self: flex-end
+    flex: 0 1 auto
+    width: 32.5%
+    height: 285px
+    padding: 20px
+    display: flex
+    align-items: flex-end
+    &:nth-child(2)
+      align-self: flex-start
+    &-bg
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      object-fit: cover
+      width: 100%
+      height: 100%
+    &-row
+      z-index: 2
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-info
+      display: flex
+      align-items: center
+    &-preview
+      margin-right: 10px
+      line-height: 0
+    &-title
+      margin: 0
+      margin-bottom: 4px
+      +stolzl-reg
+      color: $five
+    &-sub
+      +inter-reg
+      font-size: 14px
+      color: $grey0
+    &-link
+      border-radius: 50%
+      flex: 0 0 auto
+      width: 32px
+      height: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: rgba($grey0, 0.2)
+
+@media ( max-width: 1024px )
+  .ms
+    min-height: calc(100vh - 60px - 56px)
+    background: $five url(../assets/static/main-screen-bg-md.svg) no-repeat
+    background-position: center center
+    background-size: cover
+    &__inner
+      padding: 170px 0 180px
+    &-h
+      margin: 0 auto 80px
+      max-width: 770px
+    &-row
+      height: 460px
+    &-item
+      height: 404px
+      &-title
+        font-size: 20px
+      &-link
+        display: none
+
+@media ( max-width: 991px )
+  .ms
+    min-height: calc(100vh - 56px - 56px)
+
+@media ( max-width: 768px )
+  .ms
+    background: $five url(../assets/static/main-screen-bg-sm.svg) no-repeat
+    background-position: center center
+    background-size: cover
+    &__inner
+      padding: 40px 0
+    &-h
+      margin: 0 auto 24px
+    &-row
+      display: block
+      height: auto
+    &-item
+      width: 100%
+      min-height: 100px
+      height: auto
+      padding: 27px 20px
+      &:not(:last-child)
+        margin-bottom: 8px
+      &-preview
+        margin-right: 10px
+      &-link
+        display: flex

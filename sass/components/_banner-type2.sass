@@ -1,0 +1,68 @@
+.bnr2
+  position: relative
+  border-radius: 24px
+  height: 245px
+  padding-left: 56px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: $primary
+  overflow: hidden
+  &__inner
+    flex: 0 0 400px
+    z-index: 2
+  &-title
+    margin: 0
+    margin-bottom: 24px
+    text-transform: uppercase
+    +stolzl-reg
+    color: $five
+  &-f
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    .bnr2-btn
+      margin-bottom: 8px
+      &:not(:last-child)
+        margin-right: 8px
+  &-btn
+    border-radius: 30px
+    height: 60px
+    padding: 0 32px
+    +inter-semibold
+    font-size: 16px
+    color: $grey0
+  &-pic
+    &-1
+      z-index: 1
+      position: absolute
+      top: 0
+      left: 40%
+    &-2
+      line-height: 0
+      z-index: 2
+
+@media ( max-width: 1024px )
+  .bnr2
+    padding-left: 40px
+
+@media ( max-width: 768px )
+  .bnr2
+    flex-direction: column
+    height: auto
+    padding-left: 0
+    &__inner
+      width: 100%
+      padding: 24px
+      padding-bottom: 0
+      flex: auto
+    &-btn
+      height: 50px
+      padding: 0 24px
+    &-pic
+      &-1
+        left: auto
+        right: -40px
+      &-2
+        display: block
+        margin-left: auto

@@ -1,0 +1,51 @@
+.msg
+  padding-top: 40px
+  padding-bottom: 110px
+  &__inner
+    margin: 0 auto
+    max-width: 700px
+    padding-top: 100px
+    text-align: center
+  &-preview
+    margin-bottom: 50px
+    img, svg
+      max-width: 100%
+  &-title
+    margin: 0
+    margin-bottom: 8px
+    +stolzl-reg
+    color: $grey0
+  &-subtitle
+    margin-bottom: 24px
+    +inter-reg
+    color: $grey40
+  &-btn
+    border-radius: 30px
+    height: 60px
+    padding: 0 32px
+    display: inline-flex
+    +inter-semibold
+    font-size: 16px
+    color: $grey0
+
+@media ( max-width: 1024px )
+  .msg
+    padding-top: 48px
+    padding-bottom: 375px
+    &__inner
+      max-width: 460px
+      padding-top: 287px
+
+@media ( max-width: 768px )
+  .msg
+    padding-top: 15px
+    padding-bottom: 135px
+    &__inner
+      max-width: 300px
+      padding-top: 105px
+    &-title
+      margin-bottom: 12px
+    &-subtitle
+      margin-bottom: 15px
+    &-btn
+      height: 50px
