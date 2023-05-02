@@ -134,8 +134,8 @@
 @media ( max-width: 768px )
   .ms
     background: $five url(../assets/static/main-screen-bg-sm.svg) no-repeat
-    background-position: center center
-    background-size: cover
+    background-position: center top
+    background-size: 100%
     &__inner
       padding: 40px 0
     &-h
@@ -143,6 +143,8 @@
     &-row
       display: block
       height: auto
+      &:not(:nth-of-type(1))
+        margin-top: 8px
     &-item
       width: 100%
       min-height: 100px

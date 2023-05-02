@@ -19,6 +19,11 @@ a
 input, textarea
   outline: none
 
+input
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
 .noscroll
   overflow-y: hidden
 
@@ -36,7 +41,7 @@ input, textarea
 .main
   position: relative
   min-height: 100vh
-  margin: 64px 0 56px
+  padding: 64px 0 56px
   background-color: $five
 
 // INPUT RANGE
@@ -156,6 +161,21 @@ input, textarea
       opacity: 0
       transform: translateY(5px)
       transition: 0.1s
+
+.tabs
+  &-node
+    display: block
+    visibility: visible
+    &.hidden
+      &:not(.active)
+        display: none
+    &.active
+      display: block
+      animation: tabFadeUp 0.3s ease-in-out 0s 1 normal forwards
+  &._height-transition
+    .tabs-node-wrapper
+      overflow: hidden
+      transition: height 0.5s ease-in-out
 
 .btn
   border: none
@@ -445,12 +465,12 @@ input, textarea
 
   .main
     min-height: 100vh
-    margin: 60px 0 56px
+    padding: 60px 0 56px
 
 @media ( max-width: 991px )
   .main
     min-height: 100vh
-    margin: 56px 0
+    padding: 56px 0
 
 @media ( max-width: 768px )
   .h1

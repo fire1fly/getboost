@@ -15,10 +15,10 @@ let hiddenElems = [];
 
 function handleTablet(e) {
   if (e.matches) {
-    console.log("tablet");
+    // console.log("tablet");
     hiddenElems.length = 0;
     hiddenElems.push(subinfo, tags, table);
-    console.log("hiddens on tablet", hiddenElems);
+    // console.log("hiddens on tablet", hiddenElems);
     hiddenElems.forEach(item => item.style.display = "none");
     block.classList.remove("opened");
     trigger.removeEventListener("click", handleBlock);
@@ -30,7 +30,7 @@ function handleTablet(e) {
 
 function handleMobile(e) {
   if (e.matches) {
-    console.log("mobile");
+    // console.log("mobile");
     hiddenElems.length = 0;
     hiddenElems.push(date, title, tags, table, bigplates);
     hiddenElems.forEach(item => item.style.display = "none");
@@ -43,7 +43,7 @@ function handleMobile(e) {
 }
 
 function handleBlock() {
-  console.log("hiddens ", hiddenElems);
+  // console.log("hiddens ", hiddenElems);
   block.classList.toggle("opened");
   trigger.classList.toggle("active");
   if (block.classList.contains("opened")) {

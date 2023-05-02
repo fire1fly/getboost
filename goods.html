@@ -746,7 +746,7 @@
     </footer><!-- /.footer -->
   </div>
 
-  <div class="m__wrapper" data-modal="buy_product">
+  <div class="m__wrapper active" data-modal="buy_product">
     <form action="#" class="m m-buyp _wide">
         <div class="m-h">
           <div class="m-title">World of Warcraft Gold</div>
@@ -769,7 +769,7 @@
                 </div>
               </div>
 
-              <div class="m-buyp-counter counter" data-counter-step="5">
+              <div class="m-buyp-counter counter" data-counter-step="1">
                 <button type="button" class="m-buyp-counter-sign counter-minus">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -777,12 +777,15 @@
                 </button>
                 <div class="m-buyp-counter__inner">
                   <div class="m-buyp-counter-placeholder">Amount</div>
-                  <div class="m-buyp-counter-value"> <span class="counter-value">7</span>K</div>
+                  <div class="m-buyp-counter-value">
+                    <input type="number" class="m-buyp-counter-value__input counter-value" value="1" min="0">
+                    <span>K</span>
+                  </div>
                 </div>
                 <button type="button" class="m-buyp-counter-sign counter-plus">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19M5 12H19" stroke="#777A7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                    
+                  </svg>
                 </button>
               </div>
 
@@ -857,7 +860,7 @@
     </form>
   </div>
 
-  <div class="m__wrapper active" data-modal="choose_server">
+  <div class="m__wrapper" data-modal="choose_server">
     <form action="#" class="m m-chs _wide">
       <div class="m__inner">
         <div class="m-h _mb">

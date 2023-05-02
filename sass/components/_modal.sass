@@ -252,9 +252,20 @@
         font-size: 14px
         color: $grey70
       &-value
+        display: flex
+        align-items: center
+        gap: 5px
         +inter-semibold
         font-size: 14px
         color: $grey90
+        &__input
+          border: none
+          flex: 0 0 20px
+          width: 40px
+          text-align: right
+          height: 16px
+          background-color: transparent
+
     &-tbl
       padding: 16px
       display: flex
