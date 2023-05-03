@@ -37,6 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
       this.handleOutClick = this.handleOutClick.bind(this);
       this.$dd.addEventListener("click", this.handleClick);
       document.addEventListener("click", this.handleOutClick);
+
+      if (this.$dd.classList.contains("select")) {
+        this.setInitState();
+      }
+    }
+
+    setInitState() {
+      this.$itemList.forEach(elem => {
+        if (elem.dataset.value === this.$input.value) {
+          this.$selected.innerHTML = elem.innerHTML;
+        }
+      });
     }
 
     handleClick(e) {

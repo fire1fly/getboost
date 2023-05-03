@@ -1436,7 +1436,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 .callout {
   position: absolute;
-  top: 0;
+  top: 64px;
   left: 0;
   z-index: 5;
   width: 100%;
@@ -1461,6 +1461,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .callout._green2 {
   background-color: #1FB7A5;
 }
+.callout._primary {
+  background-color: #3474EE;
+}
 .callout__inner {
   position: relative;
   padding-right: 30px;
@@ -1478,6 +1481,17 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
+.callout-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
 .callout-close {
   position: absolute;
   top: 50%;
@@ -1492,6 +1506,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .callout b {
   font-family: "Inter SemiBold", sans-serif;
 }
+.callout-btn {
+  border-radius: 10px;
+  padding: 5px 10px;
+}
 
 @-webkit-keyframes closeUp {
   100% {
@@ -1504,6 +1522,16 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   100% {
     height: 0;
     padding: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .callout {
+    top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .callout {
+    top: 56px;
   }
 }
 .tooltip__wrap {
@@ -3114,6 +3142,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .stc-card-text.gradient-primary {
   font-family: "Inter Bold", sans-serif;
 }
+.stc-card-text a {
+  color: #3474EE;
+}
 .stc-card-step {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -4476,7 +4507,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   }
 }
 .cbn {
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 60px;
 }
 .cbn__form {
@@ -4959,6 +4990,21 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.cbn-card-btn-grid {
+  display: grid;
+  grid-template-columns: 32px auto;
+}
+.cbn-card-btn .checkbox input[type=checkbox]:checked + .checkbox-plate .checkbox-trigger {
+  left: 18px;
+}
+.cbn-card-btn .checkbox-plate {
+  width: 40px;
+  height: 24px;
+}
+.cbn-card-btn .checkbox-trigger {
+  width: 20px;
+  height: 20px;
 }
 .cbn-card-btn-icon {
   -webkit-box-flex: 0;
@@ -10278,6 +10324,16 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .m-cart .m-f {
   border-top: 1px solid #E8E9EA;
   padding: 20px 40px 26px;
+}
+.m-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

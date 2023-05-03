@@ -20,6 +20,8 @@
     <script defer src="./js/dropblock.js"></script>
     <script defer src="./js/modal.js"></script>
     <script defer src="./js/tabs.js"></script>
+    <script defer src="./js/stepsAnimation.js"></script>
+    <script defer src="./js/intersectionAnimations.js"></script>
 
     <script src="./js/popper.min.js"></script>
     <script src="./js/tippy-bundle.umd.min.js"></script>
@@ -375,13 +377,16 @@
                       <div class="cbn-card-title">Notifications</div>
                     </div>
                     <div class="cbn-card-bar">
-                      <a href="#" class="btn btn-light cbn-card-btn">
+                      <button
+                        href="#"
+                        class="btn btn-light cbn-card-btn btn-open-modal"
+                        data-modal="notifications_telegram">
                         <div class="cbn-card-btn-icon">
                           <img src="./assets/static/icon-telegram.svg" alt="telegram" />
                         </div>
                         Telegram
-                      </a>
-                      <button type="button" class="btn btn-light cbn-card-btn">
+                      </button>
+                      <label class="btn btn-light cbn-card-btn">
                         <div class="cbn-card-btn-icon">
                           <svg
                             width="18"
@@ -397,9 +402,18 @@
                               stroke-linejoin="round" />
                           </svg>
                         </div>
-                        Push notifications
-                      </button>
-                      <button type="button" class="btn btn-light cbn-card-btn">
+                        <span class="cbn-card-btn-text">Push notifications</span>
+                        <div class="checkbox">
+                          <input type="checkbox" />
+                          <div class="checkbox-plate">
+                            <div class="checkbox-trigger"></div>
+                          </div>
+                        </div>
+                      </label>
+                      <button
+                        type="button"
+                        class="btn btn-light cbn-card-btn btn-open-modal"
+                        data-modal="notifications_email">
                         <div class="cbn-card-btn-icon">
                           <svg
                             width="18"
@@ -1575,7 +1589,7 @@
               <div class="form-part">
                 <div class="form-label">Whithdraw to</div>
                 <div class="form-select dd select fadeDown">
-                  <input type="hidden" class="dd-input" value="null" />
+                  <input type="hidden" class="dd-input" value="1" />
                   <div class="form-select-item selected placeholder">Wallet</div>
                   <div class="form-select-arrow">
                     <svg
@@ -1773,6 +1787,180 @@
           <div class="m-f">
             <button type="button" class="btn btn-primary m-btn _wide">Withdraw Money</button>
             <div class="m-subtext m-f-text _center">Money will be withdrawn in 24 hours</div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="m__wrapper" data-modal="notifications_email">
+      <form action="#" class="m">
+        <div class="m__inner">
+          <div class="m-h _mb">
+            <div class="m-title">E-mail notifications</div>
+            <div class="m-btn-close m-close">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 8L8 24M8 8L24 24"
+                  stroke="#777A7E"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="m-b">
+            <div class="m-form">
+              <div class="form-part">
+                <label class="m-checkbox">
+                  <div class="checkbox2">
+                    <input type="checkbox" />
+                    <div class="checkbox2-plate">
+                      <svg
+                        class="checkbox2-trigger"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.3332 4L5.99984 11.3333L2.6665 8"
+                          stroke="white"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="m-checkbox-label m-subtext">Пришло сообщение</div>
+                </label>
+              </div>
+              <div class="form-part">
+                <label class="m-checkbox">
+                  <div class="checkbox2">
+                    <input type="checkbox" />
+                    <div class="checkbox2-plate">
+                      <svg
+                        class="checkbox2-trigger"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.3332 4L5.99984 11.3333L2.6665 8"
+                          stroke="white"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="m-checkbox-label m-subtext">Взял заказ</div>
+                </label>
+              </div>
+              <div class="form-part">
+                <label class="m-checkbox">
+                  <div class="checkbox2">
+                    <input type="checkbox" />
+                    <div class="checkbox2-plate">
+                      <svg
+                        class="checkbox2-trigger"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.3332 4L5.99984 11.3333L2.6665 8"
+                          stroke="white"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="m-checkbox-label m-subtext">Закрыл заказ</div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="m-f m-f-row">
+            <button type="button" class="btn btn-primary m-btn _wide">Сохранить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="m__wrapper" data-modal="notifications_telegram">
+      <form action="#" class="m m-steps _ultra-wide">
+        <div class="m__inner">
+          <div class="m-h _mb">
+            <div class="m-title _fz2">Telegram notifications</div>
+            <div class="m-btn-close m-close">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 8L8 24M8 8L24 24"
+                  stroke="#777A7E"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="m-b">
+            <div class="stc-row step-animate">
+              <div class="stc-card__wrap step-animate-element">
+                <div class="stc-card">
+                  <h3 class="stc-card-title">Шаг 1</h3>
+                  <p class="stc-card-text">
+                    Перейдите к нашему боту <a href="#">@ExampleGetBoostBot</a> и нажмите команду
+                    /start
+                  </p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step">01</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+              <div class="stc-card__wrap step-animate-element">
+                <div class="stc-card">
+                  <h3 class="stc-card-title">Шаг 2</h3>
+                  <p class="stc-card-text">
+                    Любой текст. Любой текст. Любой текст. Любой текст. Любой текст.
+                  </p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step">02</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+              <div class="stc-card__wrap step-animate-element">
+                <div class="stc-card">
+                  <h3 class="stc-card-title">Шаг 3</h3>
+                  <p class="stc-card-text">
+                    Любой текст. Любой текст. Любой текст. Любой текст. Любой текст. Любой текст.
+                    Любой текст. Любой текст. Любой текст.
+                  </p>
+                </div>
+                <div class="stc-card-step__wrap">
+                  <div class="stc-card-step">03</div>
+                  <div class="stc-card-step-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-f m-f-row">
+            <button type="button" class="btn btn-primary m-btn">Подтвердить</button>
           </div>
         </div>
       </form>

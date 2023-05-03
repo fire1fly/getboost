@@ -1,6 +1,6 @@
 .callout
   position: absolute
-  top: 0
+  top: 64px
   left: 0
   z-index: 5
   width: 100%
@@ -18,6 +18,8 @@
       visibility: hidden
   &._green2
     background-color: $green2
+  &._primary
+    background-color: $primary
   &__inner
     position: relative
     padding-right: 30px
@@ -26,6 +28,11 @@
     justify-content: center
     text-align: center
     transition: 0.3s ease-in-out
+  &-msg
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 10px
   &-close
     position: absolute
     top: 50%
@@ -36,8 +43,19 @@
     line-height: 0
   b
     +inter-semibold
+  &-btn
+    border-radius: 10px
+    padding: 5px 10px
 
 @keyframes closeUp
   100%
     height: 0
     padding: 0
+
+@media ( max-width: 1024px )
+  .callout
+    top: 60px
+
+@media ( max-width: 991px )
+  .callout
+    top: 56px

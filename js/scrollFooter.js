@@ -1,31 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => { // DOM готов к взаимодейтсвию
+document.addEventListener('DOMContentLoaded', () => {
 
-  const onScrollfooter = () => { // объявляем основную функцию onScrollfooter
+  const onScrollfooter = () => {
 
-    const footer = document.querySelector('.f') // находим footer и записываем в константу
+    const footer = document.querySelector('.f')
 
-    let prevScroll = window.pageYOffset // узнаем на сколько была прокручена страница ранее
-    let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
+    let prevScroll = window.pageYOffset
+    let currentScroll
 
-    window.addEventListener('scroll', () => { // при прокрутке страницы
+    window.addEventListener('scroll', () => {
 
-      currentScroll = window.pageYOffset // узнаем на сколько прокрутили страницу
+      currentScroll = window.pageYOffset
 
-      const footerHidden = () => footer.classList.contains('_hidden') // узнаем скрыт footer или нет
+      const footerHidden = () => footer.classList.contains('_hidden')
 
-      if (currentScroll > prevScroll && !footerHidden()) { // если прокручиваем страницу вниз и footer не скрыт
-        footer.classList.add('_hidden') // то скрываем footer
+      if (currentScroll > prevScroll && !footerHidden()) {
+        footer.classList.add('_hidden')
       }
-      if (currentScroll < prevScroll && footerHidden()) { // если прокручиваем страницу вверх и footer скрыт
-        footer.classList.remove('_hidden') // то отображаем footer
+      if (currentScroll < prevScroll && footerHidden()) {
+        footer.classList.remove('_hidden')
       }
 
-      prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
+      prevScroll = currentScroll
 
     })
 
   }
 
-  onScrollfooter() // вызываем основную функцию onScrollfooter
+  onScrollfooter()
 
 });
