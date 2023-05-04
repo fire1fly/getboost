@@ -41,7 +41,7 @@ function handleSteps(entries, observer) {
             elem.classList.remove("animate-active");
             setStateByTimeout(elem, index, entry.target, delay)
           });
-        }, 5000);
+        }, delay * elems.length);
       }
     }
   });
