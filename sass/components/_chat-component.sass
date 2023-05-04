@@ -22,8 +22,22 @@
     align-items: center
     gap: 12px
     background-color: $grey0
-    .chat-btn-more
+    &-info
+      align-self: center
+    &-bar-dd
       margin-left: auto
+      padding: 0 6px
+      .chat-h-bar-dd
+        &-list
+          width: 300px
+          left: auto
+          right: 0
+        &-btn
+          padding: 0 12px
+          width: 100%
+          justify-content: flex-start
+          text-align: left
+          background-color: transparent
   &-avatar
     flex: 0 0 auto
     border-radius: 50%
@@ -303,3 +317,10 @@
       &-date
         border: none
         padding: 0
+
+@media ( max-width: 520px )
+  .chat
+    &-h
+      &-bar-dd
+        .chat-h-bar-dd-list
+          width: 220px
