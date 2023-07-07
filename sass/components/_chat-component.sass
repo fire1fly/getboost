@@ -287,6 +287,19 @@
       transition: 0.2s
       svg, path
         stroke: $grey0
+  &-empty
+    width: 100%
+    height: 100%
+    padding: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    &-title
+      +stolzl-med
+      text-align: center
+      font-size: 24px
+      font-weight: bold
+      color: $button1
 
 @media ( max-width: 1024px )
   .chat
@@ -380,6 +393,15 @@
           img, svg
             width: 12px
             height: 12px
+    &-empty
+      border-top-left-radius: 12px
+      border-top-right-radius: 12px
+      border: 1px solid $grey10
+      padding: 16px
+      background-color: $grey0
+      &-title
+        font-size: 18px
+        font-weight: normal
 
 @media ( max-width: 520px )
   .chat
