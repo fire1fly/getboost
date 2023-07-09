@@ -660,23 +660,39 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .promo-field {
   position: relative;
 }
-.promo-field::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
-  right: 24px;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #777A7E;
-  border-bottom: 2px solid #777A7E;
-}
 .promo-field.hidden {
   display: none;
 }
 .promo-field .promo-input {
   width: 100%;
   padding-right: 34px;
+}
+.promo-field .promo-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100%;
+  background-color: transparent;
+}
+.promo-field .promo-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #777A7E;
+  border-bottom: 2px solid #777A7E;
+  transition: border-color 0.3s;
+}
+.promo-field .promo-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.promo-field .promo-btn:not(:disabled):hover::after {
+  border-color: #3474EE;
 }
 
 @media (max-width: 1024px) {

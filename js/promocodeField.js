@@ -10,8 +10,15 @@ function handlePromo(link, field) {
 promoElems.forEach(elem => {
   const promoLink = elem.querySelector(".promo-link");
   const promoField = elem.querySelector(".promo-field");
+  const promoInput = elem.querySelector(".promo-input");
+  const promoSendBtn = elem.querySelector(".promo-btn");
+
   elem.addEventListener("click", () => {
     elem.classList.add("active")
     handlePromo(promoLink, promoField);
   });
+
+  promoInput.addEventListener("input", (e) => {
+    promoSendBtn.disabled = e.target.value ? false : true;
+  })
 });

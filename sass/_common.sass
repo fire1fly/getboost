@@ -428,21 +428,37 @@ input
       display: none
   &-field
     position: relative
-    &::after
-      content: ''
-      position: absolute
-      top: 50%
-      transform: translateY(-50%) rotate(-45deg)
-      right: 24px
-      width: 8px
-      height: 8px
-      border-right: 2px solid $grey50
-      border-bottom: 2px solid $grey50
     &.hidden
       display: none
-    .promo-input
-      width: 100%
-      padding-right: 34px
+    .promo
+      &-input
+        width: 100%
+        padding-right: 34px
+      &-btn
+        position: absolute
+        top: 0
+        right: 0
+        width: 48px
+        height: 100%
+        background-color: transparent
+        &::after
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%) rotate(-45deg)
+          width: 8px
+          height: 8px
+          border-right: 2px solid $grey50
+          border-bottom: 2px solid $grey50
+          transition: border-color 0.3s
+        &:disabled
+          opacity: 0.5
+          cursor: not-allowed
+        &:not(:disabled)
+          &:hover
+            &::after
+              border-color: $primary
 
 @media ( max-width: 1024px )
   .h1
