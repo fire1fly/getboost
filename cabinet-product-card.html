@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link type="image/x-icon" rel="icon" href="./favicon.ico" />
-    <link type="image/png" sizes="16x16" rel="icon" href="./favicon-16x16.png" />
-    <link type="image/png" sizes="32x32" rel="icon" href="./favicon-32x32.png" />
-    <link type="image/png" sizes="64x64" rel="icon" href="./favicon-64x64.png" />
-    <link type="image/png" sizes="128x128" rel="icon" href="./favicon-128x128.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon-180x180.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
+  <link type="image/x-icon" rel="icon" href="./favicon.ico" />
+  <link type="image/png" sizes="16x16" rel="icon" href="./favicon-16x16.png" />
+  <link type="image/png" sizes="32x32" rel="icon" href="./favicon-32x32.png" />
+  <link type="image/png" sizes="64x64" rel="icon" href="./favicon-64x64.png" />
+  <link type="image/png" sizes="128x128" rel="icon" href="./favicon-128x128.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon-180x180.png" />
 
-    <script defer src="./js/dropdown.js"></script>
-    <script defer src="./js/mobileMenu.js"></script>
-    <script defer src="./js/dropblock.js"></script>
-    <script defer src="./js/modal.js"></script>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/styles.min.css" />
 
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/tippy-bundle.umd.min.js"></script>
-    <script defer src="./js/tooltips.js"></script>
+  <script defer src="./js/dropdown.js"></script>
+  <script defer src="./js/mobileMenu.js"></script>
+  <script defer src="./js/dropblock.js"></script>
+  <script defer src="./js/modal.js"></script>
 
-    <title>Cabinet booster - Getboost.gg</title>
-  </head>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/tippy-bundle.umd.min.js"></script>
+  <script defer src="./js/tooltips.js"></script>
 
-  <body>
-    <div class="root">
-      <header class="h">
-        <div class="h__inner container">
-          <a href="./index.html" class="h-logo h__logo">
-            <img src="./assets/static/logo.svg" alt="getboost.gg" />
+  <title>Cabinet booster - Getboost.gg</title>
+</head>
+
+<body>
+  <div class="root">
+    <header class="h">
+      <div class="h__inner container">
+        <a href="./index.html" class="h-logo h__logo">
+          <img src="./assets/static/logo.svg" alt="getboost.gg" />
+        </a>
+        <div class="h-bar">
+          <nav class="h-nav">
+            <a href="#" class="h-nav-link">Rules</a>
+            <a href="./chat.html" class="h-nav-link">Messages</a>
+            <a href="./cashback.html" class="h-nav-link">Cashback</a>
+          </nav>
+          <a href="#" type="button" class="btn btn-dark h-btn">
+            <div class="h-btn-icon">
+              <img src="./assets/static/icon-cart.svg" alt="cart" />
+            </div>
+            <div class="h-btn-label">My Orders</div>
           </a>
+          <button class="btn h-btn h-btn-logout">
+            Log out
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.3333 14.1667L17.5 10M17.5 10L13.3333 5.83333M17.5 10H7.5M7.5 2.5H6.5C5.09987 2.5 4.3998 2.5 3.86502 2.77248C3.39462 3.01217 3.01217 3.39462 2.77248 3.86502C2.5 4.3998 2.5 5.09987 2.5 6.5V13.5C2.5 14.9001 2.5 15.6002 2.77248 16.135C3.01217 16.6054 3.39462 16.9878 3.86502 17.2275C4.3998 17.5 5.09987 17.5 6.5 17.5H7.5"
+                stroke="#494D53" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="h-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="h-menu">
+          <nav class="h-nav">
+            <a href="#" class="h-nav-link">Rules</a>
+            <a href="./chat.html" class="h-nav-link">Messages</a>
+            <a href="./cashback.html" class="h-nav-link">Cashback</a>
+          </nav>
           <div class="h-bar">
-            <nav class="h-nav">
-              <a href="#" class="h-nav-link">Rules</a>
-              <a href="./chat.html" class="h-nav-link">Messages</a>
-              <a href="./cashback.html" class="h-nav-link">Cashback</a>
-            </nav>
             <a href="#" type="button" class="btn btn-dark h-btn">
               <div class="h-btn-icon">
                 <img src="./assets/static/icon-cart.svg" alt="cart" />
@@ -48,464 +76,328 @@
             </a>
             <button class="btn h-btn h-btn-logout">
               Log out
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M13.3333 14.1667L17.5 10M17.5 10L13.3333 5.83333M17.5 10H7.5M7.5 2.5H6.5C5.09987 2.5 4.3998 2.5 3.86502 2.77248C3.39462 3.01217 3.01217 3.39462 2.77248 3.86502C2.5 4.3998 2.5 5.09987 2.5 6.5V13.5C2.5 14.9001 2.5 15.6002 2.77248 16.135C3.01217 16.6054 3.39462 16.9878 3.86502 17.2275C4.3998 17.5 5.09987 17.5 6.5 17.5H7.5"
-                  stroke="#494D53"
-                  stroke-width="1.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
+                  stroke="#494D53" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
           </div>
-          <div class="h-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="h-menu">
-            <nav class="h-nav">
-              <a href="#" class="h-nav-link">Rules</a>
-              <a href="./chat.html" class="h-nav-link">Messages</a>
-              <a href="./cashback.html" class="h-nav-link">Cashback</a>
-            </nav>
-            <div class="h-bar">
-              <a href="#" type="button" class="btn btn-dark h-btn">
-                <div class="h-btn-icon">
-                  <img src="./assets/static/icon-cart.svg" alt="cart" />
-                </div>
-                <div class="h-btn-label">My Orders</div>
-              </a>
-              <button class="btn h-btn h-btn-logout">
-                Log out
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.3333 14.1667L17.5 10M17.5 10L13.3333 5.83333M17.5 10H7.5M7.5 2.5H6.5C5.09987 2.5 4.3998 2.5 3.86502 2.77248C3.39462 3.01217 3.01217 3.39462 2.77248 3.86502C2.5 4.3998 2.5 5.09987 2.5 6.5V13.5C2.5 14.9001 2.5 15.6002 2.77248 16.135C3.01217 16.6054 3.39462 16.9878 3.86502 17.2275C4.3998 17.5 5.09987 17.5 6.5 17.5H7.5"
-                    stroke="#494D53"
-                    stroke-width="1.66667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
-      </header>
-      <!-- /.header -->
-      <main class="main">
-        <div class="cbn">
-          <div class="container">
-            <div class="cbn-tord cpc-tord">
-              <div class="cbn-tord-h">
-                <div class="cbn-tord-h__head">
-                  <div class="cbn-tord-title">Timelost Fatebringer Godroll</div>
-                  <div class="cbn-tord-sum">$23,04</div>
-                  <div class="cbn-tord-preview">
-                    <img src="./assets/static/h-dd-item-3.png" alt="preview" />
-                  </div>
-                </div>
-                <div class="cbn-tord-subtext">
-                  Please tap the button and go though the last step before we can find a pro player
-                  for you
-                </div>
-                <div class="cbn-tord-bar">
-                  <button type="button" class="btn btn-primary cbn-tord-btn">Take the order</button>
-                  <button type="button" class="btn btn-white cbn-tord-btn">Skip</button>
+      </div>
+    </header>
+    <!-- /.header -->
+    <main class="main">
+      <div class="cbn">
+        <div class="container">
+          <div class="cbn-tord cpc-tord">
+            <div class="cbn-tord-h">
+              <div class="cbn-tord-h__head">
+                <div class="cbn-tord-title">Timelost Fatebringer Godroll</div>
+                <div class="cbn-tord-sum">$23,04</div>
+                <div class="cbn-tord-preview">
+                  <img src="./assets/static/h-dd-item-3.png" alt="preview" />
                 </div>
               </div>
-              <div class="cbn-tord-b">
-                <div class="cbn-tord-label">Comments</div>
-                <div class="cbnord-tbl">
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Order</div>
-                    <div class="cbnord-tbl-value">IF75393</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Platform</div>
-                    <div class="cbnord-tbl-value">XBOX</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Start Date</div>
-                    <div class="cbnord-tbl-value">Jul 29,09:00</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Deadline</div>
-                    <div class="cbnord-tbl-value">Aug 3,09:00</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Acc free hours</div>
-                    <div class="cbnord-tbl-value">Any</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Deadline</div>
-                    <div class="cbnord-tbl-value">Aug 3,09:00</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Acc free hours</div>
-                    <div class="cbnord-tbl-value">Any</div>
-                  </div>
+              <div class="cbn-tord-subtext">
+                Please tap the button and go though the last step before we can find a pro player
+                for you
+              </div>
+              <div class="cbn-tord-bar">
+                <button type="button" class="btn btn-primary cbn-tord-btn">Take the order</button>
+                <button type="button" class="btn btn-white cbn-tord-btn">Skip</button>
+              </div>
+            </div>
+            <div class="cbn-tord-b">
+              <div class="cbn-tord-label">Comments</div>
+              <div class="cbnord-tbl">
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Order</div>
+                  <div class="cbnord-tbl-value">IF75393</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Platform</div>
+                  <div class="cbnord-tbl-value">XBOX</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Start Date</div>
+                  <div class="cbnord-tbl-value">Jul 29,09:00</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Deadline</div>
+                  <div class="cbnord-tbl-value">Aug 3,09:00</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Acc free hours</div>
+                  <div class="cbnord-tbl-value">Any</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Deadline</div>
+                  <div class="cbnord-tbl-value">Aug 3,09:00</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Acc free hours</div>
+                  <div class="cbnord-tbl-value">Any</div>
                 </div>
               </div>
-              <div class="cbn-tord-f">
-                <div class="cbnord-tbl">
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Order</div>
-                    <div class="cbnord-tbl-value">IF75393</div>
-                  </div>
-                  <div class="cbnord-tbl-item">
-                    <div class="cbnord-tbl-label">Platform</div>
-                    <div class="cbnord-tbl-value">XBOX</div>
-                  </div>
+            </div>
+            <div class="cbn-tord-f">
+              <div class="cbnord-tbl">
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Order</div>
+                  <div class="cbnord-tbl-value">IF75393</div>
+                </div>
+                <div class="cbnord-tbl-item">
+                  <div class="cbnord-tbl-label">Platform</div>
+                  <div class="cbnord-tbl-value">XBOX</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
-      <!-- /.main (cabinet) -->
-      <footer class="f">
-        <div class="f__inner container">
-          <div class="f-copy">Getboost.gg © All rights reserved</div>
-          <div class="f-links">
-            <a href="#" class="f-link">Privacy Policy</a>
-            <div class="f-links__sep"></div>
-            <a href="#" class="f-link">Terms&Conditions</a>
-          </div>
-          <div class="f-bar">
-            <div class="f-dd f-dd__language dd fadeUp">
-              <div class="f-dd-icon">
-                <img src="./assets/static/icon-language.svg" alt="language" />
-              </div>
-              <div class="f-dd-label">English (ENG)</div>
-              <div class="f-dd-list dd-list">
-                <a href="#" class="f-dd-item">English (ENG)</a>
-                <a href="#" class="f-dd-item active">French(FRE)</a>
-                <a href="#" class="f-dd-item">French(FRE)</a>
-                <a href="#" class="f-dd-item">French(FRE)</a>
-              </div>
-            </div>
-            <div class="f-dd dd fadeUp">
-              <div class="f-dd-icon">
-                <img src="./assets/static/icon-currency.svg" alt="currency" />
-              </div>
-              <div class="f-dd-label">USD</div>
-              <div class="f-dd-list dd-list">
-                <a href="#" class="f-dd-item">EUR</a>
-                <a href="#" class="f-dd-item active">USD</a>
-                <a href="#" class="f-dd-item">FRF</a>
-              </div>
-            </div>
-            <div class="f-bar__sep"></div>
-            <button class="btn f-btn _light _sign btn-open-modal" data-modal="signin">
-              Log in
-            </button>
-            <button class="btn f-btn _primary _sign btn-open-modal" data-modal="signup">
-              Sign up
-            </button>
-            <button class="btn f-btn _primary _mobile btn-open-modal" data-modal="signin">
-              Authorization
-            </button>
-          </div>
+      </div>
+    </main>
+    <!-- /.main (cabinet) -->
+    <footer class="f">
+      <div class="f__inner container">
+        <div class="f-copy">Getboost.gg © All rights reserved</div>
+        <div class="f-links">
+          <a href="#" class="f-link">Privacy Policy</a>
+          <div class="f-links__sep"></div>
+          <a href="#" class="f-link">Terms&Conditions</a>
         </div>
-      </footer>
-      <!-- /.footer -->
-    </div>
+        <div class="f-bar">
+          <div class="f-dd f-dd__language dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-language.svg" alt="language" />
+            </div>
+            <div class="f-dd-label">English (ENG)</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">English (ENG)</a>
+              <a href="#" class="f-dd-item active">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+              <a href="#" class="f-dd-item">French(FRE)</a>
+            </div>
+          </div>
+          <div class="f-dd dd fadeUp">
+            <div class="f-dd-icon">
+              <img src="./assets/static/icon-currency.svg" alt="currency" />
+            </div>
+            <div class="f-dd-label">USD</div>
+            <div class="f-dd-list dd-list">
+              <a href="#" class="f-dd-item">EUR</a>
+              <a href="#" class="f-dd-item active">USD</a>
+              <a href="#" class="f-dd-item">FRF</a>
+            </div>
+          </div>
+          <div class="f-bar__sep"></div>
+          <button class="btn f-btn _light _sign btn-open-modal" data-modal="signin">
+            Log in
+          </button>
+          <button class="btn f-btn _primary _sign btn-open-modal" data-modal="signup">
+            Sign up
+          </button>
+          <button class="btn f-btn _primary _mobile btn-open-modal" data-modal="signin">
+            Authorization
+          </button>
+        </div>
+      </div>
+    </footer>
+    <!-- /.footer -->
+  </div>
 
-    <div class="m__wrapper" data-modal="email_change">
-      <form action="#" class="m">
-        <div class="m__inner">
-          <div class="m-h _mb">
-            <div class="m-title">Change e-mail</div>
-            <div class="m-btn-close m-close">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 8L8 24M8 8L24 24"
-                  stroke="#777A7E"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="m-subtext">Your e-mail: <b>getboost@gmail.com</b></div>
-          </div>
-          <div class="m-b">
-            <div class="m-form">
-              <div class="form-part">
-                <label for="email_change_email" class="form-label">New e-mail</label>
-                <input
-                  type="text"
-                  id="email_change_email"
-                  name="email_change_email"
-                  class="form-input"
-                  placeholder="Enter new e-mail" />
-                <div class="form-part-msg"></div>
-              </div>
-            </div>
-          </div>
-          <div class="m-f">
-            <button
-              type="button"
-              class="btn btn-primary m-btn _wide m-close btn-open-modal"
-              data-modal="email_change_confirm">
-              Continue
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div class="m__wrapper" data-modal="email_change_confirm">
-      <form action="#" class="m">
-        <div class="m__inner">
-          <div class="m-h _mb">
-            <div class="m-title">Change e-mail</div>
-            <div class="m-btn-close m-close">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 8L8 24M8 8L24 24"
-                  stroke="#777A7E"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="m-subtext">We sent a recovery link to your email ew****mail@gmail.com.</div>
-          </div>
-          <div class="m-f">
-            <button type="button" class="btn btn-primary m-btn _wide">Continue</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div class="m__wrapper" data-modal="change_password">
-      <form action="#" class="m">
-        <div class="m__inner">
-          <div class="m-h _mb">
-            <div class="m-title">Change password</div>
-            <div class="m-btn-close m-close">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 8L8 24M8 8L24 24"
-                  stroke="#777A7E"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-          </div>
-          <div class="m-b">
-            <div class="m-form">
-              <div class="form-part">
-                <label for="change_password" class="form-label">Old password</label>
-                <input
-                  type="password"
-                  id="change_password"
-                  name="change_password"
-                  class="form-input"
-                  placeholder="Enter old password" />
-                <div class="form-part-msg"></div>
-              </div>
-              <div class="form-part">
-                <label for="change_password_confirm" class="form-label">New password</label>
-                <input
-                  type="password"
-                  id="change_password_confirm"
-                  name="change_password_confirm"
-                  class="form-input"
-                  placeholder="Enter new password" />
-                <div class="form-part-msg"></div>
-              </div>
-            </div>
-          </div>
-          <div class="m-f">
-            <button type="button" class="btn btn-primary m-btn _wide">Change password</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div class="m__wrapper" data-modal="order_completed">
-      <form action="#" class="m">
-        <div class="m-h _bordered">
-          <div class="m-title">Are you sure the order has been fully completed?</div>
+  <div class="m__wrapper" data-modal="email_change">
+    <form action="#" class="m">
+      <div class="m__inner">
+        <div class="m-h _mb">
+          <div class="m-title">Change e-mail</div>
           <div class="m-btn-close m-close">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24 8L8 24M8 8L24 24"
-                stroke="#777A7E"
-                stroke-width="2.66667"
-                stroke-linecap="round"
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </div>
-          <div class="m-subtext">Attach screenshots of completion (imgur.com)</div>
+          <div class="m-subtext">Your e-mail: <b>getboost@gmail.com</b></div>
         </div>
-        <div class="m__inner">
-          <div class="m-b">
-            <div class="m-form">
-              <div class="form-part">
-                <label for="order_completed_comment" class="form-label">Your comment</label>
-                <textarea
-                  id="order_completed_comment"
-                  name="order_completed_comment"
-                  class="form-textarea _sm-height"
-                  placeholder="Your comment"></textarea>
-                <div class="form-part-msg"></div>
+        <div class="m-b">
+          <div class="m-form">
+            <div class="form-part">
+              <label for="email_change_email" class="form-label">New e-mail</label>
+              <input type="text" id="email_change_email" name="email_change_email" class="form-input"
+                placeholder="Enter new e-mail" />
+              <div class="form-part-msg"></div>
+            </div>
+          </div>
+        </div>
+        <div class="m-f">
+          <button type="button" class="btn btn-primary m-btn _wide m-close btn-open-modal"
+            data-modal="email_change_confirm">
+            Continue
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="m__wrapper" data-modal="email_change_confirm">
+    <form action="#" class="m">
+      <div class="m__inner">
+        <div class="m-h _mb">
+          <div class="m-title">Change e-mail</div>
+          <div class="m-btn-close m-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="m-subtext">We sent a recovery link to your email ew****mail@gmail.com.</div>
+        </div>
+        <div class="m-f">
+          <button type="button" class="btn btn-primary m-btn _wide">Continue</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="m__wrapper" data-modal="change_password">
+    <form action="#" class="m">
+      <div class="m__inner">
+        <div class="m-h _mb">
+          <div class="m-title">Change password</div>
+          <div class="m-btn-close m-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="m-b">
+          <div class="m-form">
+            <div class="form-part">
+              <label for="change_password" class="form-label">Old password</label>
+              <input type="password" id="change_password" name="change_password" class="form-input"
+                placeholder="Enter old password" />
+              <div class="form-part-msg"></div>
+            </div>
+            <div class="form-part">
+              <label for="change_password_confirm" class="form-label">New password</label>
+              <input type="password" id="change_password_confirm" name="change_password_confirm" class="form-input"
+                placeholder="Enter new password" />
+              <div class="form-part-msg"></div>
+            </div>
+          </div>
+        </div>
+        <div class="m-f">
+          <button type="button" class="btn btn-primary m-btn _wide">Change password</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="m__wrapper" data-modal="order_completed">
+    <form action="#" class="m">
+      <div class="m-h _bordered">
+        <div class="m-title">Are you sure the order has been fully completed?</div>
+        <div class="m-btn-close m-close">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="m-subtext">Attach screenshots of completion (imgur.com)</div>
+      </div>
+      <div class="m__inner">
+        <div class="m-b">
+          <div class="m-form">
+            <div class="form-part">
+              <label for="order_completed_comment" class="form-label">Your comment</label>
+              <textarea id="order_completed_comment" name="order_completed_comment" class="form-textarea _sm-height"
+                placeholder="Your comment"></textarea>
+              <div class="form-part-msg"></div>
+            </div>
+            <div class="form-part">
+              <label for="order_completed_screenshot_link" class="form-label">Link to screenshot</label>
+              <input type="text" id="order_completed_screenshot_link" name="order_completed_screenshot_link"
+                class="form-input" placeholder="Link to screenshot" />
+              <div class="form-part-msg"></div>
+              <div class="form-part-link _center m-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19M5 12H19" stroke="#3474EE" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                Add screenshot
               </div>
-              <div class="form-part">
-                <label for="order_completed_screenshot_link" class="form-label"
-                  >Link to screenshot</label
-                >
-                <input
-                  type="text"
-                  id="order_completed_screenshot_link"
-                  name="order_completed_screenshot_link"
-                  class="form-input"
-                  placeholder="Link to screenshot" />
-                <div class="form-part-msg"></div>
-                <div class="form-part-link _center m-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M12 5V19M5 12H19"
-                      stroke="#3474EE"
-                      stroke-width="2"
-                      stroke-linecap="round"
+            </div>
+          </div>
+        </div>
+        <div class="m-f m-f-row">
+          <button type="button" class="btn btn-primary m-btn _wide">Sent ticket</button>
+          <button type="button" class="btn btn-white m-btn _wide">No, still not done</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="m__wrapper" data-modal="withdraw">
+    <form action="#" class="m">
+      <div class="m__inner">
+        <div class="m-h _mb">
+          <div class="m-title">Withdraw</div>
+          <div class="m-btn-close m-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#777A7E" stroke-width="2.66667" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="m-b">
+          <div class="m-form">
+            <div class="form-part">
+              <div class="form-label">Whithdraw to</div>
+              <div class="form-select dd select fadeDown">
+                <input type="hidden" class="dd-input" value="null" />
+                <div class="form-select-item selected placeholder">Wallet</div>
+                <div class="form-select-arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
-                  Add screenshot
                 </div>
+                <ul class="form-select-list dd-list">
+                  <li>
+                    <div href="#" class="form-select-item dd-item" data-value="1">
+                      4% Visa / Mastercard
+                    </div>
+                  </li>
+                  <li>
+                    <div href="#" class="form-select-item dd-item" data-value="2">4% PayPal</div>
+                  </li>
+                  <li>
+                    <div href="#" class="form-select-item dd-item" data-value="3">4% Qiwi</div>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-          <div class="m-f m-f-row">
-            <button type="button" class="btn btn-primary m-btn _wide">Sent ticket</button>
-            <button type="button" class="btn btn-white m-btn _wide">No, still not done</button>
+            <div class="form-part">
+              <label for="withdraw_value" class="form-label">Account to withdraw</label>
+              <input type="text" id="withdraw_value" name="withdraw_value" class="form-input" placeholder="$123,6.04" />
+              <div class="form-part-msg"></div>
+            </div>
+            <div class="form-part">
+              <label for="withdraw_email" class="form-label">E-mail of PayPal Account</label>
+              <input type="email" id="withdraw_email" name="withdraw_email" class="form-input"
+                placeholder="qwerty@gmail.com" />
+              <div class="form-part-msg"></div>
+            </div>
           </div>
         </div>
-      </form>
-    </div>
+        <div class="m-f">
+          <button type="button" class="btn btn-primary m-btn _wide">Whithdraw</button>
+          <div class="m-subtext m-f-text _center">Money will be withdraw in 48 hours</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
 
-    <div class="m__wrapper" data-modal="withdraw">
-      <form action="#" class="m">
-        <div class="m__inner">
-          <div class="m-h _mb">
-            <div class="m-title">Withdraw</div>
-            <div class="m-btn-close m-close">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 8L8 24M8 8L24 24"
-                  stroke="#777A7E"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-          </div>
-          <div class="m-b">
-            <div class="m-form">
-              <div class="form-part">
-                <div class="form-label">Whithdraw to</div>
-                <div class="form-select dd select fadeDown">
-                  <input type="hidden" class="dd-input" value="null" />
-                  <div class="form-select-item selected placeholder">Wallet</div>
-                  <div class="form-select-arrow">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5 7.5L10 12.5L15 7.5"
-                        stroke-width="2.14286"
-                        stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                  <ul class="form-select-list dd-list">
-                    <li>
-                      <div href="#" class="form-select-item dd-item" data-value="1">
-                        4% Visa / Mastercard
-                      </div>
-                    </li>
-                    <li>
-                      <div href="#" class="form-select-item dd-item" data-value="2">4% PayPal</div>
-                    </li>
-                    <li>
-                      <div href="#" class="form-select-item dd-item" data-value="3">4% Qiwi</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="form-part">
-                <label for="withdraw_value" class="form-label">Account to withdraw</label>
-                <input
-                  type="text"
-                  id="withdraw_value"
-                  name="withdraw_value"
-                  class="form-input"
-                  placeholder="$123,6.04" />
-                <div class="form-part-msg"></div>
-              </div>
-              <div class="form-part">
-                <label for="withdraw_email" class="form-label">E-mail of PayPal Account</label>
-                <input
-                  type="email"
-                  id="withdraw_email"
-                  name="withdraw_email"
-                  class="form-input"
-                  placeholder="qwerty@gmail.com" />
-                <div class="form-part-msg"></div>
-              </div>
-            </div>
-          </div>
-          <div class="m-f">
-            <button type="button" class="btn btn-primary m-btn _wide">Whithdraw</button>
-            <div class="m-subtext m-f-text _center">Money will be withdraw in 48 hours</div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </body>
 </html>
