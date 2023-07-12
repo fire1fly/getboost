@@ -6373,7 +6373,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     height: auto;
   }
   .c-ms__form {
-    position: static;
+    position: relative;
+    top: 0;
   }
   .c-ms__form-track {
     padding-top: 0;

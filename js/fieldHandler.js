@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   console.log(fields);
 
+  alert("test 4");
+
   function getPosition(el) {
     let x = 0, y = 0, n = true;
 
@@ -22,15 +24,31 @@ document.addEventListener("DOMContentLoaded", function() {
     return {x: parseInt(x, 10), y: parseInt(y, 10)};
   }
 
-  function handleField(e) {;
-    const offset = (getPosition(e.target).y + 100);
-    window.scrollTo({
-      top: offset,
-      behavior: 'smooth'
-    });
+  function handleField(e) {
+    const input = e.target.closest("INPUT");
+    const topOffsetInput = input.getBoundingClientRect().top;
+
+    if (topOffsetInput > (window.innerHeight / 2) - 100) {
+      const offset = topOffsetInput - 100;
+      window.scrollBy({
+        top: offset,
+        behavior: 'smooth'
+      });
+    }
+    // input.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'center'
+    // });
+    // const offset = (getPosition(input).y - 200);
+    // window.scrollTo({
+    //   top: offset,
+    //   behavior: 'smooth'
+    // });
   }
 
   if (window.matchMedia("only screen and (max-width: 991px)").matches) {
-    fields.forEach(field => field.addEventListener("focus", handleField));
+    fields.forEach(field => {
+      field.addEventListener("click", handleField);
+    });
   }
 });
