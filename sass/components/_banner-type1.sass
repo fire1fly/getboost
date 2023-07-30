@@ -16,7 +16,7 @@
   &-title
     margin: 0
     margin-bottom: 11px
-    +stolzl-reg
+    +stolzl-med
     font-size: 34px
     color: $grey100
   &-sub
@@ -49,12 +49,10 @@
     bottom: 0
     align-self: end
     flex: 0 0 auto
-    width: 20%
+    width: 38%
     line-height: 0
     margin-top: -80px
     transition: 0.5s
-    &.animate-active
-      width: 38%
     img
       width: 100%
   &-f
@@ -64,11 +62,9 @@
     display: flex
     align-items: center
     gap: 14px 30px
-    background-color: rgba($primary, 0.3)
+    background-color: $primary
     transition: 0.3s
     transition-delay: 0.2s
-    &.animate-active
-      background-color: $primary
     &-item
       flex: 0 1 auto
       img, svg
@@ -108,5 +104,4 @@
       margin-top: -40px
       flex: auto
       max-width: 250px
-      &.animate-active
-        width: 100%
+      width: 100%

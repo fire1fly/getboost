@@ -24,7 +24,7 @@
       font-size: 16px
   &-title
     margin: 0
-    +stolzl-reg
+    +stolzl-med
     color: $grey100
   &-select
     &__cats
@@ -70,7 +70,7 @@
     &-title
       margin: 0
       margin-bottom: 24px
-      +stolzl-reg
+      +stolzl-med
       text-transform: uppercase
       color: $grey100
 
@@ -117,85 +117,25 @@
     &-h
       margin-bottom: 18px
     &-select
-      display: block
-      border-radius: 8px
-      border: 1px solid $grey10
-      height: 50px
-      padding: 0 18px
-      display: flex
-      align-items: center
-      justify-content: space-between
-      background-color: $grey0
-      cursor: pointer
-      user-select: none
-      &.active
-        border-color: $grey20
-        .ct-select
-          &-arrow
-            transform: scale(1, -1)
-            svg
-              stroke: $primary
-          &-list
-            opacity: 1
-            transform: translateY(0)
       &__cats
         margin-bottom: 12px
-      &-label
-        display: block
-        margin-right: 8px
-        +inter-reg
-        font-size: 14px
-        color: $grey70
-      &-item
-        margin: 0
-        border: none
-        border-radius: 0
-        display: block
-        +inter-semibold
-        font-size: 16px
-        color: $grey70
-        &:hover
-          background-color: inherit
-        &.selected
-          margin-right: auto
-          display: block
-          padding: 0
-          height: auto
-      &-arrow
-        display: block
-        line-height: 0
-        transition: 0.1s
-        svg
-          stroke: $grey70
       &-list
-        opacity: 0
-        transform: translateY(-5px)
-        position: absolute
-        transition: 0.1s
-        visibility: hidden
-        display: block
-        top: calc(100% + 5px)
-        border-radius: 8px
-        border: 1px solid $grey20
-        padding: 12px 0
-        background-color: $grey0
-        box-shadow: 0px 22px 35px rgba(26, 31, 36, 0.25)
-        .ct-select-item
-          height: 48px
-          line-height: 48px
-          padding: 0 18px
-          &:hover
-            background-color: $light
-          &.active
-            color: $grey100
-            background-color: $light
-            &::before
-              content: "•"
-              margin-right: 13px
-              color: $primary
+        flex-wrap: nowrap
+        overflow-x: auto
+      &-item
+        white-space: nowrap
     &-steps
       padding: 30px 0
       &-title
         margin-bottom: 20px
         .gradient-primary
           display: inline-block
+
+@media ( max-width: 520px )
+  .ct
+    &-select
+      &-item
+        border-radius: 16px
+        height: 32px
+        padding: 0 12px
+        font-size: 14px
