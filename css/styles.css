@@ -3636,7 +3636,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .cbn-btn {
   border-radius: 30px;
   height: 50px;
-  padding: 0 24px;
+  padding: 0 20px;
   font-family: "Inter SemiBold", sans-serif;
   font-size: 16px;
 }
@@ -3653,7 +3653,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   gap: 20px;
 }
 .cbn-top .cbn-stat {
-  flex: 0 1 300px;
+  flex: 0 0 300px;
 }
 .cbn-top .cbn-bar {
   flex: 1 1 auto;
@@ -3687,6 +3687,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 .cbn-stat-item:first-child {
   padding-top: 0;
@@ -3696,7 +3697,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-bottom: 0;
 }
 .cbn-stat-item-icon {
-  margin-right: 12px;
   flex: 0 0 auto;
   line-height: 0;
 }
@@ -3774,7 +3774,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   gap: 10px;
 }
 .cbn-bar-part-f-btns {
-  flex: 0 0 42%;
+  flex: 0 0 45%;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -4333,6 +4333,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   max-width: 500px;
 }
 
+@media (max-width: 1440px) {
+  .cbn-top .cbn-stat {
+    flex-shrink: 1;
+  }
+}
 @media (max-width: 1200px) {
   .cbn {
     padding-top: 15px;
