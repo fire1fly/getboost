@@ -140,6 +140,9 @@
           display: flex
           flex-wrap: wrap
           gap: 4px
+          max-height: 100px
+          overflow-y: auto
+          overscroll-behavior: none
       .cbn-invite
         margin-bottom: 20px
     &-tooltips
@@ -280,6 +283,11 @@
       +inter-semibold
       font-size: 12px
       color: $grey70
+      &._overflow
+        max-width: 125px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
     &-plate
       border-radius: 6px
       border: 1px solid $grey20
@@ -743,10 +751,18 @@
         font-size: 16px
         color: $button1
       &-sub
+        width: 100%
         +inter-semibold
         font-size: 12px
         color: $grey70
-        word-break: break-all
+        display: table-cell
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        &-wrapper
+          display: table
+          table-layout: fixed
+          width: 100%
       &-btn
         margin-left: 4px
         flex: 0 0 auto
@@ -818,7 +834,7 @@
                 display: flex
           &-attach
             width: 100%
-            justify-content: center
+            max-height: 200px
       &-tooltips
         gap: 5px
     &-invite
