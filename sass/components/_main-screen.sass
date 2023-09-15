@@ -37,6 +37,8 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
+    &:not(:first-of-type)
+      transform: translateY(-42px)
   &-item
     position: relative
     border-radius: 16px
@@ -143,6 +145,8 @@
     &-row
       display: block
       height: auto
+      &:not(:first-of-type)
+        transform: translateY(0)
       &:not(:nth-of-type(1))
         margin-top: 8px
     &-item
