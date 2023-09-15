@@ -8636,6 +8636,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 .m-chs-item-label {
   margin-left: auto;
+  text-align: right;
   font-family: "Inter Regular", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
