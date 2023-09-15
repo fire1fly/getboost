@@ -163,14 +163,14 @@
     color: $grey70
   &-tab
     &-grid
-      display: flex
+      display: inline-flex
+      flex-wrap: wrap
       user-select: none
       &._type1
         border-radius: 8px
         padding: 4px
         background-color: $grey10
         .form-tab
-          flex: 1 1 auto
           cursor: pointer
           input[type="radio"]
             display: none
@@ -197,7 +197,6 @@
       &._type2
         gap: 4px
         .form-tab
-          flex: 1 1 auto
           cursor: pointer
           input[type="radio"]
             display: none
@@ -221,15 +220,17 @@
             &:hover
               background-color: darken($five, 10%)
       &._big
-        height: 56px
+        .form-tab
+          height: 56px
       &._mid
-        height: 40px
+        .form-tab
+          height: 40px
         .form-tab-plate
           font-size: 14px
       &._small
-        height: 33px
+        .form-tab
+          height: 33px
       &._short
-        display: inline-flex
         .form-tab-plate
           padding: 0 12px
   &-outimg
