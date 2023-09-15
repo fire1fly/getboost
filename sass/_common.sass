@@ -460,6 +460,12 @@ input
             &::after
               border-color: $primary
 
+.accordion
+  &-item
+    &:not(.accordion-item_show)
+      .accordion-body
+        display: none
+
 @media ( max-width: 1024px )
   .h1
     font-size: 48px
