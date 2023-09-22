@@ -54,9 +54,11 @@
       +inter-semibold
       text-transform: uppercase
     &__tab
-      flex: 0 0 auto
+      // flex: 0 0 auto
     &__select
       flex: 0 1 470px
+      .form-select
+        height: 64px
     &-reset
       border: none
       height: 56px
@@ -244,6 +246,12 @@
       padding: 24px
       &-text
         font-size: 16px
+    &-bar
+      flex-wrap: wrap
+      gap: 18px 7px
+      &__select
+        .form-select
+          height: 50px
 
 @media ( max-width: 768px )
   .g
@@ -280,14 +288,11 @@
       &__first
         display: none
     &-bar
-      flex-wrap: wrap
-      gap: 18px 7px
       &__select
         flex: 1 1 100%
       &__tab
         .form-tab
           &-grid
-            height: 50px
             .form-tab-plate
               font-size: 14px
       &-reset

@@ -52,8 +52,11 @@
     display: flex
     align-items: flex-end
     &:hover
-      .ms-item-bg
-        transform: scale(1.1)
+      .ms-item
+        &-backdrop
+          opacity: 0
+        &-bg
+          transform: scale(1.1)
     &:nth-child(2)
       transform: translateY(-20%)
     &-bg
@@ -73,6 +76,7 @@
       height: 100%
       z-index: 2
       background: linear-gradient(0deg, rgba(19, 28, 61, 0.44), rgba(19, 28, 61, 0.44))
+      transition: opacity 0.2s
     &-row
       z-index: 3
       width: 100%
