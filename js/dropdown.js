@@ -32,23 +32,43 @@ document.addEventListener("DOMContentLoaded", function () {
     setup() {
       if (this.$dd.classList.contains("select")) {
         this.checkSelect();
+        this.setView();
+        this.setupInput();
+        this.handleInput = this.handleInput.bind(this);
+        this.$input.addEventListener("change", this.handleInput);
       }
       this.handleClick = this.handleClick.bind(this);
       this.handleOutClick = this.handleOutClick.bind(this);
       this.$dd.addEventListener("click", this.handleClick);
       document.addEventListener("click", this.handleOutClick);
-
-      if (this.$dd.classList.contains("select")) {
-        this.setInitState();
-      }
     }
 
-    setInitState() {
+    setView() {
       this.$itemList.forEach(elem => {
         if (elem.dataset.value === this.$input.value) {
           this.$selected.innerHTML = elem.innerHTML;
         }
       });
+    }
+
+    handleInput() {
+      this.setView();
+    }
+
+    setupInput() {
+      const input = this.$input;
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach(mutation => {
+          if (
+            mutation.type === 'attributes'
+            && mutation.attributeName === 'value'
+          ) {
+            input.dispatchEvent(new Event('change'));
+            this.setView()
+          }
+        });
+      });
+      observer.observe(input, { attributes: true });
     }
 
     handleClick(e) {
