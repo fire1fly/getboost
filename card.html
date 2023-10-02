@@ -386,26 +386,293 @@
                       </label>
                     </div>
                   </div>
+
                   <div class="c-form-block">
                     <div class="c-form-title">Rating</div>
-                    <div class="c-form-dr double-range">
+                    <div class="c-form-dr double-range" data-range-type="extra">
                       <div class="c-form-dr-row">
                         <div class="c-form-dr-field">
                           <div class="c-form-dr-label">Your rating</div>
-                          <input type="text" class="c-form-dr-input double-range-value value-1" placeholder="1" />
+                          <input type="number" class="c-form-dr-input double-range-value value-1" placeholder="1" />
                         </div>
                         <div class="c-form-dr-row__sep"></div>
                         <div class="c-form-dr-field">
                           <div class="c-form-dr-label">Rating you want</div>
-                          <input type="text" class="c-form-dr-input double-range-value value-2" placeholder="60" />
+                          <input type="number" class="c-form-dr-input double-range-value value-2" placeholder="60" />
                         </div>
                       </div>
                       <div class="c-form-dr-range__wrap double-range__inner">
                         <div class="double-range-track"></div>
-                        <input type="range" class="c-form-dr-range form-range double-range-input range-1" min="1"
-                          max="60" value="10" />
-                        <input type="range" class="c-form-dr-range form-range double-range-input range-2" min="1"
-                          max="60" value="40" />
+                        <input type="range" class="c-form-dr-range form-range double-range-input range-1" min="0"
+                          max="21" value="3" />
+                        <input type="range" class="c-form-dr-range form-range double-range-input range-2" min="0"
+                          max="21" value="10" />
+                      </div>
+                      <div class="c-form-dr-picrow">
+                        <div class="c-form-dr-refvalue double-range-refvalue-1">
+                          <img src="./assets/static/rookie.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="1">
+                          <img src="./assets/static/bronze.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="4">
+                          <img src="./assets/static/silver.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="7">
+                          <img src="./assets/static/gold.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="10">
+                          <img src="./assets/static/platinum.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="13">
+                          <img src="./assets/static/diamond.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="16">
+                          <img src="./assets/static/master.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="19">
+                        </div>
+                        <div class="c-form-dr-refvalue double-range-refvalue-2">
+                          <img src="./assets/static/rookie.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="1">
+                          <img src="./assets/static/bronze.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="4">
+                          <img src="./assets/static/silver.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="7">
+                          <img src="./assets/static/gold.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="10">
+                          <img src="./assets/static/platinum.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="13">
+                          <img src="./assets/static/diamond.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="16">
+                          <img src="./assets/static/master.png" class="c-form-dr-pic double-range-refvalue" hidden
+                            data-value="19">
+                        </div>
+                      </div>
+                      <div class="c-form-dr-row _select-row">
+                        <div class="c-form-dr-field">
+                          <div class="c-form-dr-label">From</div>
+                          <div class="form-select dd select fadeUp">
+                            <input type="hidden" class="dd-input double-range-select-1" value="1" />
+                            <div class="form-select-item selected">
+                              Iron 1
+                            </div>
+                            <div class="form-select-arrow">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                            <ul class="form-select-list dd-list">
+                              <div class="form-select-list-inner">
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="1">
+                                    Rookie I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="2">
+                                    Rookie II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="3">
+                                    Rookie III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="4">
+                                    Bronze I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="5">
+                                    Bronze II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="6">
+                                    Bronze III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="7">
+                                    Silver I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="8">
+                                    Silver II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="9">
+                                    Silver III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="10">
+                                    Gold I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="11">
+                                    Gold II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="12">
+                                    Gold III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="13">
+                                    Platinum I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="14">
+                                    Platinum II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="15">
+                                    Platinum III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="16">
+                                    Diamond I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="17">
+                                    Diamond II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="18">
+                                    Diamond III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="19">
+                                    Master
+                                  </div>
+                                </li>
+                              </div>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="c-form-dr-field">
+                          <div class="c-form-dr-label">To</div>
+                          <div class="form-select dd select fadeUp">
+                            <input type="hidden" class="dd-input double-range-select-2" value="16" />
+                            <div class="form-select-item selected">
+                              Iron 1
+                            </div>
+                            <div class="form-select-arrow">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2.14286" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                            <ul class="form-select-list dd-list">
+                              <div class="form-select-list-inner">
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="1">
+                                    Rookie I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="2">
+                                    Rookie II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="3">
+                                    Rookie III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="4">
+                                    Bronze I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="5">
+                                    Bronze II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="6">
+                                    Bronze III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="7">
+                                    Silver I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="8">
+                                    Silver II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="9">
+                                    Silver III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="10">
+                                    Gold I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="11">
+                                    Gold II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="12">
+                                    Gold III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="13">
+                                    Platinum I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="14">
+                                    Platinum II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="15">
+                                    Platinum III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="16">
+                                    Diamond I
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="17">
+                                    Diamond II
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="18">
+                                    Diamond III
+                                  </div>
+                                </li>
+                                <li>
+                                  <div href="#" class="form-select-item dd-item" data-value="19">
+                                    Master
+                                  </div>
+                                </li>
+                              </div>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <!-- /.c-form-dr (double range) -->
@@ -451,6 +718,7 @@
                       </label>
                     </div>
                   </div>
+
                   <div class="c-form-block c-form-block-grid2">
                     <div class="c-form-title">Start time</div>
                     <div class="form-tab-grid _type1 _mid _short _days">
