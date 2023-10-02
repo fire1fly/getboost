@@ -546,10 +546,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   position: relative;
 }
 .double-range-track {
-  position: absolute;
   border-radius: 3px;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 6px;
   background-color: #E8E9EA;
@@ -5833,6 +5830,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   grid-template-columns: 1fr;
   gap: 12px;
 }
+.c-form-block-grid2 .form-tab-grid {
+  justify-self: start;
+}
 .c-form-title {
   margin-bottom: 16px;
   font-family: "Inter SemiBold", sans-serif;
@@ -5886,15 +5886,19 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #FFFFFF;
 }
 .c-form-dr {
-  margin-bottom: 52px;
+  margin-bottom: 30px;
 }
 .c-form-dr-row {
   margin-bottom: 22px;
   display: flex;
+  gap: 13px;
+}
+.c-form-dr-row._select-row .c-form-dr-field {
+  width: 48%;
 }
 .c-form-dr-row__sep {
   align-self: end;
-  margin: 0 13px 25px;
+  margin: 0 0 25px;
   flex: 0 0 auto;
   border-radius: 4px;
   width: 14px;
@@ -5928,6 +5932,45 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 .c-form-dr-input::placeholder {
   color: #BBBCBF;
+}
+.c-form-dr-picrow {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+}
+.c-form-dr-refvalue {
+  flex: 0 0 auto;
+  width: 80px;
+}
+.c-form-dr-pic {
+  max-width: 100%;
+}
+.c-form-dr .form-select {
+  height: 50px;
+  padding: 0 16px;
+}
+.c-form-dr .form-select-item {
+  font-size: 14px;
+}
+.c-form-dr .form-select-list {
+  top: auto;
+  bottom: calc(100% + 5px);
+  padding: 5px 0;
+}
+.c-form-dr .form-select-list-inner {
+  max-height: 250px;
+  overflow-y: auto;
+  overscroll-behavior: none;
+}
+.c-form-dr .form-select-list .form-select-item {
+  height: 30px;
+  padding: 0 16px;
+  font-size: 12px;
+}
+.c-form-dr .form-select .dd-input {
+  display: none;
 }
 .c-form-promo {
   display: flex;
@@ -6225,24 +6268,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     flex-direction: row;
     align-items: center;
   }
-  .c-form-block-grid2 {
-    display: grid;
-    grid-template-columns: auto min-content;
-    grid-template-rows: auto;
-    align-items: center;
-    gap: 10px;
-  }
-  .c-form-block-grid2 .c-form-title {
-    margin: 0;
-  }
-  .c-form-block-grid2 ._days {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .c-form-block-grid2 ._time {
-    grid-column: 1/3;
-    width: auto;
-  }
   .c-form-sum {
     border-top: 1px solid #E8E9EA;
     padding: 16px 25px;
@@ -6430,6 +6455,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   }
   .c-form-dr-input {
     height: 40px;
+    font-size: 14px;
+  }
+  .c-form-dr .form-select {
+    height: 40px;
+  }
+  .c-form-dr .form-select-item {
     font-size: 14px;
   }
   .c-form-promo {
