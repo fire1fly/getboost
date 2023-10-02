@@ -45,8 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setView() {
       this.$itemList.forEach(elem => {
+        elem.classList.remove("active");
         if (elem.dataset.value === this.$input.value) {
           this.$selected.innerHTML = elem.innerHTML;
+          elem.classList.add("active");
         }
       });
     }
@@ -77,14 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const clickedItem = e.target.closest(".dd-item");
 
         if (clickedItem) {
-          this.$selected.innerHTML = clickedItem.innerHTML;
           this.$selected.classList.remove("placeholder");
           this.$input.value = clickedItem.dataset.value;
-
-          this.$itemList.forEach(item => {
-            item.classList.remove("active");
-          });
-          clickedItem.classList.add("active");
+          this.setView();
         }
       }
 
