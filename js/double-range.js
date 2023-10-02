@@ -36,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       this.$input1.addEventListener("input", this.handleInput1);
       this.$input2.addEventListener("input", this.handleInput2);
 
-      console.log(this.isExtra);
-
       if (this.isExtra) {
         this.handleSelect1 = this.handleSelect1.bind(this);
         this.handleSelect2 = this.handleSelect2.bind(this);
@@ -133,10 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.$refValueList1.forEach(item => {
         values.push(parseInt(item.dataset.value));
       });
-      console.log(values);
       this.$refValueList1.forEach((item, i) => {
         item.hidden = true;
-        console.log(values[i + 1]);
         if (
           (
             parseInt(this.$input1.value) >= values[i]
@@ -158,10 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.$refValueList2.forEach(item => {
         values.push(parseInt(item.dataset.value));
       });
-      console.log(values);
       this.$refValueList2.forEach((item, i) => {
         item.hidden = true;
-        console.log(values[i + 1]);
         if (
           (
             parseInt(this.$input2.value) >= values[i]
