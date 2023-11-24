@@ -90,6 +90,15 @@
       transform: none
       visibility: visible
       flex-wrap: wrap
+      .category-item_have-parrent
+        .ct-select-item
+          background-color: darken($light, 2%)
+          &:hover
+            background-color: $light
+          &.active
+            border-color: $primary
+            background-color: $primary
+            color: $five
   &-steps
     padding: 50px 0
     background-color: $grey0

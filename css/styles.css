@@ -1953,6 +1953,17 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   visibility: visible;
   flex-wrap: wrap;
 }
+.ct-select-list .category-item_have-parrent .ct-select-item {
+  background-color: #d9e6ff;
+}
+.ct-select-list .category-item_have-parrent .ct-select-item:hover {
+  background-color: #E3EDFF;
+}
+.ct-select-list .category-item_have-parrent .ct-select-item.active {
+  border-color: #3474EE;
+  background-color: #3474EE;
+  color: #FBFBFB;
+}
 .ct-steps {
   padding: 50px 0;
   background-color: #FFFFFF;
