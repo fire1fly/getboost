@@ -1,5 +1,4 @@
 const bnrEl = document.querySelector(".bnr2");
-console.log(bnrEl);
 const titleEl = document.querySelector(".bnr2-title-animate");
 const btnEl = document.querySelector(".bnr2-btn-animate");
 
