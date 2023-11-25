@@ -219,25 +219,28 @@
         width: 80px
       &-pic
         max-width: 100%
-      .form-select
-        height: 50px
-        padding: 0 16px
-        &-item
-          font-size: 14px
-        &-list
-          top: auto
-          bottom: calc(100% + 5px)
-          padding: 5px 0
-          &-inner
-            max-height: calc(50px * 5)
-            overflow-y: auto
-            overscroll-behavior: none
-          .form-select-item
-            height: 30px
-            padding: 0 16px
-            font-size: 12px
-        .dd-input
-          display: none
+    .form-select
+      height: auto
+      padding: 12px 16px
+      &-arrow
+        stroke: $primary
+      &-item
+        font-size: 14px
+      &-list
+        top: auto
+        bottom: calc(100% + 5px)
+        padding: 5px 0
+        &-inner
+          max-height: calc(50px * 5)
+          overflow-y: auto
+          overscroll-behavior: none
+        .form-select-item
+          height: auto
+          padding: 8px 16px
+          font-size: 12px
+      .dd-input
+        display: none
+
     &-promo
       display: flex
       flex-direction: column

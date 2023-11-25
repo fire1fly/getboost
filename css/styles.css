@@ -5678,20 +5678,24 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .form-tab-grid._type2 .form-tab-plate:hover {
   background-color: #e2e2e2;
 }
-.form-tab-grid._big .form-tab {
-  height: 56px;
+.form-tab-grid._big .form-tab-plate {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
-.form-tab-grid._mid .form-tab {
-  height: 40px;
+.form-tab-grid._mid .form-tab-plate {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .form-tab-grid._mid .form-tab-plate {
   font-size: 14px;
 }
-.form-tab-grid._small .form-tab {
-  height: 33px;
+.form-tab-grid._small .form-tab-plate {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .form-tab-grid._short .form-tab-plate {
-  padding: 0 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .form-outimg {
   width: 100%;
@@ -5701,6 +5705,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 100%;
 }
 
+@media (max-width: 991px) {
+  .form-tab-grid._big .form-tab-plate {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
 @media (max-width: 767px) {
   .form-block {
     margin-bottom: 24px;
@@ -5745,12 +5755,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     font-size: 14px;
   }
   .form-tab-grid._short .form-tab-plate {
-    padding: 0 8px;
-  }
-}
-@media (max-width: 991px) {
-  .form-tab-grid._big .form-tab {
-    height: 42px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 .c {
@@ -6024,29 +6030,32 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .c-form-dr-pic {
   max-width: 100%;
 }
-.c-form-dr .form-select {
-  height: 50px;
-  padding: 0 16px;
+.c-form .form-select {
+  height: auto;
+  padding: 12px 16px;
 }
-.c-form-dr .form-select-item {
+.c-form .form-select-arrow {
+  stroke: #3474EE;
+}
+.c-form .form-select-item {
   font-size: 14px;
 }
-.c-form-dr .form-select-list {
+.c-form .form-select-list {
   top: auto;
   bottom: calc(100% + 5px);
   padding: 5px 0;
 }
-.c-form-dr .form-select-list-inner {
+.c-form .form-select-list-inner {
   max-height: 250px;
   overflow-y: auto;
   overscroll-behavior: none;
 }
-.c-form-dr .form-select-list .form-select-item {
-  height: 30px;
-  padding: 0 16px;
+.c-form .form-select-list .form-select-item {
+  height: auto;
+  padding: 8px 16px;
   font-size: 12px;
 }
-.c-form-dr .form-select .dd-input {
+.c-form .form-select .dd-input {
   display: none;
 }
 .c-form-promo {
