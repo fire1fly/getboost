@@ -141,6 +141,23 @@
     transform: scale(1.1);
   }
 }
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -694,6 +711,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .accordion-item:not(.accordion-item_show) .accordion-body {
   display: none;
+}
+
+._horizontal-shaking {
+  animation: horizontal-shaking 0.3s linear 0s 2 normal forwards;
 }
 
 @media (max-width: 1024px) {
@@ -5891,6 +5912,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   text-transform: uppercase;
   font-size: 16px;
   color: #494D53;
+  transition: 0.2s;
+}
+.c-form-title._text-error {
+  color: #D53D33;
 }
 .c-form-checkbox {
   display: flex;
