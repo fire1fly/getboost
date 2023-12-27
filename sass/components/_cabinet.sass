@@ -109,14 +109,9 @@
     background-color: $grey0
     box-shadow: 0px 4px 23px #EFF2F8
     overflow: hidden
-    .cbn-card
-      flex: 0 0 200px
-      &:nth-last-of-type(1)
-        border-top-right-radius: 12px
-        border-bottom-right-radius: 12px
     &-part
       flex: 1 1 auto
-      margin: 24px 0
+      margin: 24px 0 16px
       padding: 0 24px
       border-right: 1px solid $grey10
       &-f
@@ -261,8 +256,24 @@
         border-radius: 10px
         height: 100%
         background-color: $primary
+  &-panel
+    flex: 0 0 auto
+    display: flex
+    flex-direction: column
+    &-row
+      flex: 1 1 auto
+      display: flex
+    .cbn-card
+      flex: 0 0 auto
+      max-width: 220px
+      &:nth-last-of-type(1)
+        border-top-right-radius: 12px
+        border-bottom-right-radius: 12px
+    &-f
+      width: 100%
+      padding: 0 11px 16px
   &-card
-    padding: 16px 11px
+    padding: 16px 11px 6px
     display: flex
     flex-direction: column
     &._light
@@ -780,7 +791,7 @@
         justify-content: center
         svg, img
           max-width: 100%
-    &-card
+    &-panel, &-card
       display: none
     &-bar
       &-part
